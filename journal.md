@@ -1,5 +1,4 @@
-# PPE2-Projet_lac
-
+# PPE2-Projet_lcd
 ## Membres
 
 - Yingzi LIU
@@ -17,6 +16,8 @@
 
 
 ### 2023.02.01
+
+**Danyel :** Creation de compte de gitlab et fait des premier exercise pour connaitre les commands gitlab. Et puis j'ai ajouté SSH Key to Gitlab Account. 
 
 **Xiaohua :** J'ai créé le compte sur gitlab, j'ai travaillé avec le groupe pour créer le dépôt de notre projet, et on a enfin les branches `main`, `page`, ainsi qu'une branche individuelle `xiaohua`. Voici le [dépôt du projet](https://gitlab.com/ppe2023/ppe2_lcd).
 
@@ -60,3 +61,5 @@ A la fin de cet exercice, j'ai ajouté le tag pour mon exercice nommé ex2r1, et
 
 ***
 
+
+**Danyel :** Creation de compte de gitlab et fait des premier exercise pour connaitre les commands gitlab. Et puis j'ai ajouté SSH Key to Gitlab Account. 
