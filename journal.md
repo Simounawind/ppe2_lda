@@ -1,4 +1,4 @@
-# PPE2-Projet_lac
+# PPE2-Projet_LDC
 
 ## Membres
 
