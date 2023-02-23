@@ -14,6 +14,20 @@
 
 
 
+
+
+### 2023.02.01
+
+**Xiaohua :** J'ai créé le compte sur gitlab, j'ai travaillé avec le groupe pour créer le dépôt de notre projet, et on a enfin les branches `main`, `page`, ainsi qu'une branche individuelle `xiaohua`. Voici le [dépôt du projet](https://gitlab.com/ppe2023/ppe2_lcd).
+
+
+
+---
+
+
+
+
+
 ### 2023.02.04
 
 **Yingzi :** En suivant les consignes données dans TP1 et avec l'aide des membres du groupe, j'ai créé des branches séparées à partir de la branche racine pour déposer les dump textes du corpus, le script python, le journal du bord, et après que tous les membres aient terminé TP1ex1 et fusionné entre eux, j'ai ajouté le tag nommé ex1fin à la version finale de TP1ex1.
@@ -40,6 +54,9 @@ A la fin de cet exercice, j'ai ajouté le tag pour mon exercice nommé ex2r1, et
 
 **Yingzi :** Aujourd'hui, après avoir suivi le cours sur les principes de nomination des branches, j'ai retravaillé les noms des branches et organisé le contenu dans chaque branche.
 
-***
 
+
+**Xiaohua :** Depuis le dernier cours, j'ai appris les commandes et les principes de git comme `merge`, `checkout`, `branch`, etc. Aussi j'ai réussi à finir les exercices sur les 4 sites de git graphiques sur iCampus. Avec les efforts des membres de notre groupe, j'ai fini le TD1 et ai crée des branches correspondants. On est encore en train de mettre en pratique les opérations de git et on se sent de plus en plus à l'aise quant aux opérations et gestions de notre dépôt.
+
+***
 
