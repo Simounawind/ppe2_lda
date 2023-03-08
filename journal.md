@@ -14,6 +14,7 @@
 
 **Danyel :** Creation de compte de gitlab et fait des premier exercise pour connaitre les commands gitlab. Et puis j'ai ajouté SSH Key to Gitlab Account. 
 
+
 **Xiaohua :** J'ai créé le compte sur gitlab, j'ai travaillé avec le groupe pour créer le dépôt de notre projet, et on a enfin les branches `main`, `page`, ainsi qu'une branche individuelle `xiaohua`. Voici le [dépôt du projet](https://gitlab.com/ppe2023/ppe2_lcd).
 
 ---
@@ -45,3 +46,13 @@ A la fin de cet exercice, j'ai ajouté le tag pour mon exercice nommé ex2r1, et
 **Xiaohua :** Depuis le dernier cours, j'ai appris les commandes et les principes de git comme `merge`, `checkout`, `branch`, etc. Aussi j'ai réussi à finir les exercices sur les 4 sites de git graphiques sur iCampus. Avec les efforts des membres de notre groupe, j'ai fini le TD1 et ai crée des branches correspondants. On est encore en train de mettre en pratique les opérations de git et on se sent de plus en plus à l'aise quant aux opérations et gestions de notre dépôt.
 
 ---
+
+
+
+### 2023.02.12
+
+**Danyel  :** Après avoir ajoutés les fichiers Turc, j'ai ajouté mon script contenant une fonction prenant comme argument une liste de chaîne et retournant un dictionnaire associant chaque mot au nombre de document dans lequel il apparaît.
+
+
+
+
