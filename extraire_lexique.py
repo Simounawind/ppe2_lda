@@ -1,19 +1,24 @@
 import os
+import argparse
+
+
+# Exo-s2-r1
+
+parser = argparse.ArgumentParser(
+    description="Obtenir un argument par bash command, un argument qui indique le chemin des fichiers")
+parser.add_argument('chemin', type=str, nargs='+',
+                    help='le chemin relatif des fichiers')
+args = parser.parse_args()
+
 
 # Exo1-s1-r1
-
-
-def construit_liste_de_chaines():
-    dir_path = './exercices/S1/Corpus/'
+def construit_liste_de_chaines(corpus_path):
     list_contenu = []
-    for txtname in os.listdir(dir_path):
-        with open(dir_path + txtname, 'r') as file:
+    for txtname in (corpus_path):
+        with open(txtname, 'r') as file:
             data = file.read()
             list_contenu.append(data)
     return list_contenu
-
-
-construit_liste_de_chaines()
 
 
 # Exo1-s1-r2
@@ -43,8 +48,8 @@ def doc_freq(corpus):
 
 
 # pour afficher
-def lexique():
-    liste_gros = construit_liste_de_chaines()
+def lexique(chemin):
+    liste_gros = construit_liste_de_chaines(chemin)
     dict_freq = count_words(liste_gros)
     dict_occurence = doc_freq(liste_gros)
     len_liste_final = len(dict_freq)
@@ -55,4 +60,5 @@ def lexique():
         print("{0:^20}|{1:^20}|{2:^20}".format(key, value1, value2))
 
 
-lexique()
+if __name__ == '__main__':
+    lexique(args.chemin)
