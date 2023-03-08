@@ -9,7 +9,7 @@ def count_words(corpus_list):
             else:
                 dictionnaire_freq[mot] = 1
     return dictionnaire_freq
-   Exo1-s1r3 
+#Exo1-s1r3 
 def doc_freq(corpus):
     nb_doc = {}
     for doc in corpus:
