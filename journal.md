@@ -1,5 +1,7 @@
 # PPE2-Projet_LCD
 
+
+
 ## Membres
 
 - Yingzi LIU
@@ -7,6 +9,8 @@
 - Danyel KANLIBICAK
 
 - Xiaohua CUI
+
+
 
 ## Journal
 
@@ -47,12 +51,37 @@ A la fin de cet exercice, j'ai ajouté le tag pour mon exercice nommé ex2r1, et
 
 ---
 
-
-
 ### 2023.02.12
 
 **Danyel  :** Après avoir ajoutés les fichiers Turc, j'ai ajouté mon script contenant une fonction prenant comme argument une liste de chaîne et retournant un dictionnaire associant chaque mot au nombre de document dans lequel il apparaît.
 
+---
 
+### 2023.02.15
 
+**Xiaohua :** En classe, on m'a dit que je dois segmenter le contenu chinois avec jieba. Enfin j'ai suivi les conseils du professeur et j'ai remplacé le corpus dans la branche `xiaohua` par 10 fichiers texte chinois qui avaient déjà été segmentés. J'ai mis à jour la branche `xiaohua` et l'ai reétiqueter. Aussi les autres membres du groupe ont à nouveau pull et merge ces nouveaux fichiers chinois. Après avoir résolu ce problème, j'ai fait à nouveau le merge des autres deux fonctions.
+
+---
+
+### 2023.02.16
+
+**Xiaohua :** Chacun a fait sa fonction. Donc Ex2 de S1 (Extraction du lexique en python) enfin fini. Réussi à affichier le lexique sous forme de trois colonnes. `mot  | mot_freq | mot_occurence `. Les autres ont aussi réussi à le afficher avec leur script, et le mien est fusionné vers la branche `main`, commit id:[8b2c1ceb](https://gitlab.com/ppe2023/ppe2_lcd/-/commit/8b2c1ceb73fdf6d63f07426bed3e4fa789331911). Et un tag [s1ex2fin](https://gitlab.com/ppe2023/ppe2_lcd/-/tags/s1ex2fin) est crée et est envoyé vers le remote origin.
+
+---
+
+### 2023.02.17
+
+**Xiaohua :** Rename des tags selon le nouveau pdf.
+
+**Xiaohua :** Début des exercices S2, commençant par la création d'une nouvelle branche [XC-s2](https://gitlab.com/ppe2023/ppe2_lcd/-/tree/XC-s2). Avant le changement du groupe, j'avais trouvé qu'on a pas remarqué une défaute pendant la fusion des 3 fonctions (je remarquais que la longueur des deux dictionnaires de `r2` et `r3` est différente, ce qui m'empêche de continuer le TD2)
+
+---
+
+### 2023.02.18
+
+**Xiaohua :** Basés sur les indications de TP1, j'ai vérifié encore une fois le type du résultat de chaque fonction, et avec le nouveau script de `s1ex2r3`, j'ai généré deux dictionnaires de longueur similaire et ai ainsi créé le lexique complet du corpus.
+
+**Xiaohua :** ex1r1 du TD2 fini (les resultats des autres membres restent à merge), tag [XC-s3-e1](https://gitlab.com/ppe2023/ppe2_lcd/-/tags/XC-s3-e1) étiquitté.
+
+**Xiaohua :** Journal enregistré dans [XC-p-s2](https://gitlab.com/ppe2023/ppe2_lcd/-/tree/XC-p-s2), fusionné vers la branche `page`.
 
