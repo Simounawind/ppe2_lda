@@ -60,6 +60,7 @@ A la fin de cet exercice, j'ai ajouté le tag pour mon exercice nommé ex2r1, et
 ### 2023.02.15
 
 **Xiaohua :** En classe, on m'a dit que je dois segmenter le contenu chinois avec jieba. Enfin j'ai suivi les conseils du professeur et j'ai remplacé le corpus dans la branche `xiaohua` par 10 fichiers texte chinois qui avaient déjà été segmentés. J'ai mis à jour la branche `xiaohua` et l'ai reétiqueter. Aussi les autres membres du groupe ont à nouveau pull et merge ces nouveaux fichiers chinois. Après avoir résolu ce problème, j'ai fait à nouveau le merge des autres deux fonctions.
+
 **Yingzi :** Les membres de notre groupe ont eu un désaccord lors de la fusion de nos scripts respectifs, nous sommes toujours en train de les modifier, j'ai constaté que lorsque je fusionne le script r3, mes scripts disparaissent complètement (les parties qui ne sont pas en conflit sont également manquantes), je ne sais pas quelle en est la raison, ce problème doit encore être résolu.
 
 ---
