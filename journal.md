@@ -60,6 +60,7 @@ A la fin de cet exercice, j'ai ajouté le tag pour mon exercice nommé ex2r1, et
 ### 2023.02.15
 
 **Xiaohua :** En classe, on m'a dit que je dois segmenter le contenu chinois avec jieba. Enfin j'ai suivi les conseils du professeur et j'ai remplacé le corpus dans la branche `xiaohua` par 10 fichiers texte chinois qui avaient déjà été segmentés. J'ai mis à jour la branche `xiaohua` et l'ai reétiqueter. Aussi les autres membres du groupe ont à nouveau pull et merge ces nouveaux fichiers chinois. Après avoir résolu ce problème, j'ai fait à nouveau le merge des autres deux fonctions.
+**Yingzi :** Les membres de notre groupe ont eu un désaccord lors de la fusion de nos scripts respectifs, nous sommes toujours en train de les modifier, j'ai constaté que lorsque je fusionne le script r3, mes scripts disparaissent complètement (les parties qui ne sont pas en conflit sont également manquantes), je ne sais pas quelle en est la raison, ce problème doit encore être résolu.
 
 ---
 
@@ -85,3 +86,59 @@ A la fin de cet exercice, j'ai ajouté le tag pour mon exercice nommé ex2r1, et
 
 **Xiaohua :** Journal enregistré dans [XC-p-s2](https://gitlab.com/ppe2023/ppe2_lcd/-/tree/XC-p-s2), fusionné vers la branche `page`.
 
+**Yingzi :**  Nous nous sommes référés au script donné par les profs et j'ai trouvé que la partie de ma r1 était fondamentalement la même idée que celle donnée par les profs et qu'aucun changement n'était nécessaire, j'ai fini par garder le script que j'avais écrit auparavant, version tag ex2r1. Ensuite, après que le membre de mon équipe ait modifié son script, j'ai fusionné le leur, puis j'ai apporté des modifications au script du prof après que les trois scripts aient été combinés.
+
+---
+
+### 2023.02.19
+
+**Yingzi :**
+TP2 exo1-r3 terminée. Dans mon script, l'idée est de construire une liste de chaînes de caractères à partir du contenu de plusieurs fichiers, en lisant les noms des fichiers à partir de l'entrée standard. Pour cela, j'ai importé le module sys(evoqué en cours). Pour chaque nom de fichier, il ouvre le fichier et lit son contenu dans une chaîne de caractères. Ensuite, il ajoute cette chaîne à une liste appelée list_contenu.
+Finalement, la fonction construit_liste_de_chaines() renvoie la liste complète de chaînes de caractères, contenant le contenu de tous les fichiers lus. En fait, cela renvoie le même résultat que exo2-r1 dans TP1.
+A la fin de cet exercice, je lui ai ajouté la tag YL-s3-e1.
+
+---
+
+### 2023.02.20
+
+**Yingzi :** 
+
+TP2 exo1-r2 terminée. Pour réaliser cette partie, j'ai d'abord écrit un script bash pour enlever les retours à la ligne de tous les fichiers dans le répertoire “Corpus"(“Corpus” est copié à partir du corpus précédent créé par TP1).
+
+Dans le script bash：
+`cd Corpus`: change le répertoire de travail actuel en "Corpus".
+`for file in *`: itère sur tous les fichiers dans le répertoire courant.
+`tr -d '\n' < "$file" > "$file.tmp" `: supprime tous les retours à la ligne de chaque fichier et les redirige vers un fichier temporaire $file.tmp.
+`echo >> "$file.tmp"`: ajoute une nouvelle ligne à la fin du fichier temporaire.
+`mv "$file.tmp" "$file"`: renomme le fichier temporaire en écrasant le fichier d'origine.
+
+Ainsi, tous les fichiers dans le répertoire “Corpus" auront été modifiés pour avoir une seule ligne sans aucun retour à la ligne, mais avec une nouvelle ligne à la fin.
+
+J'ai ensuite fait une modification du script python de TP1 similaire à celui de TP2 r3, l'idée est de lire les lignes de chaque fichier du "Corpus" depuis l'entrée standard (`stdin`) et de les stocker dans une liste de chaînes de caractères.
+
+---
+
+### 2023.02.21
+
+**Yingzi :** 
+
+Après avoir fusionné r1 dans ma branche YL-s2, j'ai rajouté du code pour comibner les trois options r1, r2 et r3. En gros, le programme final que j'ai écrit peut être appelé avec des arguments de ligne de commande spécifiant les chemins des fichiers, ou il peut être utilisé en mode interactif, où les noms de fichiers sont fournis sur l'entrée standard.
+
+La première partie du code définie un analyseur d'arguments de ligne de commande utilisant le module argparse pour récupérer les chemins des fichiers( Cette partie était réalisée par Xiaohua).
+
+J'ai combiné le cas r2 et r3 dans la deuxième partie du code. Cette partie définit une fonction pour construire une liste de chaînes de caractères à partir des fichiers texte. Cette fonction prend en compte deux cas différents :
+
+Cas r1 : si l'argument chemin est spécifié à partir de la ligne de commande, les fichiers texte sont lus à partir des chemins spécifiés.
+Cas r2 et r3 : si aucun argument chemin n'est spécifié, les noms de fichiers sont lus à partir de l'entrée standard. Dans ce cas, la fonction vérifie si chaque nom de fichier se termine par l'extension ".txt". Si oui, elle lit le contenu du fichier correspondant. Sinon, elle considère que le nom de fichier est lui-même une chaîne de caractères à inclure dans la liste.
+
+La partie suivante est ce que nous avons fait dans TP1.
+
+Enfin, la dernière fonction construit le lexique final en imprimant les résultats dans un format de tableau lisible. Elle utilise les dictionnaires construits précédemment pour calculer la fréquence et la fréquence de document pour chaque mot, et les imprime dans un format tabulaire.
+
+**Le problème que j'ai rencontré**: dans l'exo r1 le argument "chemin" est obligatoire et j'essaie de le rendre optionnel, mais finalement quand je lance le programme dans le terminal je dois ajouter un script bash pour traiter le fichier：
+`python extraire_lexique.py --chemin Corpus/*.txt`
+ce n'est pas la même command suggerée dans les consignes pour TP2 r1:
+`python extraire_lexique.py --chemin Corpus/*.txt`
+Je ne sais pas comment résoudre ce problème.
+
+---
