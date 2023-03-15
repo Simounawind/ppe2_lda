@@ -1,22 +1,16 @@
-import os
-
-# Exo1-s1-r1
-
-
-def construit_liste_de_chaines():
-    dir_path = './exercices/S1/Corpus/'
+###################################### Partie r2
+import sys
+def construit_liste_de_chaines_r2():
     list_contenu = []
-    for txtname in os.listdir(dir_path):
-        with open(dir_path + txtname, 'r') as file:
-            data = file.read()
-            list_contenu.append(data)
+    for line in sys.stdin:
+        list_contenu.append(line)
     return list_contenu
 
+# construit_liste_de_chaines()
+print(construit_liste_de_chaines_r2())
 
-construit_liste_de_chaines()
+######################################
 
-
-# Exo1-s1-r2
 def count_words(corpus_list):
     dictionnaire_freq = {}
     for sing_contenu in corpus_list:
@@ -29,7 +23,6 @@ def count_words(corpus_list):
     return dictionnaire_freq
 
 
-# Exo1-s1r3
 def doc_freq(corpus):
     nb_doc = {}
     for doc in corpus:
@@ -42,7 +35,6 @@ def doc_freq(corpus):
     return nb_doc
 
 
-# pour afficher
 def lexique():
     liste_gros = construit_liste_de_chaines()
     dict_freq = count_words(liste_gros)
@@ -55,4 +47,5 @@ def lexique():
         print("{0:^20}|{1:^20}|{2:^20}".format(key, value1, value2))
 
 
-lexique()
+# lexique()
+
