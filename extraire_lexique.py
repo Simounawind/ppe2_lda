@@ -1,44 +1,14 @@
-import sys
 import os
-
+import sys
+import glob
 import argparse
 
-
-# Exo-s2-r1
-
+# r1
 parser = argparse.ArgumentParser(
     description="Obtenir un argument par bash command, un argument qui indique le chemin des fichiers")
-parser.add_argument('chemin', type=str, nargs='+',
-                    help='le chemin relatif des fichiers')
+parser.add_argument('chemin', type=str, nargs='*',
+                    help='le chemin relatif des fichiers', default=[])
 args = parser.parse_args()
-
-
-# r3 , obtenir des données à partir de "ls"
-
-
-def r3():
-    list_contenu = []
-    for txtname in sys.stdin:
-        txtname = txtname.replace('\n', '')
-        with open(txtname, 'r') as file:
-            data = file.read()
-            list_contenu.append(data)
-    return list_contenu
-
-
-# r3 , obtenir des données à partir de "ls"
-
-
-def r3():
-    list_contenu = []
-    for txtname in sys.stdin:
-        txtname = txtname.replace('\n', '')
-        with open(txtname, 'r') as file:
-            data = file.read()
-            list_contenu.append(data)
-    return list_contenu
-
-# Exo1-s1-r1
 
 
 def construit_liste_de_chaines(corpus_path):
@@ -50,10 +20,43 @@ def construit_liste_de_chaines(corpus_path):
     return list_contenu
 
 
-# construit_liste_de_chaines()
-print(construit_liste_de_chaines_r2())
+# r2
+def r2():
+    for txtname in sys.stdin:
+        fo = open("combined.txt", "a")
+        fo.write(txtname)
+        fo.close
+    files = glob.glob("exercices/S1/Corpus/*.txt")
+    num_lines_list = []
 
-# Exo1-s1-r2
+    for file in files:
+        with open(file, 'r') as f:
+            lines = f.readlines()
+            # Open each file and count the number of lines in each file
+            num_lines_list.append(len(lines))
+    with open('combined.txt', 'r') as f:
+        lines = f.readlines()
+    # Loop through the lines of the combined file and split them into separate files
+    list_contenu = []
+    line_number = 0
+    for i, n in enumerate(num_lines_list):
+        content = ''
+        for j in range(line_number, line_number+n):
+            content += lines[j]
+        list_contenu.append(content)
+        line_number += n
+    return list_contenu
+
+
+# r3
+def r3():
+    list_contenu = []
+    for txtname in sys.stdin:
+        txtname = txtname.replace('\n', '')
+        with open(txtname, 'r') as file:
+            data = file.read()
+            list_contenu.append(data)
+    return list_contenu
 
 
 def count_words(corpus_list):
@@ -80,39 +83,43 @@ def doc_freq(corpus):
     return nb_doc
 
 
-def lexique(chemin):
-    liste_gros = construit_liste_de_chaines(chemin)
+jugement = sys.stdin
 
 
-def lexique():
-    liste_gros = r3()
+def lexique(*chemin):
+    liste_gros = []
+    argnum = sys.argv
+    if len(argnum) == 1:  # 说明是没有argperser的
+        print("no argsperser")
+        a = 0
+        for i in jugement:
+            a += 1
+        print(a)
+        if a > 30:
+            print("a =", a)
+            print("we choose r2 to input the files, because of cat")
+            liste_gros = r2()
+        else:
+            print("a =", a)
+            print("we choose r3 to input the files, because of ls")
+            liste_gros = r2()
+
+    elif len(argnum) > 1:
+        print("files enter with an argument \'chemin\'")
+        # r1
+        liste_gros = construit_liste_de_chaines(*chemin)
+        print(len(liste_gros))
+
     dict_freq = count_words(liste_gros)
     dict_occurence = doc_freq(liste_gros)
     len_liste_final = len(dict_freq)
+    print("\n\n\n\n=====================Tableau du lexique============================\n\n")
     for i in range(len_liste_final):
         key = list(dict_freq)[i]
         value1 = list(dict_freq.values())[i]
         value2 = list(dict_occurence.values())[i]
-        print("{0:^20}|{1:^20}|{2:^20}".format(key, value1, value2))
+        print("{0:^10}|{1:^10}|{2:^10}".format(key, value1, value2))
 
 
 if __name__ == '__main__':
     lexique(args.chemin)
-    lexique()  # pour afficher
-
-
-def lexique():
-    liste_gros = r3()
-    dict_freq = count_words(liste_gros)
-    dict_occurence = doc_freq(liste_gros)
-    len_liste_final = len(dict_freq)
-    for i in range(len_liste_final):
-        key = list(dict_freq)[i]
-        value1 = list(dict_freq.values())[i]
-        value2 = list(dict_occurence.values())[i]
-        print("{0:^20}|{1:^20}|{2:^20}".format(key, value1, value2))
-
-
-if __name__ == '__main__':
-    if __name__ == '__main__':
-        # lexique(args.chemin)
