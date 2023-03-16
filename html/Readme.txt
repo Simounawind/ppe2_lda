@@ -1,0 +1,1 @@
+Ce dossier est réservé à la création du site.
