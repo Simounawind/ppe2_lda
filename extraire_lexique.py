@@ -50,7 +50,12 @@ def construit_liste_de_chaines(corpus_path):
     return list_contenu
 
 
+# construit_liste_de_chaines()
+print(construit_liste_de_chaines_r2())
+
 # Exo1-s1-r2
+
+
 def count_words(corpus_list):
     dictionnaire_freq = {}
     for sing_contenu in corpus_list:
@@ -63,7 +68,6 @@ def count_words(corpus_list):
     return dictionnaire_freq
 
 
-# Exo1-s1r3
 def doc_freq(corpus):
     nb_doc = {}
     for doc in corpus:
@@ -76,7 +80,6 @@ def doc_freq(corpus):
     return nb_doc
 
 
-# pour afficher
 def lexique(chemin):
     liste_gros = construit_liste_de_chaines(chemin)
 
@@ -112,4 +115,4 @@ def lexique():
 
 if __name__ == '__main__':
     if __name__ == '__main__':
-    lexique(args.chemin)
+        # lexique(args.chemin)
