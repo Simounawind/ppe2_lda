@@ -1,7 +1,6 @@
-import re
 import pathlib
 import argparse
-import os
+from title_descr_etree import title_descr
 
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
@@ -9,90 +8,88 @@ import os
 # Etape 1 : obtenir les fichiers d'après l'input
 parser = argparse.ArgumentParser(
     description="le script sert à extraire et afficher le titre et la description de chaque article dans un fichier XML")
-parser.add_argument('dossier_XML', type=str,
-                    help='le chemin du dossier qui contient des fichiers xml')
-parser.add_argument('categorie', type=str,
-                    help='la categorie des articles')
+parser.add_argument('root', type=str,
+                    help='le dossier root qui contient des dossiers/fichiers xml')
+
+parser.add_argument('--date', type=str,
+                    help='le dossier root qui contient des dossiers/fichiers xml')
+
+parser.add_argument('--cat', type=str,
+                    help='le dossier root qui contient des dossiers/fichiers xml')
 args = parser.parse_args()
 
 
-# Etape 2 : 对于每个文件：找出所有article，以便后续进行过滤，列表中的每个元素就是一个xml里的内容
+# Etape 2 : filtrer les fichiers selon les exigences, répondant aux critères suivants  :
+# 1. les fichiers sont au format XML
+# 2. les fichiers XML comme "fil1646762506-v1.xml" doivent être exclus.
+# 3. les fichiers sont de bonne date et de bonne catégorie.
 
-def lire_XML():
-    dir_path = args.dossier_XML
-    fichiers_liste = []
-    for txtname in os.listdir(dir_path):
-        fic = pathlib.Path(dir_path) / txtname
-        xml = fic.read_text()  # 从而得出每一个txt的内容
-        fichiers_liste.append(xml)
-    return fichiers_liste
-
-
-# Selectionner les articles convenables (selon la date et la categrie)
-def filtrer(xml_liste):
-    liste_filtre = []
-    art_pattern = re.compile('<item>.*?</item>')
+# La fonction dessous renvoie une liste qui contient le chemin des fichiers xml qu'on veut trouver.
+def fichiers_pf():
+    # créer une dictionnaire pour lier les strings aux codes.
     cat_dict = {
-        'une': 3208,
-        'international': 3210,
-        'europe': 3214,
-        'societe': 3224,
-        'idees': 3232,
-        'economie': 3234,
-        'actualite-medias': 3236,
-        'sport': 3242,
-        'planete': 3244,
-        'culture': 3246,
-        'livres': 3260,
-        'cinema': 3476,
-        'voyage': 3546,
-        'technologies': 651865,
-        'politique': 823353,
+        'une': '0,2-3208,1-0,0',
+        'international': '0,2-3210,1-0,0',
+        'europe': '0,2-3214,1-0,0',
+        'societe': '0,2-3224,1-0,0',
+        'idees': '0,2-3232,1-0,0',
+        'economie': '0,2-3234,1-0,0',
+        'actualite-medias': '0,2-3236,1-0,0',
+        'sport': '0,2-3242,1-0,0',
+        'planete': '0,2-3244,1-0,0',
+        'culture': '0,2-3246,1-0,0',
+        'livres': '0,2-3260,1-0,0',
+        'cinema': '0,2-3476,1-0,0',
+        'voyage': '0,2-3546,1-0,0',
+        'technologies': '0,2-651865,1-0,0',
+        'politique': '0,57-0,64-823353,0',
+        'sciences': 'env_sciences',
     }
-    cat_nom = args.categorie
-    cat_cible = cat_dict[cat_nom]
-    for xml in xml_liste:
-        # 1. trouver chaque article comme un élément dans une liste
-        art_liste = art_pattern.findall(xml)
-        # for article in art_liste:
-        # dateline_pattern = re.compile(r"<pubDate>(.*?)</pubDate>")
-        # date_line = catline_pattern.search(article).group(1)
-        # date_pattern = re.compile(r"(\d{4})\.html")
-        # cat_num = int(cat_pattern.search(article).group(1))
-        # if cat_num == cat_cible:
-        #     liste_filtre.append(article)
-
-        # 2. dans chaque article, trouver les infos exactes sur la ligne de categorie et ses numéros (comme "3232" pour idees)
-        for article in art_liste:
-            catline_pattern = re.compile(r"<link>(.*?)</link>")
-            cat_line = catline_pattern.search(article).group(1)
-            cat_pattern = re.compile(r"(\d{4})\.html")
-            cat_num = int(cat_pattern.search(article).group(1))
-            if cat_num == cat_cible:
-                liste_filtre.append(article)
-    return liste_filtre, cat_nom
-
-
-# fonctions pour extraire titre et description des articles pertinenets
-def title_descr(filtre_liste):
-    with open('sortie.txt', 'a') as f:
-        f.write("Catégorie : " + cat_num + "\n")
-        f.write("########################################" + "\n")
-    for article in filtre_liste:
-        tit_pattern = re.compile(r"<title><!\[CDATA\[(.*?)\]\]></title>")
-        titre = tit_pattern.search(article).group(1)
-        print("---Titre : ", titre)
-        desc_pattern = re.compile(
-            r"<description><!\[CDATA\[(.*?)\]\]></description>")
-        description = desc_pattern.search(article).group(1)
-        print("---Description : ", description)
-        with open('sortie.txt', 'a') as f:
-            f.write("Titre:" + titre + "\n")
-            f.write("Description:" + description + "\n")
-            f.write("-------------------" + "\n")
+    dossier_racine = pathlib.Path(args.root)
+    selected_paths = []
+    for folder_path in dossier_racine.glob('**/*'):
+        if folder_path.is_file() and folder_path.suffix == '.xml' and not folder_path.stem.startswith('fil'):
+            with open('fichiers.txt', 'a') as f:
+                f.write(f'{folder_path}\n')
+            path_str = str(str(folder_path))
+            if args.date and args.cat:
+                cat_nom = args.cat
+                cat_cible = cat_dict[cat_nom]
+                date_cible = args.date
+                if date_cible in path_str:
+                    if cat_cible in path_str:
+                        selected_paths.append(str(folder_path))
+                        with open('fichiers_selected.txt', 'a') as fs:
+                            fs.write(f'{folder_path}\n')
+            elif args.date:
+                date_cible = args.date
+                if date_cible in path_str:
+                    selected_paths.append(str(folder_path))
+            elif args.cat:
+                cat_nom = args.cat
+                cat_cible = cat_dict[cat_nom]
+                if cat_cible in path_str:
+                    selected_paths.append(str(folder_path))
+            else:
+                print('Deux arguments exigés. Aucun argument n\'est défini')
+                print(
+                    'Reessayer avec au moins un argument sous forme comme \"python xxxx.py --date Mon/21 --cat culture\"')
+                break
+    return selected_paths
 
 
 if __name__ == '__main__':
-    xml = lire_XML()
-    filtre_liste, cat_num = filtrer(xml)
-    title_descr(filtre_liste)
+    xml_liste = fichiers_pf()
+    for xml in xml_liste:
+        title_descr(xml)
+    # La fonction title_descr, fini dans l'exo 1, est appelé ici.
+
+
+# exo 2 fini
+
+
+# ecrire les contenus obtenus dans un nouveau fichier xml:
+        # with open('xml_filtre.xml', 'a') as d:
+        # d.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
+        # d.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel>')
+        # d.write()
