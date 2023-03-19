@@ -11,12 +11,18 @@ def title_descr(xml):
     tree = ET.parse(xml)
     root = tree.getroot()
     print(root.findall('item'))
+    title_list = []
+    descr_list = []
     for article in root.findall(".//item"):
         title = article.find('title').text
         description = article.find('description').text
         print("---Titre:", title)
         print("---Description:", description)
         print("------------------------------------------------")
+        title_list.append(title)
+        descr_list.append(description)
+    return title_list, descr_list
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(

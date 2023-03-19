@@ -79,17 +79,27 @@ def fichiers_pf():
 
 
 if __name__ == '__main__':
+    # ecrire les contenus obtenus dans un nouveau fichier xml:
+    with open('xml_filtre.xml', 'a') as d:
+        d.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
+        d.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
+        d.write(f'<corpus>\n')
+
+    d.close
     xml_liste = fichiers_pf()
     for xml in xml_liste:
+        # La fonction title_descr, fini dans l'exo 1, est appelé ici.
         title_descr(xml)
-    # La fonction title_descr, fini dans l'exo 1, est appelé ici.
+        title_list, descr_list = title_descr(xml)
+        for i in range(len(title_list)):
+            t = title_list[i]
+            d = descr_list[i]
+            with open('xml_filtre.xml', 'a') as d2:
+                d2.write(f'<item>')
+                d2.write(f'<title>'+t+'</title>')
+                d2.write(f'<description>' + d + '</description>')
+                d2.write(f'</item>\n')
+    with open('xml_filtre.xml', 'a') as d:
+        d.write(f'</corpus>\n</rss>')
 
-
-# exo 2 fini
-
-
-# ecrire les contenus obtenus dans un nouveau fichier xml:
-        # with open('xml_filtre.xml', 'a') as d:
-        # d.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
-        # d.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel>')
-        # d.write()
+    # exo 2 fini
