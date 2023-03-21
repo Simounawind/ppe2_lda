@@ -4,6 +4,7 @@ import argparse
 # Définition des motifs réguliers pour extraire le titre et la description
 title_pattern = re.compile(r"<title><!\[CDATA\[(.*?)\]\]></title>")
 description_pattern = re.compile(r"<description><!\[CDATA\[(.*?)\]\]></description>")
+
 # title_pattern_2 = re.compile(r"<title>(.*?)</title>")
 def extract_title_description(xml_file):
     # Lecture du contenu du fichier XML
