@@ -18,7 +18,6 @@
     </a>
 </p>
 
-![image-20230328235441579](../../../../Library/Mobile Documents/iCloud~md~obsidian/Documents/学习笔记/总附件/image-20230328235441579.png)
 
 ## Membres :
 
