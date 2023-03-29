@@ -12,10 +12,10 @@ parser.add_argument('root', type=str,
                     help='le dossier root qui contient des dossiers/fichiers xml')
 
 parser.add_argument('--date', type=str,
-                    help='le dossier root qui contient des dossiers/fichiers xml')
+                    help='la date limitant le choix des fichiers XML')
 
 parser.add_argument('--cat', type=str,
-                    help='le dossier root qui contient des dossiers/fichiers xml')
+                    help='la ou les catégories des fichiers XML désirés')
 args = parser.parse_args()
 
 
@@ -54,13 +54,15 @@ def fichiers_pf():
             path_str = str(str(folder_path))
             if args.date and args.cat:
                 cat_nom = args.cat
-                cat_cible = cat_dict[cat_nom]
-                date_cible = args.date
-                if date_cible in path_str:
+                cat_liste = cat_nom.split("+")
+                for single_cat in cat_liste:
+                    cat_cible = cat_dict[single_cat]
                     if cat_cible in path_str:
-                        selected_paths.append(str(folder_path))
-                        with open('fichiers_selected.txt', 'a') as fs:
-                            fs.write(f'{folder_path}\n')
+                        date_cible = args.date
+                        if date_cible in path_str:
+                            selected_paths.append(str(folder_path))
+                            with open('fichiers_selected.txt', 'a') as fs:
+                                fs.write(f'{folder_path}\n')
             elif args.date:
                 date_cible = args.date
                 if date_cible in path_str:
