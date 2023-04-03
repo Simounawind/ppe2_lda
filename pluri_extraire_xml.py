@@ -7,7 +7,7 @@ import sys
 from typing import Optional, List, Dict
 from datetime import date
 from pathlib import Path
-
+import json  
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
 MONTHS = ["Jan",
@@ -113,7 +113,7 @@ if __name__ == "__main__":
         sys.exit()
     # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
 
-    if args.o:     # ecrire les contenus obtenus dans un nouveau fichier xml
+    if 'xml' in args.o:     # ecrire les contenus obtenus dans un nouveau fichier xml
         print('parsing already done, outputed in the file you required')
         with open(args.o, 'a') as a:
             a.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
@@ -135,6 +135,18 @@ if __name__ == "__main__":
                         d.write(f'</item>\n')
         with open(args.o, 'a') as c:
             c.write(f'</corpus>\n</rss>')
+    elif 'json' in args.o:
+        output_json = []
+        for f in parcours_path(Path(args.corpus_dir),
+                               start_date=date.fromisoformat(args.s),
+                               end_date=date.fromisoformat(args.e),
+                               categories=args.categories):
+            for title, desc in fonc(f):
+                if title and desc is not None:
+                    print(f"desc: {desc}")
+                    output_json.append({'title': title, 'description': desc})
+        with open(args.o, 'w') as d:
+            d.write(json.dumps(output_json))
     else:
         for f in parcours_path(Path(args.corpus_dir),
                                start_date=date.fromisoformat(args.s),
