@@ -1,107 +1,150 @@
-import pathlib
+from title_descr_re import re_parser
+from title_descr_etree import etree_parser
+import re
+from xml.etree import ElementTree as et
 import argparse
-from title_descr_etree import title_descr
+import sys
+from typing import Optional, List, Dict
+from datetime import date
+from pathlib import Path
 
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
+MONTHS = ["Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"]
 
-# Etape 1 : obtenir les fichiers d'après l'input
-parser = argparse.ArgumentParser(
-    description="le script sert à extraire et afficher le titre et la description de chaque article dans un fichier XML")
-parser.add_argument('root', type=str,
-                    help='le dossier root qui contient des dossiers/fichiers xml')
+DAYS = [f"{x:02}" for x in range(1, 32)]
 
-parser.add_argument('--date', type=str,
-                    help='la date limitant le choix des fichiers XML')
 
-parser.add_argument('--cat', type=str,
-                    help='la ou les catégories des fichiers XML désirés')
-args = parser.parse_args()
+cat_dict = {
+    'une': '0,2-3208,1-0,0',
+    'international': '0,2-3210,1-0,0',
+    'europe': '0,2-3214,1-0,0',
+    'societe': '0,2-3224,1-0,0',
+    'idees': '0,2-3232,1-0,0',
+    'economie': '0,2-3234,1-0,0',
+    'actualite-medias': '0,2-3236,1-0,0',
+    'sport': '0,2-3242,1-0,0',
+    'planete': '0,2-3244,1-0,0',
+    'culture': '0,2-3246,1-0,0',
+    'livres': '0,2-3260,1-0,0',
+    'cinema': '0,2-3476,1-0,0',
+    'voyage': '0,2-3546,1-0,0',
+    'technologies': '0,2-651865,1-0,0',
+    'politique': '0,57-0,64-823353,0',
+    'sciences': 'env_sciences',
+}
+
+
+def convert_month(mon: str) -> int:
+    m = MONTHS.index(mon) + 1
+    return m
 
 
 # Etape 2 : filtrer les fichiers selon les exigences, répondant aux critères suivants  :
-# 1. les fichiers sont au format XML
-# 2. les fichiers XML comme "fil1646762506-v1.xml" doivent être exclus.
-# 3. les fichiers sont de bonne date et de bonne catégorie.
+# 1. les fichiers sont au format XML, placés dans un dossier Corpus/Mmm/JJ/19-00-00/
+# 2. les fichiers sont de bonne période et de bonne(s) catégorie(s).
+# 3. les fichiers XML comme "fil1646762506-v1.xml" doivent être exclus. Les fichiers attendus doivent avoir leur code de categorie dans leur nom
 
-# La fonction dessous renvoie une liste qui contient le chemin des fichiers xml qu'on veut trouver.
-def fichiers_pf():
-    # créer une dictionnaire pour lier les strings aux codes.
-    cat_dict = {
-        'une': '0,2-3208,1-0,0',
-        'international': '0,2-3210,1-0,0',
-        'europe': '0,2-3214,1-0,0',
-        'societe': '0,2-3224,1-0,0',
-        'idees': '0,2-3232,1-0,0',
-        'economie': '0,2-3234,1-0,0',
-        'actualite-medias': '0,2-3236,1-0,0',
-        'sport': '0,2-3242,1-0,0',
-        'planete': '0,2-3244,1-0,0',
-        'culture': '0,2-3246,1-0,0',
-        'livres': '0,2-3260,1-0,0',
-        'cinema': '0,2-3476,1-0,0',
-        'voyage': '0,2-3546,1-0,0',
-        'technologies': '0,2-651865,1-0,0',
-        'politique': '0,57-0,64-823353,0',
-        'sciences': 'env_sciences',
-    }
-    dossier_racine = pathlib.Path(args.root)
-    selected_paths = []
-    for folder_path in dossier_racine.glob('**/*'):
-        if folder_path.is_file() and folder_path.suffix == '.xml' and not folder_path.stem.startswith('fil'):
-            with open('fichiers.txt', 'a') as f:
-                f.write(f'{folder_path}\n')
-            path_str = str(str(folder_path))
-            if args.date and args.cat:
-                cat_nom = args.cat
-                cat_liste = cat_nom.split("+")
-                for single_cat in cat_liste:
-                    cat_cible = cat_dict[single_cat]
-                    if cat_cible in path_str:
-                        date_cible = args.date
-                        if date_cible in path_str:
-                            selected_paths.append(str(folder_path))
-                            with open('fichiers_selected.txt', 'a') as fs:
-                                fs.write(f'{folder_path}\n')
-            elif args.date:
-                date_cible = args.date
-                if date_cible in path_str:
-                    selected_paths.append(str(folder_path))
-            elif args.cat:
-                cat_nom = args.cat
-                cat_cible = cat_dict[cat_nom]
-                if cat_cible in path_str:
-                    selected_paths.append(str(folder_path))
-            else:
-                print('Deux arguments exigés. Aucun argument n\'est défini')
-                print(
-                    'Reessayer avec au moins un argument sous forme comme \"python xxxx.py --date Mon/21 --cat culture\"')
-                break
-    return selected_paths
+# La fonction 'parcours_path' prend en entrée un répertoire corpus_dir et plusieurs arguments optionnels
+# Elle itère sur chaque fichier XML dans le répertoire et renvoie un générateur qui produit un par un les fichiers XML qui répondent aux critères spécifiés.
+def parcours_path(corpus_dir: Path, categories: Optional[List[str]] = None, start_date: Optional[date] = None, end_date: Optional[date] = None):
+    if categories is not None and len(categories) > 0:
+        # 对于所有在categories列表里的c，我们依次在cat-code里找出其对应的答案
+        categories = [cat_dict[c] for c in categories]
+    else:
+        categories = cat_dict.values()  # on prend tout
+
+    for month_dir in corpus_dir.iterdir():
+        if month_dir.name not in MONTHS:
+            # on ignore les dossiers qui ne sont pas des mois
+            continue  # 跳出这次循环，进行下一个month_dir的判断
+        m_num = convert_month(month_dir.name)  # 对于Jan,我们将其对应到数字形式 m_num = 1
+        for day_dir in month_dir.iterdir():
+            if day_dir.name not in DAYS:
+                # on ignore les dossiers qui ne sont pas des jours    2022-07-21  2022-09-13
+                continue
+            # selon le format "2022-01-25",on 生成对应的date对象
+            d = date.fromisoformat(f"2022-{m_num:02}-{day_dir.name}")
+            if (start_date is None or start_date <= d) and (end_date is None or end_date >= d):  # 保证该日期符合在开始和结束日期之间。
+                for time_dir in day_dir.iterdir():
+                    if re.match(r"\d\d-\d\d-\d\d", time_dir.name):  # 对应19-00-00
+                        for fic in time_dir.iterdir():
+                            # 进一步过滤xml文件的名称
+                            if fic.name.endswith(".xml") and any([c in fic.name for c in categories]):
+                                # un générateur qui produit un par un les fichiers XML qui répondent aux critères spécifiés.
+                                yield(fic)
 
 
-if __name__ == '__main__':
-    # ecrire les contenus obtenus dans un nouveau fichier xml:
-    with open('xml_filtre.xml', 'a') as d:
-        d.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
-        d.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
-        d.write(f'<corpus>\n')
+if __name__ == "__main__":
+    # Etape 1 : obtenir les fichiers d'après l'input
+    parser = argparse.ArgumentParser(
+        description="le script sert à extraire et afficher le titre et la description de chaque article dans un fichier XML")
+    parser.add_argument(
+        "-m", help="méthode de parsing (etree ou re)", default="etree")
+    parser.add_argument(
+        "-s", help="start date (iso format)", default="2022-06-15")
+    parser.add_argument("-e", help="end date (iso format)",
+                        default="2022-09-01")
+    parser.add_argument("-o", help="output file (stdout if not specified")
+    parser.add_argument(
+        "corpus_dir", help="root dir of the corpus data,qui contient des dossiers/fichiers xml")
+    parser.add_argument("categories", nargs="*",
+                        help="la ou les catégories des fichiers XML désirés")
+    args = parser.parse_args()
+    if args.m == 'etree':
+        fonc = etree_parser
+        print("vous avez choisi etree pour parser")
+    elif args.m == 're':
+        fonc = re_parser
+        print("vous avez choisi re pour parser")
+    else:
+        print("méthode non disponible", file=sys.stderr)
+        sys.exit()
+    # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
 
-    d.close
-    xml_liste = fichiers_pf()
-    for xml in xml_liste:
-        # La fonction title_descr, fini dans l'exo 1, est appelé ici.
-        title_descr(xml)
-        title_list, descr_list = title_descr(xml)
-        for i in range(len(title_list)):
-            t = title_list[i]
-            d = descr_list[i]
-            with open('xml_filtre.xml', 'a') as d2:
-                d2.write(f'<item>')
-                d2.write(f'<title>'+t+'</title>')
-                d2.write(f'<description>' + d + '</description>')
-                d2.write(f'</item>\n')
-    with open('xml_filtre.xml', 'a') as d:
-        d.write(f'</corpus>\n</rss>')
+    if args.o:     # ecrire les contenus obtenus dans un nouveau fichier xml
+        print('parsing already done, outputed in the file you required')
+        with open(args.o, 'a') as a:
+            a.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
+            a.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
+            a.write(f'<corpus>\n')
+        for f in parcours_path(Path(args.corpus_dir),
+                               start_date=date.fromisoformat(args.s),
+                               end_date=date.fromisoformat(args.e),
+                               categories=args.categories):
+            # print("#######", f, "##########")  # 打印返回值
+            # fonc, soit etree, soit re, renvoie le titre et la description du fichier xml traité
+            for title, desc in fonc(f):
+                if title and desc is not None:
+                    print(f"desc: {desc}")
+                    with open(args.o, 'a') as d:
+                        d.write(f'<item>')
+                        d.write(f'<title>'+title+'</title>')
+                        d.write(f'<description>' + desc + '</description>')
+                        d.write(f'</item>\n')
+        with open(args.o, 'a') as c:
+            c.write(f'</corpus>\n</rss>')
+    else:
+        for f in parcours_path(Path(args.corpus_dir),
+                               start_date=date.fromisoformat(args.s),
+                               end_date=date.fromisoformat(args.e),
+                               categories=args.categories):
+            for title, desc in fonc(f):
+                if title and desc is not None:
+                    print(">>> Titre:", title)
+                    print(">>> Description:", desc)
+                    print(
+                        '------------------------------------------------------------------------------------------------------------------------------')
 
     # exo 2 fini
