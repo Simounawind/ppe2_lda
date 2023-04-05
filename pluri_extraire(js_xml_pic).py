@@ -114,7 +114,7 @@ if __name__ == "__main__":
         print("méthode non disponible", file=sys.stderr)
         sys.exit()
     # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
-
+    # creation du corpus
     if args.o.endswith(".xml"):
         print('parsing already done, outputed in the file xml you required')
         with open(args.o, 'a') as a:

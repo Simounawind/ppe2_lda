@@ -1,0 +1,2 @@
+json在bash里有一个快速预览指令
+sjdias | cat json在bash里有一个快速预览指令
