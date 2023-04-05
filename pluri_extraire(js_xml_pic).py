@@ -7,6 +7,8 @@ import sys
 from typing import Optional, List, Dict
 from datetime import date
 from pathlib import Path
+import json
+import pickle
 
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
@@ -113,8 +115,8 @@ if __name__ == "__main__":
         sys.exit()
     # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
 
-    if args.o:     # ecrire les contenus obtenus dans un nouveau fichier xml
-        print('parsing already done, outputed in the file you required')
+    if args.o.endswith(".xml"):
+        print('parsing already done, outputed in the file xml you required')
         with open(args.o, 'a') as a:
             a.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
             a.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
@@ -135,6 +137,38 @@ if __name__ == "__main__":
                         d.write(f'</item>\n')
         with open(args.o, 'a') as c:
             c.write(f'</corpus>\n</rss>')
+    elif args.o.endswith(".js"):
+        print('parsing already done, outputed in the file json you required')
+        output_json = []
+        for f in parcours_path(Path(args.corpus_dir),
+                               start_date=date.fromisoformat(args.s),
+                               end_date=date.fromisoformat(args.e),
+                               categories=args.categories):
+            for title, desc in fonc(f):
+                if title and desc is not None:
+                    output_json.append({'title': title, 'description': desc})
+        with open(args.o, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(output_json, ensure_ascii=False,
+                               indent=4))
+
+    elif args.o.endswith(".pickle"):
+        print('parsing already done, outputed in the file pickle you required')
+        pickle_contenu = []
+        for f in parcours_path(Path(args.corpus_dir),
+                               start_date=date.fromisoformat(args.s),
+                               end_date=date.fromisoformat(args.e),
+                               categories=args.categories):
+            # print("#######", f, "##########")  # 打印返回值
+            # fonc, soit etree, soit re, renvoie le titre et la description du fichier xml traité
+            for title, desc in fonc(f):
+                if title and desc is not None:
+                    pickle_contenu.append(
+                        {'title': title, 'description': desc})
+        with open(args.o, 'wb') as f:
+            pickle.dump(pickle_contenu, f)
+        with open(args.o, 'rb') as r:
+            returned_data = pickle.load(r)
+
     else:
         for f in parcours_path(Path(args.corpus_dir),
                                start_date=date.fromisoformat(args.s),
