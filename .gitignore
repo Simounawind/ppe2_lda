@@ -3,3 +3,4 @@
 2022
 cache
 cache/*
+__pycache__/
