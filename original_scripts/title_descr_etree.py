@@ -30,4 +30,4 @@ if __name__ == '__main__':
     parser.add_argument('chemin_xml', type=str,
                         help='le chemin du fichier xml')
     args = parser.parse_args()
-    title_descr(args.chemin_xml)
+    etree_parser(args.chemin_xml)

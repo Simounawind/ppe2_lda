@@ -25,7 +25,7 @@ def re_parser(xml):
         print("---Description : ", description)
         title_list.append(titre)
         descr_list.append(description)
-    return title_list, descr_list
+    yield title_list, descr_list
 
 
 if __name__ == '__main__':
@@ -36,4 +36,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     fic = pathlib.Path(args.chemin_xml)
     xml = fic.read_text()
-    title_descr(xml)
+    re_parser(xml)
