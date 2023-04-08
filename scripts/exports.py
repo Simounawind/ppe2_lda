@@ -47,10 +47,9 @@ def write_xml(corpus: Corpus, destination: str):
         art_xml = article_to_xml(article)
         root.append(art_xml)
         # content.append(art_xml)
+    tree = ET.ElementTree(root)
+    ET.indent(tree)
+    tree.write(destination, encoding='utf-8', xml_declaration=True)
 
 
 # <corpus> <article> <title> </title> <description> </description> </article> <article> <title> </title> <description> </description> </article> </corpus>
-
-    tree = ET.ElementTree(root)
-    ET.indent(tree)
-    tree.write(destination)
