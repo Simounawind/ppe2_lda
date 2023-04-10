@@ -1,5 +1,6 @@
 from title_descr_re import re_parser
 from title_descr_etree import etree_parser
+from title_descr_feedparser import feedparser_parser
 import re
 from xml.etree import ElementTree as et
 import argparse
@@ -110,6 +111,9 @@ if __name__ == "__main__":
     elif args.m == 're':
         fonc = re_parser
         print("vous avez choisi re pour parser")
+    elif args.m == 'feedparser':
+        fonc = feedparser_parser
+        print("vous avez choisi feedparser pour parser")
     else:
         print("méthode non disponible", file=sys.stderr)
         sys.exit()

@@ -1,5 +1,6 @@
 from title_descr_re import re_parser
 from title_descr_etree import etree_parser
+from title_descr_feedparser import feedparser_parser
 import re
 from xml.etree import ElementTree as et
 import argparse
@@ -7,7 +8,7 @@ import sys
 from typing import Optional, List, Dict
 from datetime import date
 from pathlib import Path
-import json
+import json  
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
 MONTHS = ["Jan",
@@ -108,6 +109,9 @@ if __name__ == "__main__":
     elif args.m == 're':
         fonc = re_parser
         print("vous avez choisi re pour parser")
+    elif args.m == 'feedparser':
+        fonc = feedparser_parser
+        print("vous avez choisi feedparser pour parser")
     else:
         print("méthode non disponible", file=sys.stderr)
         sys.exit()
@@ -159,4 +163,4 @@ if __name__ == "__main__":
                     print(
                         '------------------------------------------------------------------------------------------------------------------------------')
 
-    # exo 2 fini
+    # exo 2bis fini
