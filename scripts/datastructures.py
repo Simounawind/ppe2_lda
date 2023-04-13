@@ -1,5 +1,4 @@
-from dataclasses import asdict
-from typing import List
+from typing import List, Optional
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -16,7 +15,8 @@ class Article:
     title: str
     desc: str
     date: str
-    analyse: List[Analyse]
+    categorie: str
+    analyse: Optional[List[Analyse]] = None
 
 
 @dataclass

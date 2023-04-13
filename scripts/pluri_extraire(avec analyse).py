@@ -10,8 +10,8 @@ from pathlib import Path
 import pickle
 from datastructures import Corpus, Article, Analyse
 from exports import write_json, write_xml
-from trankit import Pipeline
-nlp = Pipeline("french")
+import nlp_modules
+from tqdm import tqdm
 
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
@@ -51,25 +51,16 @@ cat_dict = {
 }
 
 
+def categorie_of_ficname(ficname: str) -> Optional[str]:
+    for nom, code in cat_dict.items():
+        if code in ficname:
+            return nom
+    return None
+
+
 def convert_month(mon: str) -> int:
     m = MONTHS.index(mon) + 1
     return m
-
-
-def trankit_analyse(text: str):
-    desc_analyse = {}
-    fr_output = nlp.posdep(text)
-    lemma_doc = nlp.lemmatize(text)
-    for x in lemma_doc.get('sentences'):
-        for token in x.get('tokens'):
-            analyse_contenu = []
-            analyse_contenu.append(token.get('lemma'))
-            for y in fr_output.get('sentences'):
-                for token2 in y.get('tokens'):
-                    if token2.get('text') == token.get('text'):
-                        analyse_contenu.append(token2.get('upos'))
-            desc_analyse[token.get('text')] = analyse_contenu
-    return desc_analyse
 
     # Etape 2 : filtrer les fichiers selon les exigences, répondant aux critères suivants  :
     # 1. les fichiers sont au format XML, placés dans un dossier Corpus/Mmm/JJ/19-00-00/
@@ -105,7 +96,8 @@ def parcours_path(corpus_dir: Path, categories: Optional[List[str]] = None, star
                             # 进一步过滤xml文件的名称
                             if fic.name.endswith(".xml") and any([c in fic.name for c in categories]):
                                 # un générateur qui produit un par un les fichiers XML qui répondent aux critères spécifiés.
-                                yield(fic, str(d))
+                                c = categorie_of_ficname(fic.name)
+                                yield(fic, str(d), c)
 
 
 if __name__ == "__main__":
@@ -136,21 +128,23 @@ if __name__ == "__main__":
     # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
 
     # creation du corpus
+    tk_parser = nlp_modules.create_parser()
     print('l\'analyse commence, veuillez patienter...')
     corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
-    for f, dt in parcours_path(Path(args.corpus_dir),
-                               start_date=date.fromisoformat(args.s),
-                               end_date=date.fromisoformat(args.e),
-                               categories=args.categories):
-        for title, desc in fonc(f):
+    for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
+                                       start_date=date.fromisoformat(args.s),
+                                       end_date=date.fromisoformat(args.e),
+                                       categories=args.categories)):
+        for title, desc in tqdm(fonc(f)):
             if title and desc is not None:
-                article = Article(title, desc, dt, [])
+                article = Article(title, desc, dt, c, [])
                 corpus.content.append(article)
-                ad = trankit_analyse(desc)
-                for forme in ad:
-                    fenxi = Analyse(forme, ad.get(forme)[
-                        0], ad.get(forme)[1])
-                    article.analyse.append(fenxi)
+                analyse_dict = nlp_modules.trankit_analyse(
+                    tk_parser, title + " " + desc)
+                for forme in analyse_dict:
+                    token = Analyse(forme, analyse_dict.get(forme)[
+                        0], analyse_dict.get(forme)[1])
+                    article.analyse.append(token)
      # d'après le format de fichier de sortie, on écrit le résultat dans le fichier correspondant
     if args.o.endswith(".js"):
         print('parsing done, outputed in the file de format json you required')
