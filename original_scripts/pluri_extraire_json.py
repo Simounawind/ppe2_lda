@@ -8,12 +8,7 @@ import sys
 from typing import Optional, List, Dict
 from datetime import date
 from pathlib import Path
-import pickle
-from datastructures import Corpus, Article, Analyse
-from exports import write_json, write_xml
-import nlp_modules
-from tqdm import tqdm
-
+import json  
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
 MONTHS = ["Jan",
@@ -52,26 +47,18 @@ cat_dict = {
 }
 
 
-def categorie_of_ficname(ficname: str) -> Optional[str]:
-    for nom, code in cat_dict.items():
-        if code in ficname:
-            return nom
-    return None
-
-
 def convert_month(mon: str) -> int:
     m = MONTHS.index(mon) + 1
     return m
 
-    # Etape 2 : filtrer les fichiers selon les exigences, répondant aux critères suivants  :
-    # 1. les fichiers sont au format XML, placés dans un dossier Corpus/Mmm/JJ/19-00-00/
-    # 2. les fichiers sont de bonne période et de bonne(s) catégorie(s).
-    # 3. les fichiers XML comme "fil1646762506-v1.xml" doivent être exclus. Les fichiers attendus doivent avoir leur code de categorie dans leur nom
 
-    # La fonction 'parcours_path' prend en entrée un répertoire corpus_dir et plusieurs arguments optionnels
-    # Elle itère sur chaque fichier XML dans le répertoire et renvoie un générateur qui produit un par un les fichiers XML qui répondent aux critères spécifiés.
+# Etape 2 : filtrer les fichiers selon les exigences, répondant aux critères suivants  :
+# 1. les fichiers sont au format XML, placés dans un dossier Corpus/Mmm/JJ/19-00-00/
+# 2. les fichiers sont de bonne période et de bonne(s) catégorie(s).
+# 3. les fichiers XML comme "fil1646762506-v1.xml" doivent être exclus. Les fichiers attendus doivent avoir leur code de categorie dans leur nom
 
-
+# La fonction 'parcours_path' prend en entrée un répertoire corpus_dir et plusieurs arguments optionnels
+# Elle itère sur chaque fichier XML dans le répertoire et renvoie un générateur qui produit un par un les fichiers XML qui répondent aux critères spécifiés.
 def parcours_path(corpus_dir: Path, categories: Optional[List[str]] = None, start_date: Optional[date] = None, end_date: Optional[date] = None):
     if categories is not None and len(categories) > 0:
         # 对于所有在categories列表里的c，我们依次在cat-code里找出其对应的答案
@@ -97,8 +84,7 @@ def parcours_path(corpus_dir: Path, categories: Optional[List[str]] = None, star
                             # 进一步过滤xml文件的名称
                             if fic.name.endswith(".xml") and any([c in fic.name for c in categories]):
                                 # un générateur qui produit un par un les fichiers XML qui répondent aux critères spécifiés.
-                                c = categorie_of_ficname(fic.name)
-                                yield(fic, str(d), c)
+                                yield(fic)
 
 
 if __name__ == "__main__":
@@ -130,39 +116,9 @@ if __name__ == "__main__":
         print("méthode non disponible", file=sys.stderr)
         sys.exit()
     # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
-<<<<<<<< HEAD:scripts/pluri_extraire(avec analyse).py
 
-    # creation du corpus
-    tk_parser = nlp_modules.create_parser()
-    print('l\'analyse commence, veuillez patienter...')
-    corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
-    for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
-                                       start_date=date.fromisoformat(args.s),
-                                       end_date=date.fromisoformat(args.e),
-                                       categories=args.categories)):
-        for title, desc in tqdm(fonc(f)):
-            if title and desc is not None:
-                article = Article(title, desc, dt, c, [])
-                corpus.content.append(article)
-                analyse_dict = nlp_modules.trankit_analyse(
-                    tk_parser, title + " " + desc)
-                for forme in analyse_dict:
-                    token = Analyse(forme, analyse_dict.get(forme)[
-                        0], analyse_dict.get(forme)[1])
-                    article.analyse.append(token)
-     # d'après le format de fichier de sortie, on écrit le résultat dans le fichier correspondant
-    if args.o.endswith(".js"):
-        print('parsing done, outputed in the file de format json you required')
-        write_json(corpus, args.o)
-
-    # output xml
-    elif args.o.endswith(".xml"):
-        print('parsing done, outputed in the xml file you required')
-        write_xml(corpus, args.o)
-========
-    # creation du corpus
-    if args.o.endswith(".xml"):
-        print('parsing already done, outputed in the file xml you required')
+    if 'xml' in args.o:     # ecrire les contenus obtenus dans un nouveau fichier xml
+        print('parsing already done, outputed in the file you required')
         with open(args.o, 'a') as a:
             a.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
             a.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
@@ -183,8 +139,7 @@ if __name__ == "__main__":
                         d.write(f'</item>\n')
         with open(args.o, 'a') as c:
             c.write(f'</corpus>\n</rss>')
-    elif args.o.endswith(".js"):
-        print('parsing already done, outputed in the file json you required')
+    elif 'json' in args.o:
         output_json = []
         for f in parcours_path(Path(args.corpus_dir),
                                start_date=date.fromisoformat(args.s),
@@ -192,22 +147,11 @@ if __name__ == "__main__":
                                categories=args.categories):
             for title, desc in fonc(f):
                 if title and desc is not None:
+                    print(f"desc: {desc}")
                     output_json.append({'title': title, 'description': desc})
-        with open(args.o, 'w', encoding='utf-8') as f:
-            f.write(json.dumps(output_json, ensure_ascii=False,
-                               indent=4))
->>>>>>>> YL-s9:original_scripts/pluri_extraire(js_xml_pic).py
-
-    elif args.o.endswith(".pickle"):
-        print(
-            'parsing done, outputed in the file pickle you required, may not that visible')
-        with open(args.o, 'wb') as f:
-            pickle.dump(corpus, f)
-        with open(args.o, 'rb') as r:
-            returned_data = pickle.load(r)
-
+        with open(args.o, 'w') as d:
+            d.write(json.dumps(output_json))
     else:
-        print('parsing done, outputed in the terminal')
         for f in parcours_path(Path(args.corpus_dir),
                                start_date=date.fromisoformat(args.s),
                                end_date=date.fromisoformat(args.e),
@@ -218,3 +162,5 @@ if __name__ == "__main__":
                     print(">>> Description:", desc)
                     print(
                         '------------------------------------------------------------------------------------------------------------------------------')
+
+    # exo 2bis fini
