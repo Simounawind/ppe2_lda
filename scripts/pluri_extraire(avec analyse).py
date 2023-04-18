@@ -12,6 +12,7 @@ from datastructures import Corpus, Article, Analyse
 from exports import write_json, write_xml
 import nlp_modules
 from tqdm import tqdm
+import gensim_lda_pred as lda
 
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
@@ -175,3 +176,14 @@ if __name__ == "__main__":
                     print(">>> Description:", desc)
                     print(
                         '------------------------------------------------------------------------------------------------------------------------------')
+# S10: LDA tourner sur les données "en bricolant" le script
+    continue_ou_non = input(
+        "Do you want to start the LDA topic module ? (y/n): ")
+    if continue_ou_non.lower() == 'y':
+        use_saved_data = input("Do you want to use saved data? (y/n): ")
+        if use_saved_data.lower() == 'y':
+            pass
+        else:
+            pass
+# ↑ problem non résolu : je ne sais pas comment lier les deux scripts ensemble, et comment faire pour que le script de LDA puisse utiliser automatiquement les données de ce script.
+# Il n'y a pour moi qu'une seule solution, c'est d'utiliser input() pour demander à l'utilisateur de choisir les paramètres pour entraîner le modèle LDA, mais je ne sais pas si c'est une bonne solution.
