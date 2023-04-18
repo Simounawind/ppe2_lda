@@ -4,16 +4,10 @@ from gensim.models import LdaModel
 from gensim.corpora import Dictionary
 from gensim.models import Phrases
 from nltk.stem.wordnet import WordNetLemmatizer
-from nltk.tokenize import RegexpTokenizer
-import smart_open
-import tarfile
-import re
-import os.path
-import io
+from nltk.corpus import stopwords
 import json
 from xml.etree import ElementTree as ET
 import argparse
-from datastructures import Corpus, Article, Analyse
 import logging
 import pyLDAvis.gensim_models
 import sys
@@ -85,11 +79,24 @@ def load_file_pickle(pickle_file, type, pos=[]):
     return corpus
 
 
+# stopwords
+def stop_words(corpus):
+    with open('stopwords-fr.txt', 'r', encoding='utf-8') as f:
+        sw_file = set(f.read().split())
+    stop_words = set(stopwords.words('french')).union(sw_file)
+    print(stop_words)
+    corpus = [[word for word in doc if word not in stop_words]
+              for doc in corpus]
+    return corpus
+
+
 # Compute bigrams.
 # Add bigrams and trigrams to docs (only ones that appear 20 times or more).
 # 为docs添加bigrams和trigrams（只添加出现20次或更多的bigrams和trigrams）
 
+
 def bigram(docs):
+
     bigram = Phrases(docs, min_count=10)
     for idx in range(len(docs)):
         for token in bigram[docs[idx]]:
@@ -312,6 +319,7 @@ if __name__ == "__main__":
         else:
             print('Invalid filetype')
             sys.exit(1)
+        corpus = stop_words(corpus)
         corpus = [[token for token in doc if not token.isnumeric()]
                   for doc in corpus]
         docs_c = [[token for token in doc if len(token) > 1] for doc in corpus]
