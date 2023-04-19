@@ -1,6 +1,5 @@
 from title_descr_re import re_parser
 from title_descr_etree import etree_parser
-from title_descr_feedparser import feedparser_parser
 import re
 from xml.etree import ElementTree as et
 import argparse
@@ -116,6 +115,8 @@ if __name__ == "__main__":
         "corpus_dir", help="root dir of the corpus data,qui contient des dossiers/fichiers xml")
     parser.add_argument("categories", nargs="*",
                         help="la ou les catégories des fichiers XML désirés")
+    parser.add_argument(
+        "-p", help="parser, spacy ou trankit ou stanza", default="trankit")
     args = parser.parse_args()
     if args.m == 'etree':
         fonc = etree_parser
@@ -123,33 +124,71 @@ if __name__ == "__main__":
     elif args.m == 're':
         fonc = re_parser
         print("vous avez choisi re pour parser")
-    elif args.m == 'feedparser':
-        fonc = feedparser_parser
-        print("vous avez choisi feedparser pour parser")
     else:
         print("méthode non disponible", file=sys.stderr)
         sys.exit()
     # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
-<<<<<<<< HEAD:scripts/pluri_extraire(avec analyse).py
 
     # creation du corpus
-    tk_parser = nlp_modules.create_parser()
-    print('l\'analyse commence, veuillez patienter...')
-    corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
-    for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
-                                       start_date=date.fromisoformat(args.s),
-                                       end_date=date.fromisoformat(args.e),
-                                       categories=args.categories)):
-        for title, desc in tqdm(fonc(f)):
-            if title and desc is not None:
-                article = Article(title, desc, dt, c, [])
-                corpus.content.append(article)
-                analyse_dict = nlp_modules.trankit_analyse(
-                    tk_parser, title + " " + desc)
-                for forme in analyse_dict:
-                    token = Analyse(forme, analyse_dict.get(forme)[
-                        0], analyse_dict.get(forme)[1])
-                    article.analyse.append(token)
+    if args.p == 'trankit':
+        tk_parser = nlp_modules.trankit_parser()
+        print('l\'analyse avec trankit commence, veuillez patienter...')
+        corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
+        for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
+                                           start_date=date.fromisoformat(
+                                               args.s),
+                                           end_date=date.fromisoformat(args.e),
+                                           categories=args.categories)):
+            for title, desc in tqdm(fonc(f)):
+                if title and desc is not None:
+                    article = Article(title, desc, dt, c, [])
+                    corpus.content.append(article)
+                    analyse_dict = nlp_modules.trankit_analyse(
+                        tk_parser, title + " " + desc)
+                    for forme in analyse_dict:
+                        token = Analyse(forme, analyse_dict.get(forme)[
+                            0], analyse_dict.get(forme)[1])
+                        article.analyse.append(token)
+    elif args.p == 'stanza':
+        za_parser = nlp_modules.stanza_parser()
+        print('l\'analyse avec stanza commence, veuillez patienter...')
+        corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
+        for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
+                                           start_date=date.fromisoformat(
+                                               args.s),
+                                           end_date=date.fromisoformat(args.e),
+                                           categories=args.categories)):
+            for title, desc in tqdm(fonc(f)):
+                if title and desc is not None:
+                    article = Article(title, desc, dt, c, [])
+                    corpus.content.append(article)
+                    analyse_dict = nlp_modules.stanza_analyse(
+                        za_parser, title + " " + desc)
+                    for forme in analyse_dict:
+                        token = Analyse(forme, analyse_dict.get(forme)[
+                            0], analyse_dict.get(forme)[1])
+                        article.analyse.append(token)
+
+    elif args.p == 'spacy':
+        sp_parser = nlp_modules.spacy_parser()
+        print('l\'analyse avec spacy commence, veuillez patienter...')
+        corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
+        for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
+                                           start_date=date.fromisoformat(
+                                               args.s),
+                                           end_date=date.fromisoformat(args.e),
+                                           categories=args.categories)):
+            for title, desc in tqdm(fonc(f)):
+                if title and desc is not None:
+                    article = Article(title, desc, dt, c, [])
+                    corpus.content.append(article)
+                    analyse_dict = nlp_modules.spacy_analyse(
+                        sp_parser, title + " " + desc)
+                    for forme in analyse_dict:
+                        token = Analyse(forme, analyse_dict.get(forme)[
+                            0], analyse_dict.get(forme)[1])
+                        article.analyse.append(token)
+
      # d'après le format de fichier de sortie, on écrit le résultat dans le fichier correspondant
     if args.o.endswith(".js"):
         print('parsing done, outputed in the file de format json you required')
@@ -159,44 +198,6 @@ if __name__ == "__main__":
     elif args.o.endswith(".xml"):
         print('parsing done, outputed in the xml file you required')
         write_xml(corpus, args.o)
-========
-    # creation du corpus
-    if args.o.endswith(".xml"):
-        print('parsing already done, outputed in the file xml you required')
-        with open(args.o, 'a') as a:
-            a.write(f'<?xml version="1.0" encoding="UTF-8"?>\n')
-            a.write(f'<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n')
-            a.write(f'<corpus>\n')
-        for f in parcours_path(Path(args.corpus_dir),
-                               start_date=date.fromisoformat(args.s),
-                               end_date=date.fromisoformat(args.e),
-                               categories=args.categories):
-            # print("#######", f, "##########")  # 打印返回值
-            # fonc, soit etree, soit re, renvoie le titre et la description du fichier xml traité
-            for title, desc in fonc(f):
-                if title and desc is not None:
-                    print(f"desc: {desc}")
-                    with open(args.o, 'a') as d:
-                        d.write(f'<item>')
-                        d.write(f'<title>'+title+'</title>')
-                        d.write(f'<description>' + desc + '</description>')
-                        d.write(f'</item>\n')
-        with open(args.o, 'a') as c:
-            c.write(f'</corpus>\n</rss>')
-    elif args.o.endswith(".js"):
-        print('parsing already done, outputed in the file json you required')
-        output_json = []
-        for f in parcours_path(Path(args.corpus_dir),
-                               start_date=date.fromisoformat(args.s),
-                               end_date=date.fromisoformat(args.e),
-                               categories=args.categories):
-            for title, desc in fonc(f):
-                if title and desc is not None:
-                    output_json.append({'title': title, 'description': desc})
-        with open(args.o, 'w', encoding='utf-8') as f:
-            f.write(json.dumps(output_json, ensure_ascii=False,
-                               indent=4))
->>>>>>>> YL-s9:original_scripts/pluri_extraire(js_xml_pic).py
 
     elif args.o.endswith(".pickle"):
         print(

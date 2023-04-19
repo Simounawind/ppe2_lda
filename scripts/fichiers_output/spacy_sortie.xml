@@ -1,0 +1,1923 @@
+<?xml version='1.0' encoding='utf-8'?>
+<corpus start="2022-05-25" end="2022-05-25">
+  <categories>
+    <cat>sport</cat>
+    <cat>culture</cat>
+  </categories>
+  <content>
+    <article date="2022-05-25" categorie="culture">
+      <title>« Delair, Clouzot », de Noël Herpe : un amour cinégénique</title>
+      <description>Une histoire de la relation entre le réalisateur et l’actrice, qui éclaire aussi l’histoire de l’Occupation et celle du cinéma français.</description>
+      <analyse>
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Delair" lemma="Delair" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Clouzot" lemma="clouzot" pos="NOUN" />
+        <token form="»" lemma="»" pos="VERB" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Noël" lemma="Noël" pos="PROPN" />
+        <token form="Herpe" lemma="Herpe" pos="PROPN" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="amour" lemma="amour" pos="NOUN" />
+        <token form="cinégénique" lemma="cinégéniqu" pos="ADJ" />
+        <token form="Une" lemma="un" pos="DET" />
+        <token form="histoire" lemma="histoire" pos="NOUN" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="relation" lemma="relation" pos="NOUN" />
+        <token form="entre" lemma="entre" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="réalisateur" lemma="réalisateur" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="l’" lemma="l’" pos="DET" />
+        <token form="actrice" lemma="acteur" pos="ADJ" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="éclaire" lemma="éclaire" pos="VERB" />
+        <token form="aussi" lemma="aussi" pos="ADV" />
+        <token form="Occupation" lemma="occupation" pos="NOUN" />
+        <token form="celle" lemma="celui" pos="PRON" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="cinéma" lemma="cinéma" pos="NOUN" />
+        <token form="français" lemma="français" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>Cannes 2022 : Juichiro Yamasaki, la constance du cinéaste-jardinier</title>
+      <description>Le réalisateur japonais, présent sur la Croisette dans la section ACID avec le film « Yamabuki, creuse le sillon d’un cinéma intime et sensoriel tout en cultivant des milliers de pieds de tomates.</description>
+      <analyse>
+        <token form="Cannes" lemma="canne" pos="NOUN" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="Juichiro" lemma="Juichiro" pos="PROPN" />
+        <token form="Yamasaki" lemma="Yamasaki" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="constance" lemma="constance" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="cinéaste" lemma="cinéaste" pos="NOUN" />
+        <token form="-" lemma="-" pos="NOUN" />
+        <token form="jardinier" lemma="jardinier" pos="NOUN" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="réalisateur" lemma="réalisateur" pos="NOUN" />
+        <token form="japonais" lemma="japonais" pos="ADJ" />
+        <token form="présent" lemma="présent" pos="ADJ" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="Croisette" lemma="Croisette" pos="PROPN" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="section" lemma="section" pos="NOUN" />
+        <token form="ACID" lemma="acid" pos="VERB" />
+        <token form="avec" lemma="avec" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="film" lemma="film" pos="NOUN" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form="Yamabuki" lemma="Yamabuki" pos="PROPN" />
+        <token form="creuse" lemma="creuse" pos="VERB" />
+        <token form="sillon" lemma="sillon" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="ADV" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="cinéma" lemma="cinéma" pos="NOUN" />
+        <token form="intime" lemma="intime" pos="ADJ" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="sensoriel" lemma="sensoriel" pos="ADJ" />
+        <token form="tout" lemma="tout" pos="ADV" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="cultivant" lemma="cultiver" pos="VERB" />
+        <token form="des" lemma="un" pos="DET" />
+        <token form="milliers" lemma="millier" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="pieds" lemma="pied" pos="NOUN" />
+        <token form="tomates" lemma="tomate" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>Dmytro Sukholytkyy-Sobchuk au Festival de Cannes : « Si on ne résiste pas aux attaques russes, nous serons exterminés »</title>
+      <description>Le réalisateur ukrainien qui présente « Pamfir », son premier long-métrage à la Quinzaine des réalisateurs, travaille à documenter la guerre qui frappe son pays.</description>
+      <analyse>
+        <token form="Dmytro" lemma="Dmytro" pos="PROPN" />
+        <token form="Sukholytkyy" lemma="Sukholytkyy" pos="PROPN" />
+        <token form="-" lemma="-" pos="NOUN" />
+        <token form="Sobchuk" lemma="Sobchuk" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="Festival" lemma="festival" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Cannes" lemma="Cannes" pos="PROPN" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form="Si" lemma="si" pos="SCONJ" />
+        <token form="on" lemma="on" pos="PRON" />
+        <token form="ne" lemma="ne" pos="ADV" />
+        <token form="résiste" lemma="résiste" pos="VERB" />
+        <token form="pas" lemma="pas" pos="ADV" />
+        <token form="aux" lemma="à" pos="ADP" />
+        <token form="attaques" lemma="attaque" pos="NOUN" />
+        <token form="russes" lemma="russe" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="nous" lemma="nous" pos="PRON" />
+        <token form="serons" lemma="être" pos="VERB" />
+        <token form="exterminés" lemma="exterminer" pos="VERB" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="réalisateur" lemma="réalisateur" pos="NOUN" />
+        <token form="ukrainien" lemma="ukrainien" pos="ADJ" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="présente" lemma="présente" pos="VERB" />
+        <token form="Pamfir" lemma="pamfir" pos="NOUN" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="premier" lemma="premier" pos="ADJ" />
+        <token form="long" lemma="long" pos="ADJ" />
+        <token form="métrage" lemma="métrage" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="Quinzaine" lemma="quinzaine" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="réalisateurs" lemma="réalisateur" pos="NOUN" />
+        <token form="travaille" lemma="travaille" pos="VERB" />
+        <token form="documenter" lemma="documenter" pos="VERB" />
+        <token form="guerre" lemma="guerre" pos="NOUN" />
+        <token form="frappe" lemma="frappe" pos="VERB" />
+        <token form="pays" lemma="pays" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>« Sur la critique et autres essais » : Jean-Pierre Richard préférait l’acte de lecture à la critique</title>
+      <description>Une anthologie paraît pour le centenaire de la naissance de Jean-Pierre Richard, lecteur exceptionnel dont les analyses littéraires retrouve une nouvelle actualité.</description>
+      <analyse>
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Sur" lemma="sur" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="critique" lemma="critique" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="autres" lemma="autre" pos="ADJ" />
+        <token form="essais" lemma="essai" pos="NOUN" />
+        <token form="»" lemma="»" pos="AUX" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="Jean-Pierre" lemma="Jean-Pierre" pos="PROPN" />
+        <token form="Richard" lemma="Richard" pos="PROPN" />
+        <token form="préférait" lemma="préférer" pos="VERB" />
+        <token form="l’" lemma="l’" pos="ADJ" />
+        <token form="acte" lemma="acte" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="lecture" lemma="lecture" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="Une" lemma="un" pos="DET" />
+        <token form="anthologie" lemma="anthologie" pos="NOUN" />
+        <token form="paraît" lemma="paraître" pos="VERB" />
+        <token form="pour" lemma="pour" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="centenaire" lemma="centenaire" pos="NOUN" />
+        <token form="naissance" lemma="naissance" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="lecteur" lemma="lecteur" pos="ADJ" />
+        <token form="exceptionnel" lemma="exceptionnel" pos="ADJ" />
+        <token form="dont" lemma="dont" pos="PRON" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="analyses" lemma="analyse" pos="NOUN" />
+        <token form="littéraires" lemma="littéraire" pos="ADJ" />
+        <token form="retrouve" lemma="retrouve" pos="VERB" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="nouvelle" lemma="nouveau" pos="ADJ" />
+        <token form="actualité" lemma="actualité" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>Festival de Cannes : « Le Barrage », labeur sur le Nil</title>
+      <description>Tourné au Soudan, le film du plasticien libanais Ali Cherri brosse le portrait magnétique d’un ouvrier de briqueterie.</description>
+      <analyse>
+        <token form="Festival" lemma="festival" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Cannes" lemma="canne" pos="NOUN" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="Barrage" lemma="barrage" pos="NOUN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="labeur" lemma="labeur" pos="NOUN" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="Nil" lemma="Nil" pos="PROPN" />
+        <token form="Tourné" lemma="Tourné" pos="PROPN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="Soudan" lemma="Soudan" pos="PROPN" />
+        <token form="film" lemma="film" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="plasticien" lemma="plasticien" pos="NOUN" />
+        <token form="libanais" lemma="libanais" pos="ADJ" />
+        <token form="Ali" lemma="Ali" pos="PROPN" />
+        <token form="Cherri" lemma="Cherri" pos="PROPN" />
+        <token form="brosse" lemma="bross" pos="ADJ" />
+        <token form="portrait" lemma="portrait" pos="NOUN" />
+        <token form="magnétique" lemma="magnétique" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="ouvrier" lemma="ouvrier" pos="NOUN" />
+        <token form="briqueterie" lemma="briqueterie" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>La déclaration d’amour de Douglas Gordon à Alberto Giacometti</title>
+      <description>L’artiste écossais s’empare des œuvres du Suisse, dont il réussit à nous faire éprouver les reliefs.</description>
+      <analyse>
+        <token form="La" lemma="le" pos="DET" />
+        <token form="déclaration" lemma="déclaration" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="amour" lemma="amour" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Douglas" lemma="Douglas" pos="PROPN" />
+        <token form="Gordon" lemma="gordon" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="Alberto" lemma="Alberto" pos="PROPN" />
+        <token form="Giacometti" lemma="Giacometti" pos="PROPN" />
+        <token form="L’" lemma="L’" pos="PROPN" />
+        <token form="artiste" lemma="artiste" pos="VERB" />
+        <token form="écossais" lemma="écossais" pos="CCONJ" />
+        <token form="s’" lemma="s’" pos="ADV" />
+        <token form="empare" lemma="empare" pos="ADV" />
+        <token form="des" lemma="un" pos="DET" />
+        <token form="œuvres" lemma="œuvre" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="Suisse" lemma="Suisse" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="dont" lemma="dont" pos="PRON" />
+        <token form="il" lemma="il" pos="PRON" />
+        <token form="réussit" lemma="réussir" pos="VERB" />
+        <token form="nous" lemma="nous" pos="PRON" />
+        <token form="faire" lemma="faire" pos="AUX" />
+        <token form="éprouver" lemma="éprouver" pos="VERB" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="reliefs" lemma="relief" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>« Une chance insolente », de Fabio Baca : malheureux soit à qui tout réussit</title>
+      <description>Le héros du premier roman de l’Italien Fabio Baca étouffe sous les coups de la bonne fortune.</description>
+      <analyse>
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Une" lemma="un" pos="DET" />
+        <token form="chance" lemma="chance" pos="NOUN" />
+        <token form="insolente" lemma="insolent" pos="ADJ" />
+        <token form="»" lemma="»" pos="ADJ" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Fabio" lemma="Fabio" pos="X" />
+        <token form="Baca" lemma="Baca" pos="PROPN" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="malheureux" lemma="malheureux" pos="ADJ" />
+        <token form="soit" lemma="soit" pos="CCONJ" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="tout" lemma="tout" pos="ADV" />
+        <token form="réussit" lemma="réussir" pos="VERB" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="héros" lemma="héros" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="premier" lemma="premier" pos="ADJ" />
+        <token form="roman" lemma="roman" pos="NOUN" />
+        <token form="l’" lemma="l’" pos="PROPN" />
+        <token form="Italien" lemma="Italien" pos="PROPN" />
+        <token form="étouffe" lemma="étouffe" pos="VERB" />
+        <token form="sous" lemma="sous" pos="ADP" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="coups" lemma="coup" pos="NOUN" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="bonne" lemma="bon" pos="ADJ" />
+        <token form="fortune" lemma="fortune" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>Opéra : le Figaro de Florian Sempey fait une entrée remarquée au Capitole de Toulouse</title>
+      <description>Le baryton bordelais, fascinant titulaire du rôle-titre du « Barbier de Séville » de Rossini depuis dix ans, a dominé la distribution toulousaine.</description>
+      <analyse>
+        <token form="Opéra" lemma="opéra" pos="NOUN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="Figaro" lemma="Figaro" pos="PROPN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Florian" lemma="Florian" pos="PROPN" />
+        <token form="Sempey" lemma="Sempey" pos="PROPN" />
+        <token form="fait" lemma="faire" pos="VERB" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="entrée" lemma="entrée" pos="NOUN" />
+        <token form="remarquée" lemma="remarquer" pos="VERB" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="Capitole" lemma="capitole" pos="NOUN" />
+        <token form="Toulouse" lemma="toulouse" pos="NOUN" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="baryton" lemma="baryton" pos="NOUN" />
+        <token form="bordelais" lemma="bordelais" pos="ADJ" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="fascinant" lemma="fasciner" pos="VERB" />
+        <token form="titulaire" lemma="titulaire" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="rôle" lemma="rôle" pos="NOUN" />
+        <token form="-" lemma="-" pos="NOUN" />
+        <token form="titre" lemma="titre" pos="NOUN" />
+        <token form="«" lemma="«" pos="NOUN" />
+        <token form="Barbier" lemma="barbier" pos="NOUN" />
+        <token form="Séville" lemma="Séville" pos="PROPN" />
+        <token form="»" lemma="»" pos="NOUN" />
+        <token form="Rossini" lemma="Rossini" pos="PROPN" />
+        <token form="depuis" lemma="depuis" pos="ADP" />
+        <token form="dix" lemma="dix" pos="NUM" />
+        <token form="ans" lemma="an" pos="NOUN" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="dominé" lemma="dominer" pos="VERB" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="distribution" lemma="distribution" pos="NOUN" />
+        <token form="toulousaine" lemma="toulousain" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>La mort du philosophe belge Michel Meyer</title>
+      <description>Auteur d’une œuvre de grande ampleur, il avait montré que la philosophie constitue avant tout une pratique méthodique de l’interrogation sans fin, plutôt que la recherche des certitudes. Il est décédé le 23 mai, à l’âge de 71 ans.</description>
+      <analyse>
+        <token form="La" lemma="le" pos="DET" />
+        <token form="mort" lemma="mort" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="philosophe" lemma="philosophe" pos="NOUN" />
+        <token form="belge" lemma="belge" pos="ADJ" />
+        <token form="Michel" lemma="Michel" pos="PROPN" />
+        <token form="Meyer" lemma="Meyer" pos="PROPN" />
+        <token form="Auteur" lemma="auteur" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="œuvre" lemma="œuvre" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="grande" lemma="grand" pos="ADJ" />
+        <token form="ampleur" lemma="ampleur" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="il" lemma="il" pos="PRON" />
+        <token form="avait" lemma="avoir" pos="AUX" />
+        <token form="montré" lemma="montrer" pos="VERB" />
+        <token form="que" lemma="que" pos="SCONJ" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="philosophie" lemma="philosophie" pos="NOUN" />
+        <token form="constitue" lemma="constitue" pos="VERB" />
+        <token form="avant" lemma="avant" pos="ADP" />
+        <token form="tout" lemma="tout" pos="ADJ" />
+        <token form="pratique" lemma="pratique" pos="NOUN" />
+        <token form="méthodique" lemma="méthodique" pos="ADJ" />
+        <token form="l’" lemma="l’" pos="ADJ" />
+        <token form="interrogation" lemma="interrogation" pos="NOUN" />
+        <token form="sans" lemma="sans" pos="ADP" />
+        <token form="fin" lemma="fin" pos="NOUN" />
+        <token form="plutôt" lemma="plutôt" pos="ADV" />
+        <token form="recherche" lemma="recherche" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="certitudes" lemma="certitude" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Il" lemma="il" pos="PRON" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="décédé" lemma="décéder" pos="VERB" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="23" lemma="23" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="mai" lemma="mai" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="âge" lemma="âge" pos="NOUN" />
+        <token form="71" lemma="71" pos="NUM" />
+        <token form="ans" lemma="an" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>« Togliatti à la dérive », sur France 2 : une jeunesse russe en dérapage contrôlé</title>
+      <description>Triste symbole de la Russie que la ville qui fit la fierté de l’Union soviétique, avec son usine automobile géante produisant les Lada. Togliatti connaît aujourd’hui l’un des taux de chômage des jeunes les plus élevés du pays.</description>
+      <analyse>
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Togliatti" lemma="Togliatti" pos="PROPN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="dérive" lemma="dérive" pos="NOUN" />
+        <token form="»" lemma="»" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="France" lemma="France" pos="PROPN" />
+        <token form="2" lemma="2" pos="NUM" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="jeunesse" lemma="jeunesse" pos="NOUN" />
+        <token form="russe" lemma="russe" pos="VERB" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="dérapage" lemma="dérapage" pos="NOUN" />
+        <token form="contrôlé" lemma="contrôler" pos="VERB" />
+        <token form="Triste" lemma="triste" pos="ADJ" />
+        <token form="symbole" lemma="symbole" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Russie" lemma="Russie" pos="PROPN" />
+        <token form="que" lemma="que" pos="SCONJ" />
+        <token form="ville" lemma="ville" pos="NOUN" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="fit" lemma="faire" pos="VERB" />
+        <token form="fierté" lemma="fierté" pos="NOUN" />
+        <token form="l’" lemma="l’" pos="ADV" />
+        <token form="Union" lemma="Union" pos="PROPN" />
+        <token form="soviétique" lemma="soviétiqu" pos="ADJ" />
+        <token form="avec" lemma="avec" pos="ADP" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="usine" lemma="usine" pos="NOUN" />
+        <token form="automobile" lemma="automobile" pos="ADJ" />
+        <token form="géante" lemma="géant" pos="ADJ" />
+        <token form="produisant" lemma="produire" pos="VERB" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="Lada" lemma="Lada" pos="PROPN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="connaît" lemma="connaître" pos="VERB" />
+        <token form="aujourd’hui" lemma="aujourd’hui" pos="ADV" />
+        <token form="un" lemma="un" pos="PRON" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="taux" lemma="taux" pos="NOUN" />
+        <token form="chômage" lemma="chômage" pos="NOUN" />
+        <token form="jeunes" lemma="jeune" pos="NOUN" />
+        <token form="plus" lemma="plus" pos="ADV" />
+        <token form="élevés" lemma="élevé" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="pays" lemma="pays" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>A Cannes, montée des marches et anniversaires pour Rima Abdul-Malak</title>
+      <description>La nouvelle ministre de la culture a rencontré, mardi 24 mai, les professionnels du cinéma au cours du Festival de Cannes</description>
+      <analyse>
+        <token form="A" lemma="a" pos="NOUN" />
+        <token form="Cannes" lemma="Cannes" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="montée" lemma="monter" pos="VERB" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="marches" lemma="marche" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="anniversaires" lemma="anniversaire" pos="NOUN" />
+        <token form="pour" lemma="pour" pos="ADP" />
+        <token form="Rima" lemma="Rima" pos="PROPN" />
+        <token form="Abdul" lemma="Abdul" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Malak" lemma="Malak" pos="PROPN" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="nouvelle" lemma="nouveau" pos="ADJ" />
+        <token form="ministre" lemma="ministre" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="culture" lemma="culture" pos="NOUN" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="rencontré" lemma="rencontrer" pos="VERB" />
+        <token form="mardi" lemma="mardi" pos="NOUN" />
+        <token form="24" lemma="24" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="mai" lemma="mai" pos="NOUN" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="professionnels" lemma="professionnel" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="cinéma" lemma="cinéma" pos="NOUN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="cours" lemma="cours" pos="NOUN" />
+        <token form="Festival" lemma="festival" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>« La Nuit de Gigi » : lumineuse Dominique Dussidour</title>
+      <description>Autour de la vie somme toute ordinaire d’une jeune femme, ce roman, qui paraît trois ans après la mort de son autrice, séduit par sa justesse et son style.</description>
+      <analyse>
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="Nuit" lemma="nuit" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Gigi" lemma="Gigi" pos="PROPN" />
+        <token form="»" lemma="»" pos="AUX" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="lumineuse" lemma="lumineuse" pos="VERB" />
+        <token form="Dominique" lemma="Dominique" pos="PROPN" />
+        <token form="Dussidour" lemma="Dussidour" pos="PROPN" />
+        <token form="Autour" lemma="autour" pos="ADV" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="vie" lemma="vie" pos="NOUN" />
+        <token form="somme" lemma="somme" pos="VERB" />
+        <token form="toute" lemma="tout" pos="DET" />
+        <token form="ordinaire" lemma="ordinaire" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="jeune" lemma="jeune" pos="ADJ" />
+        <token form="femme" lemma="femme" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="ce" lemma="ce" pos="DET" />
+        <token form="roman" lemma="roman" pos="NOUN" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="paraît" lemma="paraître" pos="VERB" />
+        <token form="trois" lemma="trois" pos="NUM" />
+        <token form="ans" lemma="an" pos="NOUN" />
+        <token form="après" lemma="après" pos="ADP" />
+        <token form="mort" lemma="mort" pos="NOUN" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="autrice" lemma="autrice" pos="NOUN" />
+        <token form="séduit" lemma="séduit" pos="ADV" />
+        <token form="par" lemma="par" pos="ADP" />
+        <token form="sa" lemma="son" pos="DET" />
+        <token form="justesse" lemma="justesse" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="style" lemma="style" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>La comédie musicale « Je vais t’aimer » réinterprète les succès de Michel Sardou</title>
+      <description>Une troupe talentueuse de dix-sept chanteurs-danseurs et chanteuses-danseuses reprend vingt-cinq titres de l’artiste, dans un spectacle qui jongle entre les lieux et les époques.</description>
+      <analyse>
+        <token form="La" lemma="le" pos="DET" />
+        <token form="comédie" lemma="comédie" pos="NOUN" />
+        <token form="musicale" lemma="musical" pos="ADJ" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Je" lemma="je" pos="PRON" />
+        <token form="vais" lemma="aller" pos="VERB" />
+        <token form="t’" lemma="t’" pos="ADV" />
+        <token form="aimer" lemma="aimer" pos="VERB" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="réinterprète" lemma="réinterpréter" pos="VERB" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="succès" lemma="succès" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Michel" lemma="Michel" pos="PROPN" />
+        <token form="Sardou" lemma="Sardou" pos="PROPN" />
+        <token form="Une" lemma="un" pos="DET" />
+        <token form="troupe" lemma="troupe" pos="NOUN" />
+        <token form="talentueuse" lemma="talentueux" pos="ADJ" />
+        <token form="dix-sept" lemma="dix-sept" pos="DET" />
+        <token form="chanteurs" lemma="chanteur" pos="NOUN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="danseurs" lemma="danseur" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="chanteuses" lemma="chanteur" pos="NOUN" />
+        <token form="danseuses" lemma="danseur" pos="NOUN" />
+        <token form="reprend" lemma="reprendre" pos="VERB" />
+        <token form="vingt-cinq" lemma="vingt-cinq" pos="NUM" />
+        <token form="titres" lemma="titre" pos="NOUN" />
+        <token form="l’" lemma="l’" pos="NOUN" />
+        <token form="artiste" lemma="artiste" pos="ADJ" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="spectacle" lemma="spectacle" pos="NOUN" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="jongle" lemma="jongle" pos="VERB" />
+        <token form="entre" lemma="entre" pos="ADP" />
+        <token form="lieux" lemma="lieu" pos="NOUN" />
+        <token form="époques" lemma="époque" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>Cannes 2022 : « Nostalgia », Mario Martone dans les méandres de la mémoire et du passé</title>
+      <description>Le réalisateur italien filme le retour à Naples d’un homme venu solder les comptes de sa jeunesse tumultueuse. Un voyage où le prévisible succède vite au mystère.</description>
+      <analyse>
+        <token form="Cannes" lemma="canne" pos="NOUN" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form="Nostalgia" lemma="Nostalgia" pos="PROPN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Mario" lemma="mario" pos="NOUN" />
+        <token form="Martone" lemma="martone" pos="VERB" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="méandres" lemma="méandre" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="mémoire" lemma="mémoire" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="passé" lemma="passé" pos="NOUN" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="réalisateur" lemma="réalisateur" pos="NOUN" />
+        <token form="italien" lemma="italien" pos="ADJ" />
+        <token form="filme" lemma="filme" pos="NOUN" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="retour" lemma="retour" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="Naples" lemma="Naples" pos="PROPN" />
+        <token form="d’" lemma="d’" pos="ADP" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="homme" lemma="homme" pos="NOUN" />
+        <token form="venu" lemma="venir" pos="VERB" />
+        <token form="solder" lemma="solder" pos="VERB" />
+        <token form="comptes" lemma="compte" pos="NOUN" />
+        <token form="sa" lemma="son" pos="DET" />
+        <token form="jeunesse" lemma="jeunesse" pos="NOUN" />
+        <token form="tumultueuse" lemma="tumultueux" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Un" lemma="un" pos="DET" />
+        <token form="voyage" lemma="voyage" pos="NOUN" />
+        <token form="où" lemma="où" pos="PRON" />
+        <token form="prévisible" lemma="prévisible" pos="NOUN" />
+        <token form="succède" lemma="succède" pos="NOUN" />
+        <token form="vite" lemma="vite" pos="ADV" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="mystère" lemma="mystère" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>Cannes 2022 : dans « Nos frangins », Rachid Bouchareb sonde l’injustice d’un crime policier</title>
+      <description>Le réalisateur revient sur le meurtre de Malik Oussekine, en décembre 1986, à Paris, et sur celui d’un autre jeune Maghrébin le même soir à Pantin.</description>
+      <analyse>
+        <token form="Cannes" lemma="Cannes" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form="Nos" lemma="notre" pos="DET" />
+        <token form="frangins" lemma="frangins" pos="ADP" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Rachid" lemma="Rachid" pos="PROPN" />
+        <token form="Bouchareb" lemma="bouchareb" pos="NOUN" />
+        <token form="sonde" lemma="sonde" pos="VERB" />
+        <token form="l’" lemma="l’" pos="ADV" />
+        <token form="injustice" lemma="injustic" pos="ADJ" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="crime" lemma="crime" pos="NOUN" />
+        <token form="policier" lemma="policier" pos="ADJ" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="réalisateur" lemma="réalisateur" pos="NOUN" />
+        <token form="revient" lemma="revenir" pos="VERB" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="meurtre" lemma="meurtre" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Malik" lemma="malik" pos="NOUN" />
+        <token form="Oussekine" lemma="Oussekine" pos="PROPN" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="décembre" lemma="décembre" pos="NOUN" />
+        <token form="1986" lemma="1986" pos="NUM" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="Paris" lemma="Paris" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="celui" lemma="celui" pos="PRON" />
+        <token form="autre" lemma="autre" pos="ADJ" />
+        <token form="jeune" lemma="jeune" pos="ADJ" />
+        <token form="Maghrébin" lemma="Maghrébin" pos="PROPN" />
+        <token form="même" lemma="même" pos="ADJ" />
+        <token form="soir" lemma="soir" pos="NOUN" />
+        <token form="Pantin" lemma="Pantin" pos="PROPN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>« Frère et sœur », « Don Juan », « Top Gun : Maverick »… Les films à l’affiche cette semaine</title>
+      <description>Chaque mercredi dans « La Matinale », les rédacteurs cinéma du « Monde » livrent leurs critiques des films à découvrir en salle.</description>
+      <analyse>
+        <token form="«" lemma="«" pos="NOUN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Frère" lemma="frère" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="sœur" lemma="sœur" pos="ADV" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Don" lemma="don" pos="NOUN" />
+        <token form="Juan" lemma="juan" pos="ADJ" />
+        <token form="Top" lemma="top" pos="DET" />
+        <token form="Gun" lemma="gun" pos="NOUN" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="Maverick" lemma="Maverick" pos="PROPN" />
+        <token form="…" lemma="…" pos="ADP" />
+        <token form="Les" lemma="le" pos="DET" />
+        <token form="films" lemma="film" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="l’" lemma="l’" pos="NOUN" />
+        <token form="affiche" lemma="affiche" pos="NOUN" />
+        <token form="cette" lemma="ce" pos="DET" />
+        <token form="semaine" lemma="semaine" pos="NOUN" />
+        <token form="Chaque" lemma="chaque" pos="DET" />
+        <token form="mercredi" lemma="mercredi" pos="NOUN" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="Matinale" lemma="matinal" pos="ADJ" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="rédacteurs" lemma="rédacteur" pos="NOUN" />
+        <token form="cinéma" lemma="cinéma" pos="ADJ" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="Monde" lemma="Monde" pos="PROPN" />
+        <token form="livrent" lemma="livrent" pos="ADV" />
+        <token form="leurs" lemma="leur" pos="DET" />
+        <token form="critiques" lemma="critique" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="découvrir" lemma="découvrir" pos="VERB" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="salle" lemma="salle" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>Cannes 2022 : « Tori et Lokita », les frères Dardenne entre générosité et manichéisme</title>
+      <description>Les deux réalisateurs belges suivent le parcours de deux immigrés béninois en quête de papiers.</description>
+      <analyse>
+        <token form="Cannes" lemma="canne" pos="NOUN" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form="Tori" lemma="Tori" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="Lokita" lemma="Lokita" pos="PROPN" />
+        <token form="»" lemma="»" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="frères" lemma="frère" pos="NOUN" />
+        <token form="Dardenne" lemma="dardenne" pos="NOUN" />
+        <token form="entre" lemma="entre" pos="ADP" />
+        <token form="générosité" lemma="générosité" pos="NOUN" />
+        <token form="manichéisme" lemma="manichéisme" pos="NOUN" />
+        <token form="Les" lemma="le" pos="DET" />
+        <token form="deux" lemma="deux" pos="NUM" />
+        <token form="réalisateurs" lemma="réalisateur" pos="NOUN" />
+        <token form="belges" lemma="belge" pos="ADJ" />
+        <token form="suivent" lemma="suivre" pos="VERB" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="parcours" lemma="parcours" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="immigrés" lemma="immigré" pos="NOUN" />
+        <token form="béninois" lemma="béninois" pos="ADJ" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="quête" lemma="quête" pos="NOUN" />
+        <token form="papiers" lemma="papier" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>« Planète préhistorique », sur Apple TV+ : un voyage au temps des dinosaures au réalisme bluffant</title>
+      <description>En cinq épisodes, cette minisérie relate avec rigueur et humour la vie sur terre il y a 66 millions d’années. Aux commentaires, Sir David Attenborough, à la passion intacte.</description>
+      <analyse>
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Planète" lemma="planète" pos="NOUN" />
+        <token form="préhistorique" lemma="préhistorique" pos="ADJ" />
+        <token form="»" lemma="»" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="Apple" lemma="Apple" pos="PROPN" />
+        <token form="TV+" lemma="tv+" pos="ADJ" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="voyage" lemma="voyage" pos="NOUN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="temps" lemma="temps" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="dinosaures" lemma="dinosaure" pos="NOUN" />
+        <token form="réalisme" lemma="réalisme" pos="NOUN" />
+        <token form="bluffant" lemma="bluffer" pos="VERB" />
+        <token form="En" lemma="en" pos="ADP" />
+        <token form="cinq" lemma="cinq" pos="NUM" />
+        <token form="épisodes" lemma="épisode" pos="NOUN" />
+        <token form="cette" lemma="ce" pos="DET" />
+        <token form="minisérie" lemma="minisérie" pos="NOUN" />
+        <token form="relate" lemma="relate" pos="VERB" />
+        <token form="avec" lemma="avec" pos="ADP" />
+        <token form="rigueur" lemma="rigueur" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="humour" lemma="humour" pos="PROPN" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="vie" lemma="vie" pos="NOUN" />
+        <token form="terre" lemma="terre" pos="NOUN" />
+        <token form="il" lemma="il" pos="PRON" />
+        <token form="y" lemma="y" pos="PRON" />
+        <token form="a" lemma="avoir" pos="VERB" />
+        <token form="66" lemma="66" pos="NUM" />
+        <token form="millions" lemma="million" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="ADV" />
+        <token form="années" lemma="année" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Aux" lemma="à" pos="ADP" />
+        <token form="commentaires" lemma="commentaire" pos="NOUN" />
+        <token form="Sir" lemma="Sir" pos="PROPN" />
+        <token form="David" lemma="David" pos="PROPN" />
+        <token form="Attenborough" lemma="Attenborough" pos="PROPN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="passion" lemma="passion" pos="NOUN" />
+        <token form="intacte" lemma="intact" pos="ADJ" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>A la Biennale de Dakar, les artistes revisitent le passé du continent</title>
+      <description>L’événement révèle l’effervescence d’une ville qui s’impose comme un carrefour culturel du continent.</description>
+      <analyse>
+        <token form="A" lemma="avoir" pos="VERB" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="Biennale" lemma="biennale" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Dakar" lemma="Dakar" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="artistes" lemma="artiste" pos="NOUN" />
+        <token form="revisitent" lemma="revisiter" pos="VERB" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="passé" lemma="passé" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="continent" lemma="continent" pos="NOUN" />
+        <token form="L’" lemma="L’" pos="PROPN" />
+        <token form="événement" lemma="événement" pos="NOUN" />
+        <token form="révèle" lemma="révèle" pos="ADP" />
+        <token form="l’" lemma="l’" pos="ADJ" />
+        <token form="effervescence" lemma="effervescence" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="ADV" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="ville" lemma="ville" pos="NOUN" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="s’" lemma="s’" pos="AUX" />
+        <token form="impose" lemma="impose" pos="VERB" />
+        <token form="comme" lemma="comme" pos="ADP" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="carrefour" lemma="carrefour" pos="NOUN" />
+        <token form="culturel" lemma="culturel" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="culture">
+      <title>L’« Artexplorer » met le cap sur Marseille</title>
+      <description>Le projet du futur « bateau-musée », qui sillonnera la Méditerranée en 2023-2025, est exposé sur le Vieux-Port. La cité phocéenne sera son premier port d’attache.</description>
+      <analyse>
+        <token form="L" lemma="l" pos="NOUN" />
+        <token form="’" lemma="’" pos="PRON" />
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Artexplorer" lemma="artexplorer" pos="VERB" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="met" lemma="mettre" pos="VERB" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="cap" lemma="cap" pos="NOUN" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="Marseille" lemma="Marseille" pos="PROPN" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="projet" lemma="projet" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="futur" lemma="futur" pos="ADJ" />
+        <token form="bateau-musée" lemma="bateau-muser" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="sillonnera" lemma="sillonner" pos="VERB" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="Méditerranée" lemma="Méditerranée" pos="PROPN" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="2023" lemma="2023" pos="NOUN" />
+        <token form="-" lemma="-" pos="NOUN" />
+        <token form="2025" lemma="2025" pos="NOUN" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="exposé" lemma="exposer" pos="VERB" />
+        <token form="Vieux-Port" lemma="Vieux-Port" pos="PROPN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="cité" lemma="cité" pos="NOUN" />
+        <token form="phocéenne" lemma="phocéen" pos="ADJ" />
+        <token form="sera" lemma="être" pos="AUX" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="premier" lemma="premier" pos="ADJ" />
+        <token form="port" lemma="port" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="attache" lemma="attache" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Fusillade au Texas : Steve Kerr, une voix qui porte face aux maux de l’Amérique</title>
+      <description>L’entraîneur de l’équipe de basket des Golden State Warriors est aussi un citoyen engagé. Mardi, son vibrant plaidoyer pour la régulation des armes à feu, après une fusillade dans une école texane, a tourné en boucle sur les chaînes de télévision et les réseaux sociaux.</description>
+      <analyse>
+        <token form="Fusillade" lemma="Fusillade" pos="PROPN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="Texas" lemma="Texas" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="Steve" lemma="Steve" pos="PROPN" />
+        <token form="Kerr" lemma="Kerr" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="voix" lemma="voix" pos="NOUN" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="porte" lemma="porte" pos="VERB" />
+        <token form="face" lemma="face" pos="NOUN" />
+        <token form="aux" lemma="à" pos="ADP" />
+        <token form="maux" lemma="mal" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="l’" lemma="l’" pos="DET" />
+        <token form="Amérique" lemma="Amérique" pos="PROPN" />
+        <token form="L’" lemma="L’" pos="PROPN" />
+        <token form="entraîneur" lemma="entraîneur" pos="NOUN" />
+        <token form="équipe" lemma="équipe" pos="NOUN" />
+        <token form="basket" lemma="basket" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="Golden" lemma="Golden" pos="PROPN" />
+        <token form="State" lemma="State" pos="X" />
+        <token form="Warriors" lemma="Warriors" pos="PROPN" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="aussi" lemma="aussi" pos="ADV" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="citoyen" lemma="citoyen" pos="NOUN" />
+        <token form="engagé" lemma="engager" pos="VERB" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Mardi" lemma="mardi" pos="NOUN" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="vibrant" lemma="vibrant" pos="AUX" />
+        <token form="plaidoyer" lemma="plaidoyer" pos="VERB" />
+        <token form="pour" lemma="pour" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="régulation" lemma="régulation" pos="NOUN" />
+        <token form="armes" lemma="arme" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="feu" lemma="feu" pos="NOUN" />
+        <token form="après" lemma="après" pos="ADP" />
+        <token form="fusillade" lemma="fusillade" pos="NOUN" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="école" lemma="école" pos="NOUN" />
+        <token form="texane" lemma="texan" pos="ADJ" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="tourné" lemma="tourner" pos="VERB" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="boucle" lemma="boucle" pos="NOUN" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="chaînes" lemma="chaîne" pos="NOUN" />
+        <token form="télévision" lemma="télévision" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="réseaux" lemma="réseau" pos="NOUN" />
+        <token form="sociaux" lemma="social" pos="ADJ" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Les fans de Madrid et Liverpool font la fortune des hôteliers parisiens</title>
+      <description>La finale de Ligue des champions s’ajoutant à l’Ascension et à Roland-Garros, la demande d’hébergement a atteint un niveau exceptionnel dans la capitale. Les dernières chambres restantes peuvent dépasser 1 000 euros dans un 3-étoiles. La hausse est plus modeste sur Airbnb.</description>
+      <analyse>
+        <token form="Les" lemma="le" pos="DET" />
+        <token form="fans" lemma="fan" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Madrid" lemma="Madrid" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="Liverpool" lemma="Liverpool" pos="PROPN" />
+        <token form="font" lemma="faire" pos="VERB" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="fortune" lemma="fortune" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="hôteliers" lemma="hôtelier" pos="NOUN" />
+        <token form="parisiens" lemma="parisien" pos="ADJ" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="finale" lemma="finale" pos="NOUN" />
+        <token form="Ligue" lemma="Ligue" pos="PROPN" />
+        <token form="champions" lemma="champion" pos="NOUN" />
+        <token form="s’" lemma="s’" pos="CCONJ" />
+        <token form="ajoutant" lemma="ajouter" pos="VERB" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="l’" lemma="l’" pos="DET" />
+        <token form="Ascension" lemma="ascension" pos="NOUN" />
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="demande" lemma="demande" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="hébergement" lemma="hébergement" pos="ADV" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="atteint" lemma="atteindre" pos="VERB" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="niveau" lemma="niveau" pos="NOUN" />
+        <token form="exceptionnel" lemma="exceptionnel" pos="ADJ" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="capitale" lemma="capitale" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="dernières" lemma="dernier" pos="ADJ" />
+        <token form="chambres" lemma="chambre" pos="NOUN" />
+        <token form="restantes" lemma="restant" pos="ADJ" />
+        <token form="peuvent" lemma="pouvoir" pos="VERB" />
+        <token form="dépasser" lemma="dépasser" pos="VERB" />
+        <token form="1" lemma="1" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="000" lemma="000" pos="DET" />
+        <token form="euros" lemma="euro" pos="NOUN" />
+        <token form="3-étoiles" lemma="3-étoile" pos="NOUN" />
+        <token form="hausse" lemma="hausse" pos="NOUN" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="plus" lemma="plus" pos="ADV" />
+        <token form="modeste" lemma="modeste" pos="ADJ" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="Airbnb" lemma="Airbnb" pos="PROPN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros : le programme de jeudi 26 mai</title>
+      <description>Alizé Cornet disputera son deuxième tour du tournoi en session de nuit sur le court central Philippe-Chatrier. Léolia Jeanjean, Caroline Garcia, Gilles Simon et Hugo Gaston seront également en lice dans la journée.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="programme" lemma="programme" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="jeudi" lemma="jeudi" pos="NOUN" />
+        <token form="26" lemma="26" pos="NUM" />
+        <token form="mai" lemma="mai" pos="NOUN" />
+        <token form="Alizé" lemma="alizé" pos="NOUN" />
+        <token form="Cornet" lemma="Cornet" pos="PROPN" />
+        <token form="disputera" lemma="disputer" pos="VERB" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="deuxième" lemma="deuxième" pos="ADJ" />
+        <token form="tour" lemma="tour" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="tournoi" lemma="tournoi" pos="NOUN" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="session" lemma="session" pos="NOUN" />
+        <token form="nuit" lemma="nuit" pos="NOUN" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="court" lemma="court" pos="ADJ" />
+        <token form="central" lemma="central" pos="ADJ" />
+        <token form="Philippe" lemma="Philippe" pos="PROPN" />
+        <token form="Chatrier" lemma="chatrier" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Léolia" lemma="Léolia" pos="PROPN" />
+        <token form="Jeanjean" lemma="Jeanjean" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Caroline" lemma="Caroline" pos="PROPN" />
+        <token form="Garcia" lemma="Garcia" pos="PROPN" />
+        <token form="Gilles" lemma="Gilles" pos="PROPN" />
+        <token form="Simon" lemma="Simon" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="Hugo" lemma="Hugo" pos="PROPN" />
+        <token form="Gaston" lemma="Gaston" pos="PROPN" />
+        <token form="seront" lemma="être" pos="AUX" />
+        <token form="également" lemma="également" pos="ADV" />
+        <token form="lice" lemma="lice" pos="NOUN" />
+        <token form="dans" lemma="dans" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="journée" lemma="journée" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros 2022 : Zverev et Djokovic poursuivent, Raducanu sortie, des Bleus à terre</title>
+      <description>La jeune Britannique, vainqueure surprise de l’US Open 2021, a été éliminée dès le deuxième tour du Grand Chelem parisien.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="Zverev" lemma="Zverev" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="Djokovic" lemma="Djokovic" pos="PROPN" />
+        <token form="poursuivent" lemma="poursuivre" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Raducanu" lemma="raducanu" pos="NOUN" />
+        <token form="sortie" lemma="sortie" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="Bleus" lemma="bleu" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="terre" lemma="terre" pos="NOUN" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="jeune" lemma="jeune" pos="ADJ" />
+        <token form="Britannique" lemma="britannique" pos="NOUN" />
+        <token form="vainqueure" lemma="vainqueure" pos="X" />
+        <token form="surprise" lemma="surprise" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="l’" lemma="l’" pos="NUM" />
+        <token form="US" lemma="US" pos="PROPN" />
+        <token form="Open" lemma="Open" pos="PROPN" />
+        <token form="2021" lemma="2021" pos="NUM" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="été" lemma="être" pos="AUX" />
+        <token form="éliminée" lemma="éliminer" pos="VERB" />
+        <token form="dès" lemma="dès" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="deuxième" lemma="deuxième" pos="ADJ" />
+        <token form="tour" lemma="tour" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="Grand" lemma="grand" pos="ADJ" />
+        <token form="Chelem" lemma="chelem" pos="NOUN" />
+        <token form="parisien" lemma="parisien" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Kylian Mbappé, « remontada » de 2017,  Rafael Nadal… Entre l’Espagne et la France, un col et beaucoup de piques</title>
+      <description>Le choix de Kylian Mbappé de prolonger son contrat au Paris-Saint-Germain jusqu’en 2025, plutôt que de rejoindre le Real Madrid, n’est que le dernier épisode en date des tensions sportives qui se manifestent régulièrement des deux côtés des Pyrénées.</description>
+      <analyse>
+        <token form="Kylian" lemma="Kylian" pos="PROPN" />
+        <token form="Mbappé" lemma="Mbappé" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="remontada" lemma="remontada" pos="NOUN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="2017" lemma="2017" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="Rafael" lemma="rafael" pos="NOUN" />
+        <token form="Nadal" lemma="Nadal" pos="PROPN" />
+        <token form="…" lemma="…" pos="ADP" />
+        <token form="Entre" lemma="entre" pos="ADP" />
+        <token form="l’" lemma="l’" pos="PROPN" />
+        <token form="Espagne" lemma="Espagne" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="France" lemma="France" pos="PROPN" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="col" lemma="col" pos="NOUN" />
+        <token form="beaucoup" lemma="beaucoup" pos="ADV" />
+        <token form="piques" lemma="pique" pos="NOUN" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="choix" lemma="choix" pos="NOUN" />
+        <token form="prolonger" lemma="prolonger" pos="VERB" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="contrat" lemma="contrat" pos="NOUN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="Paris-Saint-Germain" lemma="Paris-Saint-Germain" pos="PROPN" />
+        <token form="jusqu’" lemma="jusqu’" pos="PROPN" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="2025" lemma="2025" pos="NUM" />
+        <token form="plutôt" lemma="plutôt" pos="ADV" />
+        <token form="que" lemma="que" pos="SCONJ" />
+        <token form="rejoindre" lemma="rejoindre" pos="VERB" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="Real" lemma="Real" pos="PROPN" />
+        <token form="Madrid" lemma="Madrid" pos="PROPN" />
+        <token form="n’" lemma="n’" pos="PROPN" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="dernier" lemma="dernier" pos="ADJ" />
+        <token form="épisode" lemma="épisode" pos="NOUN" />
+        <token form="date" lemma="date" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="tensions" lemma="tension" pos="NOUN" />
+        <token form="sportives" lemma="sportif" pos="ADJ" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="se" lemma="se" pos="PRON" />
+        <token form="manifestent" lemma="manifester" pos="VERB" />
+        <token form="régulièrement" lemma="régulièrement" pos="ADV" />
+        <token form="deux" lemma="deux" pos="NUM" />
+        <token form="côtés" lemma="côté" pos="NOUN" />
+        <token form="Pyrénées" lemma="pyrénée" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Ostéoporose : dépasser la peur de bouger</title>
+      <description>Les personnes atteintes de cette maladie fragilisant les os, principalement liée à l’âge, ne doivent pas craindre de pratiquer une activité physique. Les risques de blessures sont infimes face aux bénéfices de l’exercice, soulignent des experts britanniques.</description>
+      <analyse>
+        <token form="Ostéoporose" lemma="ostéoporose" pos="NOUN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="dépasser" lemma="dépasser" pos="VERB" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="peur" lemma="peur" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="bouger" lemma="bouger" pos="VERB" />
+        <token form="Les" lemma="le" pos="DET" />
+        <token form="personnes" lemma="personne" pos="NOUN" />
+        <token form="atteintes" lemma="atteindre" pos="VERB" />
+        <token form="cette" lemma="ce" pos="DET" />
+        <token form="maladie" lemma="maladie" pos="NOUN" />
+        <token form="fragilisant" lemma="fragiliser" pos="VERB" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="os" lemma="os" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="principalement" lemma="principalement" pos="ADV" />
+        <token form="liée" lemma="lier" pos="VERB" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="l’" lemma="l’" pos="NUM" />
+        <token form="âge" lemma="âge" pos="NOUN" />
+        <token form="ne" lemma="ne" pos="ADV" />
+        <token form="doivent" lemma="devoir" pos="VERB" />
+        <token form="pas" lemma="pas" pos="ADV" />
+        <token form="craindre" lemma="craindre" pos="VERB" />
+        <token form="pratiquer" lemma="pratiquer" pos="VERB" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="activité" lemma="activité" pos="NOUN" />
+        <token form="physique" lemma="physique" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="risques" lemma="risque" pos="NOUN" />
+        <token form="blessures" lemma="blessure" pos="NOUN" />
+        <token form="sont" lemma="être" pos="AUX" />
+        <token form="infimes" lemma="infime" pos="ADJ" />
+        <token form="face" lemma="face" pos="NOUN" />
+        <token form="aux" lemma="aux" pos="DET" />
+        <token form="bénéfices" lemma="bénéfice" pos="NOUN" />
+        <token form="exercice" lemma="exercice" pos="NOUN" />
+        <token form="soulignent" lemma="souligner" pos="VERB" />
+        <token form="des" lemma="un" pos="DET" />
+        <token form="experts" lemma="expert" pos="NOUN" />
+        <token form="britanniques" lemma="britannique" pos="ADJ" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Football : le gouvernement britannique autorise la vente du club de Chelsea</title>
+      <description>La Premier League avait déjà approuvé, mardi, le rachat du club de football de Chelsea par le groupe mené par l’homme d’affaires américain Todd Boehly.</description>
+      <analyse>
+        <token form="Football" lemma="football" pos="NOUN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="gouvernement" lemma="gouvernement" pos="NOUN" />
+        <token form="britannique" lemma="britannique" pos="ADJ" />
+        <token form="autorise" lemma="autorise" pos="VERB" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="vente" lemma="vent" pos="ADJ" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="club" lemma="club" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Chelsea" lemma="chelsea" pos="NOUN" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="Premier" lemma="premier" pos="ADJ" />
+        <token form="League" lemma="league" pos="NOUN" />
+        <token form="avait" lemma="avoir" pos="AUX" />
+        <token form="déjà" lemma="déjà" pos="ADV" />
+        <token form="approuvé" lemma="approuver" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="mardi" lemma="mardi" pos="NOUN" />
+        <token form="rachat" lemma="rachat" pos="NOUN" />
+        <token form="football" lemma="football" pos="NOUN" />
+        <token form="par" lemma="par" pos="ADP" />
+        <token form="groupe" lemma="groupe" pos="NOUN" />
+        <token form="mené" lemma="mener" pos="VERB" />
+        <token form="l’" lemma="l’" pos="NUM" />
+        <token form="homme" lemma="homme" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="affaires" lemma="affaire" pos="NOUN" />
+        <token form="américain" lemma="américain" pos="ADJ" />
+        <token form="Todd" lemma="Todd" pos="PROPN" />
+        <token form="Boehly" lemma="Boehly" pos="PROPN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>A Roland-Garros, la guerre en Ukraine divise le circuit</title>
+      <description>Les joueuses et joueurs présents sur la terre battue parisienne n’apprécient pas tous la décision des instances du tennis de ne pas attribuer de points lors du prochain tournoi de Wimbledon, après que ce dernier a décidé d’exclure les joueurs russes et biélorusses.</description>
+      <analyse>
+        <token form="A" lemma="a" pos="NOUN" />
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="guerre" lemma="guerre" pos="NOUN" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="Ukraine" lemma="ukraine" pos="NOUN" />
+        <token form="divise" lemma="divise" pos="VERB" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="circuit" lemma="circuit" pos="NOUN" />
+        <token form="Les" lemma="le" pos="DET" />
+        <token form="joueuses" lemma="joueur" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="joueurs" lemma="joueur" pos="NOUN" />
+        <token form="présents" lemma="présent" pos="ADJ" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="terre" lemma="terre" pos="NOUN" />
+        <token form="battue" lemma="battu" pos="ADJ" />
+        <token form="parisienne" lemma="parisien" pos="ADJ" />
+        <token form="n’" lemma="n’" pos="PROPN" />
+        <token form="apprécient" lemma="apprécier" pos="VERB" />
+        <token form="pas" lemma="pas" pos="ADV" />
+        <token form="tous" lemma="tout" pos="ADJ" />
+        <token form="décision" lemma="décision" pos="NOUN" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="instances" lemma="instance" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="tennis" lemma="tennis" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="ne" lemma="ne" pos="ADV" />
+        <token form="attribuer" lemma="attribuer" pos="VERB" />
+        <token form="points" lemma="point" pos="NOUN" />
+        <token form="lors" lemma="lors" pos="ADV" />
+        <token form="prochain" lemma="prochain" pos="ADJ" />
+        <token form="tournoi" lemma="tournoi" pos="NOUN" />
+        <token form="Wimbledon" lemma="Wimbledon" pos="PROPN" />
+        <token form="après" lemma="après" pos="ADP" />
+        <token form="que" lemma="que" pos="SCONJ" />
+        <token form="ce" lemma="ce" pos="DET" />
+        <token form="dernier" lemma="dernier" pos="ADJ" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="décidé" lemma="décider" pos="VERB" />
+        <token form="d’" lemma="d’" pos="PROPN" />
+        <token form="exclure" lemma="exclure" pos="NOUN" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="russes" lemma="russe" pos="NOUN" />
+        <token form="biélorusses" lemma="biélorusse" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Richard Gasquet, l’ex-« petit Mozart du tennis », veut un dernier rappel</title>
+      <description>Malgré la fin de sa carrière qui se profile, à bientôt 36 ans, le Biterrois s’est qualifié pour le deuxième tour lors de son 19ᵉ Roland-Garros.</description>
+      <analyse>
+        <token form="Richard" lemma="Richard" pos="PROPN" />
+        <token form="Gasquet" lemma="Gasquet" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="l’" lemma="l’" pos="ADV" />
+        <token form="ex-" lemma="ex-" pos="NOUN" />
+        <token form="«" lemma="«" pos="VERB" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="petit" lemma="petit" pos="ADJ" />
+        <token form="Mozart" lemma="mozart" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="tennis" lemma="tennis" pos="NOUN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="veut" lemma="vouloir" pos="VERB" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="dernier" lemma="dernier" pos="ADJ" />
+        <token form="rappel" lemma="rappel" pos="NOUN" />
+        <token form="Malgré" lemma="malgré" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="fin" lemma="fin" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="sa" lemma="son" pos="DET" />
+        <token form="carrière" lemma="carrière" pos="NOUN" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="se" lemma="se" pos="PRON" />
+        <token form="profile" lemma="profile" pos="VERB" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="bientôt" lemma="bientôt" pos="ADV" />
+        <token form="36" lemma="36" pos="NUM" />
+        <token form="ans" lemma="an" pos="NOUN" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="Biterrois" lemma="Biterrois" pos="PROPN" />
+        <token form="s’" lemma="s’" pos="AUX" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="qualifié" lemma="qualifier" pos="VERB" />
+        <token form="pour" lemma="pour" pos="ADP" />
+        <token form="deuxième" lemma="deuxième" pos="ADJ" />
+        <token form="tour" lemma="tour" pos="NOUN" />
+        <token form="lors" lemma="lors" pos="ADV" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="19ᵉ" lemma="19ᵉ" pos="NOUN" />
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Le Sud-Africain Pierre Carter devient le premier à s’élancer légalement en parapente d’un sommet de l’Everest</title>
+      <description>Jusqu’ici, trois vols avaient été enregistrés depuis le toit du monde, tous effectués sans autorisation gouvernementale.</description>
+      <analyse>
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="Sud-Africain" lemma="sud-africain" pos="NOUN" />
+        <token form="Pierre" lemma="Pierre" pos="PROPN" />
+        <token form="Carter" lemma="Carter" pos="PROPN" />
+        <token form="devient" lemma="devenir" pos="VERB" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="premier" lemma="premier" pos="ADJ" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="s’" lemma="s’" pos="AUX" />
+        <token form="élancer" lemma="élancer" pos="AUX" />
+        <token form="légalement" lemma="légalement" pos="ADV" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="parapente" lemma="parapente" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="ADV" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="sommet" lemma="sommet" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="l’" lemma="l’" pos="PROPN" />
+        <token form="Everest" lemma="Everest" pos="PROPN" />
+        <token form="Jusqu’" lemma="Jusqu’" pos="X" />
+        <token form="ici" lemma="ici" pos="ADV" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="trois" lemma="trois" pos="NUM" />
+        <token form="vols" lemma="vol" pos="NOUN" />
+        <token form="avaient" lemma="avoir" pos="AUX" />
+        <token form="été" lemma="être" pos="AUX" />
+        <token form="enregistrés" lemma="enregistrer" pos="VERB" />
+        <token form="depuis" lemma="depuis" pos="ADP" />
+        <token form="toit" lemma="toit" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="monde" lemma="monde" pos="NOUN" />
+        <token form="tous" lemma="tout" pos="ADJ" />
+        <token form="effectués" lemma="effectuer" pos="VERB" />
+        <token form="sans" lemma="sans" pos="ADP" />
+        <token form="autorisation" lemma="autorisation" pos="NOUN" />
+        <token form="gouvernementale" lemma="gouvernemental" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>L’entraîneur du PSG féminin, Didier Ollé-Nicolle, suspendu en raison d’un comportement « inapproprié »</title>
+      <description>L’entraîneur a été « mis en disponibilité » temporairement le temps d’enquêter sur des « faits et propos inappropriés » qui lui sont reprochés. La police judiciaire de Versailles s’est également saisie du dossier.</description>
+      <analyse>
+        <token form="L’" lemma="L’" pos="PROPN" />
+        <token form="entraîneur" lemma="entraîneur" pos="PROPN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="PSG" lemma="psg" pos="NOUN" />
+        <token form="féminin" lemma="féminin" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Didier" lemma="Didier" pos="PROPN" />
+        <token form="Ollé" lemma="Ollé" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Nicolle" lemma="Nicolle" pos="PROPN" />
+        <token form="suspendu" lemma="suspendre" pos="VERB" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="raison" lemma="raison" pos="NOUN" />
+        <token form="d’" lemma="d’" pos="ADV" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="comportement" lemma="comportement" pos="NOUN" />
+        <token form="«" lemma="«" pos="NOUN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="inapproprié" lemma="inapproprié" pos="ADJ" />
+        <token form="»" lemma="»" pos="NOUN" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="été" lemma="être" pos="AUX" />
+        <token form="mis" lemma="mettre" pos="VERB" />
+        <token form="disponibilité" lemma="disponibilité" pos="NOUN" />
+        <token form="temporairement" lemma="temporairement" pos="ADV" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="temps" lemma="temps" pos="NOUN" />
+        <token form="enquêter" lemma="enquêter" pos="VERB" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="des" lemma="un" pos="DET" />
+        <token form="faits" lemma="fait" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="propos" lemma="propos" pos="NOUN" />
+        <token form="inappropriés" lemma="inapproprié" pos="ADJ" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="lui" lemma="lui" pos="PRON" />
+        <token form="sont" lemma="être" pos="AUX" />
+        <token form="reprochés" lemma="reprocher" pos="VERB" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="police" lemma="police" pos="NOUN" />
+        <token form="judiciaire" lemma="judiciaire" pos="ADJ" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Versailles" lemma="Versailles" pos="PROPN" />
+        <token form="s’" lemma="s’" pos="AUX" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="également" lemma="également" pos="ADV" />
+        <token form="saisie" lemma="saisir" pos="VERB" />
+        <token form="dossier" lemma="dossier" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Maroc : « Coach Vahid », le sélectionneur mal aimé des Lions de l’Atlas, conserve son siège</title>
+      <description>Même s’il a qualifié l’équipe nationale pour la Coupe du monde, Vahid Halilhodzic est l’objet de vives critiques.</description>
+      <analyse>
+        <token form="Maroc" lemma="Maroc" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form="Coach" lemma="Coach" pos="PROPN" />
+        <token form="Vahid" lemma="vahid" pos="NOUN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="sélectionneur" lemma="sélectionneur" pos="NOUN" />
+        <token form="mal" lemma="mal" pos="ADJ" />
+        <token form="aimé" lemma="aimer" pos="VERB" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="Lions" lemma="lion" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="l’" lemma="l’" pos="ADV" />
+        <token form="Atlas" lemma="Atlas" pos="PROPN" />
+        <token form="conserve" lemma="conserve" pos="VERB" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="siège" lemma="siège" pos="NOUN" />
+        <token form="Même" lemma="même" pos="ADV" />
+        <token form="s’" lemma="s’" pos="AUX" />
+        <token form="il" lemma="il" pos="PRON" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="qualifié" lemma="qualifier" pos="VERB" />
+        <token form="équipe" lemma="équipe" pos="NOUN" />
+        <token form="nationale" lemma="national" pos="ADJ" />
+        <token form="pour" lemma="pour" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="Coupe" lemma="coupe" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="monde" lemma="monde" pos="NOUN" />
+        <token form="Halilhodzic" lemma="Halilhodzic" pos="PROPN" />
+        <token form="est" lemma="être" pos="AUX" />
+        <token form="objet" lemma="objet" pos="ADJ" />
+        <token form="vives" lemma="vive" pos="NOUN" />
+        <token form="critiques" lemma="critique" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros : « Du panache, du scénario, de la blessure », les adieux au tennis réussis de Jo-Wilfried Tsonga</title>
+      <description>Le meilleur joueur français des vingt dernières années a disputé, mardi, l’ultime rencontre de sa carrière. Battu au premier tour par le Norvégien Casper Ruud, Tsonga prend sa retraite, à 37 ans.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="«" lemma="«" pos="PUNCT" />
+        <token form="Du" lemma="de" pos="ADP" />
+        <token form="panache" lemma="panache" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="scénario" lemma="scénario" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="blessure" lemma="blessure" pos="NOUN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="adieux" lemma="adieu" pos="NOUN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="tennis" lemma="tennis" pos="NOUN" />
+        <token form="réussis" lemma="réussir" pos="VERB" />
+        <token form="Jo" lemma="Jo" pos="PROPN" />
+        <token form="Wilfried" lemma="Wilfried" pos="PROPN" />
+        <token form="Tsonga" lemma="Tsonga" pos="PROPN" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="meilleur" lemma="meilleur" pos="ADJ" />
+        <token form="joueur" lemma="joueur" pos="NOUN" />
+        <token form="français" lemma="français" pos="ADJ" />
+        <token form="des" lemma="de" pos="ADP" />
+        <token form="vingt" lemma="vingt" pos="NUM" />
+        <token form="dernières" lemma="dernier" pos="ADJ" />
+        <token form="années" lemma="année" pos="NOUN" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="disputé" lemma="disputer" pos="VERB" />
+        <token form="mardi" lemma="mardi" pos="NOUN" />
+        <token form="l’" lemma="l’" pos="NUM" />
+        <token form="ultime" lemma="ultime" pos="ADJ" />
+        <token form="rencontre" lemma="rencontre" pos="NOUN" />
+        <token form="sa" lemma="son" pos="DET" />
+        <token form="carrière" lemma="carrière" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Battu" lemma="battu" pos="NOUN" />
+        <token form="premier" lemma="premier" pos="ADJ" />
+        <token form="tour" lemma="tour" pos="NOUN" />
+        <token form="par" lemma="par" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="Norvégien" lemma="Norvégien" pos="PROPN" />
+        <token form="Casper" lemma="Casper" pos="PROPN" />
+        <token form="Ruud" lemma="Ruud" pos="PROPN" />
+        <token form="prend" lemma="prendre" pos="VERB" />
+        <token form="retraite" lemma="retraite" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="37" lemma="37" pos="NUM" />
+        <token form="ans" lemma="an" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros 2022 : le programme de mercredi 25 mai</title>
+      <description>La journée se clôturera avec une session de nuit qui verra le Français Corentin Moutet affronter, au deuxième tour, l’Espagnol Rafael Nadal. Le Serbe Novak Djokovic et l’Espagnol Carlos Alcaraz seront également en lice.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="programme" lemma="programme" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="mercredi" lemma="mercredi" pos="NOUN" />
+        <token form="25" lemma="25" pos="NUM" />
+        <token form="mai" lemma="mai" pos="NOUN" />
+        <token form="La" lemma="le" pos="DET" />
+        <token form="journée" lemma="journée" pos="NOUN" />
+        <token form="se" lemma="se" pos="PRON" />
+        <token form="clôturera" lemma="clôturer" pos="VERB" />
+        <token form="avec" lemma="avec" pos="ADP" />
+        <token form="une" lemma="un" pos="DET" />
+        <token form="session" lemma="session" pos="NOUN" />
+        <token form="nuit" lemma="nuit" pos="NOUN" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="verra" lemma="voir" pos="VERB" />
+        <token form="Français" lemma="français" pos="NOUN" />
+        <token form="Corentin" lemma="Corentin" pos="PROPN" />
+        <token form="Moutet" lemma="Moutet" pos="PROPN" />
+        <token form="affronter" lemma="affronter" pos="VERB" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="deuxième" lemma="deuxième" pos="ADJ" />
+        <token form="tour" lemma="tour" pos="NOUN" />
+        <token form="l’" lemma="l’" pos="PROPN" />
+        <token form="Espagnol" lemma="Espagnol" pos="PROPN" />
+        <token form="Rafael" lemma="rafael" pos="NOUN" />
+        <token form="Nadal" lemma="Nadal" pos="PROPN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="Serbe" lemma="Serbe" pos="PROPN" />
+        <token form="Novak" lemma="Novak" pos="PROPN" />
+        <token form="Djokovic" lemma="Djokovic" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="Carlos" lemma="carlos" pos="VERB" />
+        <token form="Alcaraz" lemma="Alcaraz" pos="PROPN" />
+        <token form="seront" lemma="être" pos="AUX" />
+        <token form="également" lemma="également" pos="ADV" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="lice" lemma="lice" pos="NOUN" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros 2022 : Hugo Gaston, Richard Gasquet, Gilles Simon, Alizé Cornet et Caroline Garcia qualifiés pour le deuxième tour</title>
+      <description>Les larmes de Tsonga, blessé à l’épaule, ont ému les spectateurs du court Philippe-Chatrier. Dans le camp français, Ugo Humbert, Arthur Rinderknech, Benoît Paire et Lucas Pouille rangent leurs raquettes au terme du premier tour.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="NOUN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="Hugo" lemma="Hugo" pos="PROPN" />
+        <token form="Gaston" lemma="Gaston" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="Richard" lemma="Richard" pos="PROPN" />
+        <token form="Gasquet" lemma="Gasquet" pos="PROPN" />
+        <token form="Gilles" lemma="Gilles" pos="PROPN" />
+        <token form="Simon" lemma="Simon" pos="PROPN" />
+        <token form="Alizé" lemma="alizé" pos="NOUN" />
+        <token form="Cornet" lemma="Cornet" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="Caroline" lemma="caroline" pos="NOUN" />
+        <token form="Garcia" lemma="Garcia" pos="PROPN" />
+        <token form="qualifiés" lemma="qualifié" pos="ADJ" />
+        <token form="pour" lemma="pour" pos="ADP" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="deuxième" lemma="deuxième" pos="ADJ" />
+        <token form="tour" lemma="tour" pos="NOUN" />
+        <token form="Les" lemma="le" pos="DET" />
+        <token form="larmes" lemma="larme" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Tsonga" lemma="Tsonga" pos="PROPN" />
+        <token form="blessé" lemma="blesser" pos="VERB" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="l’" lemma="l’" pos="PROPN" />
+        <token form="épaule" lemma="épaule" pos="NOUN" />
+        <token form="ont" lemma="avoir" pos="AUX" />
+        <token form="ému" lemma="émouvoir" pos="VERB" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="spectateurs" lemma="spectateur" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="court" lemma="court" pos="ADJ" />
+        <token form="Philippe" lemma="Philippe" pos="PROPN" />
+        <token form="Chatrier" lemma="chatrier" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Dans" lemma="dans" pos="ADP" />
+        <token form="camp" lemma="camp" pos="NOUN" />
+        <token form="français" lemma="français" pos="ADJ" />
+        <token form="Ugo" lemma="Ugo" pos="PROPN" />
+        <token form="Humbert" lemma="Humbert" pos="PROPN" />
+        <token form="Arthur" lemma="Arthur" pos="PROPN" />
+        <token form="Rinderknech" lemma="Rinderknech" pos="PROPN" />
+        <token form="Benoît" lemma="Benoît" pos="PROPN" />
+        <token form="Paire" lemma="Paire" pos="PROPN" />
+        <token form="Lucas" lemma="Lucas" pos="PROPN" />
+        <token form="Pouille" lemma="pouille" pos="NOUN" />
+        <token form="rangent" lemma="ranger" pos="VERB" />
+        <token form="leurs" lemma="leur" pos="DET" />
+        <token form="raquettes" lemma="raquette" pos="NOUN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="terme" lemma="terme" pos="NOUN" />
+        <token form="premier" lemma="premier" pos="ADJ" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Pourquoi Kylian Mbappé reste-t-il au PSG ? Posez vos questions</title>
+      <description>L’attaquant a rejeté l’offre du Real Madrid et signé jusqu’en 2025. Alexandre Pedro, journaliste au service Sports du « Monde », répond à vos questions.</description>
+      <analyse>
+        <token form="Pourquoi" lemma="pourquoi" pos="ADV" />
+        <token form="Kylian" lemma="Kylian" pos="PROPN" />
+        <token form="Mbappé" lemma="Mbappé" pos="PROPN" />
+        <token form="reste" lemma="reste" pos="VERB" />
+        <token form="-t" lemma="-t" pos="PRON" />
+        <token form="-il" lemma="il" pos="PRON" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="PSG" lemma="PSG" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="?" lemma="?" pos="PUNCT" />
+        <token form="Posez" lemma="poser" pos="VERB" />
+        <token form="vos" lemma="votre" pos="DET" />
+        <token form="questions" lemma="question" pos="NOUN" />
+        <token form="L’" lemma="L’" pos="PROPN" />
+        <token form="attaquant" lemma="attaquant" pos="PROPN" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="rejeté" lemma="rejeter" pos="VERB" />
+        <token form="l’" lemma="l’" pos="NUM" />
+        <token form="offre" lemma="offre" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="Real" lemma="Real" pos="PROPN" />
+        <token form="Madrid" lemma="Madrid" pos="PROPN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="signé" lemma="signer" pos="VERB" />
+        <token form="jusqu’" lemma="jusqu’" pos="NOUN" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="2025" lemma="2025" pos="NUM" />
+        <token form="." lemma="." pos="PUNCT" />
+        <token form="Alexandre" lemma="Alexandre" pos="PROPN" />
+        <token form="Pedro" lemma="Pedro" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="journaliste" lemma="journaliste" pos="NOUN" />
+        <token form="service" lemma="service" pos="NOUN" />
+        <token form="Sports" lemma="sport" pos="ADJ" />
+        <token form="«" lemma="«" pos="NOUN" />
+        <token form="Monde" lemma="Monde" pos="PROPN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="répond" lemma="répondre" pos="VERB" />
+        <token form="à" lemma="à" pos="ADP" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Les accents gaulliens de Kylian Mbappé, qui reste à Paris</title>
+      <description>« J’ai eu l’appel de la patrie et de la capitale », a déclaré, lundi, le footballeur pour justifier son choix de demeurer au PSG, ajoutant vouloir « continuer un peu, mener la France vers les sommets ».</description>
+      <analyse>
+        <token form="Les" lemma="le" pos="DET" />
+        <token form="accents" lemma="accent" pos="NOUN" />
+        <token form="gaulliens" lemma="gaullien" pos="ADJ" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="Kylian" lemma="Kylian" pos="PROPN" />
+        <token form="Mbappé" lemma="Mbappé" pos="PROPN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="reste" lemma="reste" pos="VERB" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="Paris" lemma="Paris" pos="PROPN" />
+        <token form="«" lemma="«" pos="DET" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="J’" lemma="J’" pos="PROPN" />
+        <token form="ai" lemma="avoir" pos="AUX" />
+        <token form="eu" lemma="avoir" pos="VERB" />
+        <token form="l’" lemma="l’" pos="NUM" />
+        <token form="appel" lemma="appel" pos="NOUN" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="patrie" lemma="patrie" pos="NOUN" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="capitale" lemma="capitale" pos="NOUN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="déclaré" lemma="déclarer" pos="VERB" />
+        <token form="lundi" lemma="lundi" pos="NOUN" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="footballeur" lemma="footballeur" pos="NOUN" />
+        <token form="pour" lemma="pour" pos="ADP" />
+        <token form="justifier" lemma="justifier" pos="VERB" />
+        <token form="son" lemma="son" pos="DET" />
+        <token form="choix" lemma="choix" pos="NOUN" />
+        <token form="demeurer" lemma="demeurer" pos="VERB" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="PSG" lemma="PSG" pos="PROPN" />
+        <token form="ajoutant" lemma="ajouter" pos="VERB" />
+        <token form="vouloir" lemma="vouloir" pos="VERB" />
+        <token form="continuer" lemma="continuer" pos="VERB" />
+        <token form="un" lemma="un" pos="DET" />
+        <token form="peu" lemma="peu" pos="ADV" />
+        <token form="mener" lemma="mener" pos="VERB" />
+        <token form="France" lemma="France" pos="PROPN" />
+        <token form="vers" lemma="vers" pos="ADP" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="sommets" lemma="sommet" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros : en dehors des courts, le Russe Andrey Rublev monte au filet</title>
+      <description>Le numéro 7 mondial, qui entre en lice mardi sur la terre battue parisienne, a pris position, à plusieurs reprises, contre la guerre en Ukraine.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="en" lemma="en" pos="ADP" />
+        <token form="dehors" lemma="dehors" pos="ADP" />
+        <token form="des" lemma="un" pos="DET" />
+        <token form="courts" lemma="court" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="Russe" lemma="Russe" pos="PROPN" />
+        <token form="Andrey" lemma="Andrey" pos="PROPN" />
+        <token form="Rublev" lemma="Rublev" pos="PROPN" />
+        <token form="monte" lemma="mont" pos="ADJ" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="filet" lemma="filet" pos="NOUN" />
+        <token form="Le" lemma="le" pos="DET" />
+        <token form="numéro" lemma="numéro" pos="NOUN" />
+        <token form="7" lemma="7" pos="NUM" />
+        <token form="mondial" lemma="mondial" pos="ADJ" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="entre" lemma="entre" pos="ADP" />
+        <token form="lice" lemma="lice" pos="NOUN" />
+        <token form="mardi" lemma="mardi" pos="NOUN" />
+        <token form="sur" lemma="sur" pos="ADP" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="terre" lemma="terre" pos="NOUN" />
+        <token form="battue" lemma="battu" pos="ADJ" />
+        <token form="parisienne" lemma="parisien" pos="ADJ" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="pris" lemma="prendre" pos="VERB" />
+        <token form="position" lemma="position" pos="NOUN" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="plusieurs" lemma="plusieurs" pos="DET" />
+        <token form="reprises" lemma="reprise" pos="NOUN" />
+        <token form="contre" lemma="contre" pos="ADP" />
+        <token form="guerre" lemma="guerre" pos="NOUN" />
+        <token form="Ukraine" lemma="ukraine" pos="NOUN" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros 2022 : le programme de mardi 24 mai</title>
+      <description>Si la pluie, qui a perturbé la journée de lundi, ne vient pas à nouveau jouer les trouble-fêtes, Jo-Wilfried Tsonga devrait faire ses adieux au public parisien.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form="2022" lemma="2022" pos="NUM" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="le" lemma="le" pos="DET" />
+        <token form="programme" lemma="programme" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="mardi" lemma="mardi" pos="NOUN" />
+        <token form="24" lemma="24" pos="NUM" />
+        <token form="mai" lemma="mai" pos="NOUN" />
+        <token form="Si" lemma="si" pos="SCONJ" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="pluie" lemma="pluie" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="qui" lemma="qui" pos="PRON" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="perturbé" lemma="perturber" pos="VERB" />
+        <token form="journée" lemma="journée" pos="NOUN" />
+        <token form="lundi" lemma="lundi" pos="NOUN" />
+        <token form="ne" lemma="ne" pos="ADV" />
+        <token form="vient" lemma="venir" pos="VERB" />
+        <token form="pas" lemma="pas" pos="ADV" />
+        <token form="à" lemma="à" pos="ADP" />
+        <token form="nouveau" lemma="nouveau" pos="ADJ" />
+        <token form="jouer" lemma="jouer" pos="VERB" />
+        <token form="les" lemma="le" pos="DET" />
+        <token form="trouble" lemma="trouble" pos="NOUN" />
+        <token form="fêtes" lemma="fête" pos="NOUN" />
+        <token form="Jo" lemma="Jo" pos="PROPN" />
+        <token form="Wilfried" lemma="Wilfried" pos="PROPN" />
+        <token form="Tsonga" lemma="Tsonga" pos="PROPN" />
+        <token form="devrait" lemma="devoir" pos="VERB" />
+        <token form="faire" lemma="faire" pos="VERB" />
+        <token form="ses" lemma="son" pos="DET" />
+        <token form="adieux" lemma="adieu" pos="NOUN" />
+        <token form="au" lemma="au" pos="ADP" />
+        <token form="public" lemma="public" pos="NOUN" />
+        <token form="parisien" lemma="parisien" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+    <article date="2022-05-25" categorie="sport">
+      <title>Roland-Garros : Diane Parry ne veut « pas se fixer de limites »</title>
+      <description>A 19 ans, la jeune Française a renversé, lundi, la Tchèque Barbora Krejcikova, tenante du titre du tournoi du Grand Chelem parisien et numéro 2 mondiale.</description>
+      <analyse>
+        <token form="Roland" lemma="Roland" pos="PROPN" />
+        <token form="-" lemma="-" pos="PROPN" />
+        <token form="Garros" lemma="Garros" pos="PROPN" />
+        <token form=" " lemma=" " pos="SPACE" />
+        <token form=":" lemma=":" pos="PUNCT" />
+        <token form="Diane" lemma="Diane" pos="PROPN" />
+        <token form="Parry" lemma="Parry" pos="PROPN" />
+        <token form="ne" lemma="ne" pos="ADV" />
+        <token form="veut" lemma="vouloir" pos="VERB" />
+        <token form="«" lemma="«" pos="AUX" />
+        <token form="pas" lemma="pas" pos="ADV" />
+        <token form="se" lemma="se" pos="PRON" />
+        <token form="fixer" lemma="fixer" pos="NOUN" />
+        <token form="de" lemma="de" pos="ADP" />
+        <token form="limites" lemma="limite" pos="NOUN" />
+        <token form="»" lemma="»" pos="PUNCT" />
+        <token form="A" lemma="a" pos="NOUN" />
+        <token form="19" lemma="19" pos="PRON" />
+        <token form="ans" lemma="an" pos="NOUN" />
+        <token form="," lemma="," pos="PUNCT" />
+        <token form="la" lemma="le" pos="DET" />
+        <token form="jeune" lemma="jeune" pos="ADJ" />
+        <token form="Française" lemma="français" pos="NOUN" />
+        <token form="a" lemma="avoir" pos="AUX" />
+        <token form="renversé" lemma="renverser" pos="VERB" />
+        <token form="lundi" lemma="lundi" pos="NOUN" />
+        <token form="Tchèque" lemma="tchèque" pos="NOUN" />
+        <token form="Barbora" lemma="Barbora" pos="PROPN" />
+        <token form="Krejcikova" lemma="Krejcikova" pos="PROPN" />
+        <token form="tenante" lemma="tenant" pos="NOUN" />
+        <token form="du" lemma="de" pos="ADP" />
+        <token form="titre" lemma="titre" pos="NOUN" />
+        <token form="tournoi" lemma="tournoi" pos="NOUN" />
+        <token form="Grand" lemma="grand" pos="ADJ" />
+        <token form="Chelem" lemma="chelem" pos="NOUN" />
+        <token form="parisien" lemma="parisien" pos="ADJ" />
+        <token form="et" lemma="et" pos="CCONJ" />
+        <token form="numéro" lemma="numéro" pos="NOUN" />
+        <token form="2" lemma="2" pos="NUM" />
+        <token form="mondiale" lemma="mondial" pos="ADJ" />
+        <token form="." lemma="." pos="PUNCT" />
+      </analyse>
+    </article>
+  </content>
+</corpus>
