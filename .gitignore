@@ -1,5 +1,6 @@
 .DS_Store 
-*/.DS_Store 
+*/.DS_Store
 2022
-__pycache__
 cache
+cache/*
+__pycache__/
