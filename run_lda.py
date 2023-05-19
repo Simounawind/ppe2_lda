@@ -1,212 +1,158 @@
-r"""
-LDA Model
-=========
-
-Introduces Gensim's LDA model and demonstrates its use on the NIPS corpus.
-
-"""
-
-import logging
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-
-###############################################################################
-# The purpose of this tutorial is to demonstrate how to train and tune an LDA model.
-#
-# In this tutorial we will:
-#
-# * Load input data.
-# * Pre-process that data.
-# * Transform documents into bag-of-words vectors.
-# * Train an LDA model.
-#
-# This tutorial will **not**:
-#
-# * Explain how Latent Dirichlet Allocation works
-# * Explain how the LDA model performs inference
-# * Teach you all the parameters and options for Gensim's LDA implementation
-#
-# If you are not familiar with the LDA model or how to use it in Gensim, I (Olavur Mortensen)
-# suggest you read up on that before continuing with this tutorial. Basic
-# understanding of the LDA model should suffice. Examples:
-#
-# * `Introduction to Latent Dirichlet Allocation <http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation>`_
-# * Gensim tutorial: :ref:`sphx_glr_auto_examples_core_run_topics_and_transformations.py`
-# * Gensim's LDA model API docs: :py:class:`gensim.models.LdaModel`
-#
-# I would also encourage you to consider each step when applying the model to
-# your data, instead of just blindly applying my solution. The different steps
-# will depend on your data and possibly your goal with the model.
-#
-# Data
-# ----
-#
-# I have used a corpus of NIPS papers in this tutorial, but if you're following
-# this tutorial just to learn about LDA I encourage you to consider picking a
-# corpus on a subject that you are familiar with. Qualitatively evaluating the
-# output of an LDA model is challenging and can require you to understand the
-# subject matter of your corpus (depending on your goal with the model).
-#
-# NIPS (Neural Information Processing Systems) is a machine learning conference
-# so the subject matter should be well suited for most of the target audience
-# of this tutorial.  You can download the original data from Sam Roweis'
-# `website <http://www.cs.nyu.edu/~roweis/data.html>`_.  The code below will
-# also do that for you.
-#
-# .. Important::
-#     The corpus contains 1740 documents, and not particularly long ones.
-#     So keep in mind that this tutorial is not geared towards efficiency, and be
-#     careful before applying the code to a large dataset.
-#
-
-import io
-import os.path
-import re
-import tarfile
-import json
-import smart_open
-
-with open('sortie.json') as f:
-    # 从文件中读取JSON数据
-    data = json.load(f)
-
-def extract_documents(data):
-    with smart_open.open(url, "rb") as file:
-        with tarfile.open(fileobj=file) as tar:
-            for member in tar.getmembers():
-                if member.isfile() and re.search(r'nipstxt/nips\d+/\d+\.txt', member.name):
-                    member_bytes = tar.extractfile(member).read()
-                    yield member_bytes.decode('utf-8', errors='replace')
-
-my_list = [
-    'Retrouvailles avec le roi du mélo prolétarien, Robert Guédiguian, dont le film fourmille de scènes et de personnages aussi bien vus que sentis.', 
-    'Victimes des assauts de la Manche, les communes du bord de mer ont chacune leurs parades, d’efficacité inégale. « Sale temps pour la planète » fait le point',
-]
-
-# unicode_list = [s.decode('utf-8') for s in my_list]
-docs = my_list
-
-###############################################################################
-# So we have a list of 1740 documents, where each document is a Unicode string.
-# If you're thinking about using your own corpus, then you need to make sure
-# that it's in the same format (list of Unicode strings) before proceeding
-# with the rest of this tutorial.
-#
-print(len(docs))
-print(docs[0][:500])
-
-###############################################################################
-# Pre-process and vectorize the documents
-# ---------------------------------------
-#
-# As part of preprocessing, we will:
-#
-# * Tokenize (split the documents into tokens).
-# * Lemmatize the tokens.
-# * Compute bigrams.
-# * Compute a bag-of-words representation of the data.
-#
-# First we tokenize the text using a regular expression tokenizer from NLTK. We
-# remove numeric tokens and tokens that are only a single character, as they
-# don't tend to be useful, and the dataset contains a lot of them.
-#
-# .. Important::
-#
-#    This tutorial uses the nltk library for preprocessing, although you can
-#    replace it with something else if you want.
-#
-
-# Tokenize the documents.
-from nltk.tokenize import RegexpTokenizer
-
-# Split the documents into tokens.
-tokenizer = RegexpTokenizer(r'\w+')
-for idx in range(len(docs)):
-    docs[idx] = docs[idx].lower()  # Convert to lowercase.
-    docs[idx] = tokenizer.tokenize(docs[idx])  # Split into words.
-
-# Remove numbers, but not words that contain numbers.
-docs = [[token for token in doc if not token.isnumeric()] for doc in docs]
-
-# Remove words that are only one character.
-docs = [[token for token in doc if len(token) > 1] for doc in docs]
-
-###############################################################################
-# We use the WordNet lemmatizer from NLTK. A lemmatizer is preferred over a
-# stemmer in this case because it produces more readable words. Output that is
-# easy to read is very desirable in topic modelling.
-#
-
-# Lemmatize the documents.
+import pickle
+from pprint import pprint
+from gensim.models import LdaModel
+from gensim.corpora import Dictionary
+from gensim.models import Phrases
 from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.tokenize import RegexpTokenizer
+import smart_open
+import tarfile
+import re
+import os.path
+import io
+import json
+from xml.etree import ElementTree as ET
+import argparse
+from datastructures import Corpus, Article, Analyse
+import logging
+import pyLDAvis.gensim_models
+import sys
+logging.basicConfig(
+    format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-lemmatizer = WordNetLemmatizer()
-docs = [[lemmatizer.lemmatize(token) for token in doc] for doc in docs]
 
-###############################################################################
-# We find bigrams in the documents. Bigrams are sets of two adjacent words.
-# Using bigrams we can get phrases like "machine_learning" in our output
-# (spaces are replaced with underscores); without bigrams we would only get
-# "machine" and "learning".
-#
-# Note that in the code below, we find bigrams and then add them to the
-# original data, because we would like to keep the words "machine" and
-# "learning" as well as the bigram "machine_learning".
-#
-# .. Important::
-#     Computing n-grams of large dataset can be very computationally
-#     and memory intensive.
-#
+# 定义一个函数：
+# 1. 通过ElementTree来获得xml里的的tokens
+# 2.
+
+
+def load_file_xml(xml_file, type, pos=[]):
+    tree = ET.parse(xml_file)
+    root = tree.getroot()
+    # corpus
+    corpus = []
+    for analyse in root.iter('analyse'):
+        single_article = []
+        for token in analyse.iter('token'):
+            if pos == []:
+                token_1 = token.get(type)  # type可能是lemma或者forme
+                if token_1 is not None:
+                    single_article.append(token_1)
+            else:
+                if token.get('pos') in pos:
+                    token_1 = token.get(type)
+                    if token_1 is not None:
+                        single_article.append(token_1)
+        corpus.append(single_article)
+    return corpus
+
+
+def load_file_json(json_file, type, pos=[]):
+    with open(json_file, 'r') as f:
+        data = json.load(f)
+    corpus = []
+    for article in data['content']:
+        single_article = []
+        for token in article['analyse']:
+            if pos == []:
+                token_1 = token[type]
+                if token_1 is not None:
+                    single_article.append(token_1)
+            elif token.get('pos') in pos:
+                token_1 = token[type]
+                if token_1 is not None:
+                    single_article.append(token_1)
+        corpus.append(single_article)
+    return corpus
+
+
+def load_file_pickle(pickle_file, type, pos=[]):
+    with open(pickle_file, 'rb') as f:
+        data = pickle.load(f)
+    corpus = []
+    for article in data.content:
+        single_article = []
+        for token in article.analyse:
+            if pos == []:
+                token_1 = token.__getattribute__(type)
+                if token_1 is not None:
+                    single_article.append(token_1)
+            elif token.pos in pos:
+                token_1 = token.__getattribute__(type)
+                if token_1 is not None:
+                    single_article.append(token_1)
+        corpus.append(single_article)
+    return corpus
 
 
 # Compute bigrams.
-from gensim.models import Phrases
-
 # Add bigrams and trigrams to docs (only ones that appear 20 times or more).
-bigram = Phrases(docs, min_count=20)
-for idx in range(len(docs)):
-    for token in bigram[docs[idx]]:
-        if '_' in token:
-            # Token is a bigram, add to document.
-            docs[idx].append(token)
+# 为docs添加bigrams和trigrams（只添加出现20次或更多的bigrams和trigrams）
+
+def bigram(docs):
+    bigram = Phrases(docs, min_count=10)
+    for idx in range(len(docs)):
+        for token in bigram[docs[idx]]:
+            if '_' in token:
+                # Token is a bigram, add to document.
+                docs[idx].append(token)
+    return docs
+
+
+# bigram是一个Phrases对象，可以用来生成bigrams
+# Phrases 函数用来生成bigrams，min_count是指bigrams出现的最小次数
+    # 这里的token是一个bigram，比如原文本为 machine learning is not easy, 则遍历生成的bigrams为: machine_learning, learning_is, is_not, not_easy
+    # 如果token是一个bigram，就添加到文档中
+    # Token is a bigram, add to document.
 
 ###############################################################################
 # We remove rare words and common words based on their *document frequency*.
 # Below we remove words that appear in less than 20 documents or in more than
 # 50% of the documents. Consider trying to remove words only based on their
 # frequency, or maybe combining that with this approach.
-#
+# 我们根据词在文档中的出现频率来去除稀有词和常见词。
+# 在下面的代码中，我们去除在20个文档中出现的词或者在50%以上的文档中出现的词。
 
 # Remove rare and common tokens.
-from gensim.corpora import Dictionary
 
 # Create a dictionary representation of the documents.
-dictionary = Dictionary(docs)
 
-# Filter out words that occur less than 20 documents, or more than 50% of the documents.
-dictionary.filter_extremes(no_below=20, no_above=0.5)
+def filter_extremes(docs):
+    dictionary = Dictionary(docs)
+    dictionary.filter_extremes(no_below=5, no_above=0.9)
+    return dictionary
+
+
+# # Filter out words that occur less than 20 documents, or more than 50% of the documents.
+# dictionary.filter_extremes(no_below=20, no_above=0.5)
 
 ###############################################################################
 # Finally, we transform the documents to a vectorized form. We simply compute
 # the frequency of each word, including the bigrams.
-#
+# 最后，我们将文档转换为向量化形式。并计算每个单词的频率，包括bigrams的频率
 
 # Bag-of-words representation of the documents.
-corpus = [dictionary.doc2bow(doc) for doc in docs]
+# 词袋表示法，corpus是一个二维数组，每个元素是一个文档，每个文档是一个二元组，二元组的第一个元素是词的id，第二个元素是词的频率
+
+
+def doc2bow(docs, dictionary):
+    corpus = [dictionary.doc2bow(doc) for doc in docs]
+    return corpus
 
 ###############################################################################
 # Let's see how many tokens and documents we have to train on.
 #
 
-print('Number of unique tokens: %d' % len(dictionary))
-print('Number of documents: %d' % len(corpus))
 
 ###############################################################################
 # Training
+# 接下来，我们开始训练LDA模型。我们首先讨论如何设置一些训练参数。
 # --------
 #
 # We are ready to train the LDA model. We will first discuss how to set some of
 # the training parameters.
 #
+# 首先，我们需要设置一些训练参数，比如说，我们需要设置多少个主题，每次训练的文档数，训练的轮数等等。
 # First of all, the elephant in the room: how many topics do I need? There is
 # really no easy answer for this, it will depend on both your data and your
 # application. I have used 10 topics here because I wanted to have a few topics
@@ -214,6 +160,9 @@ print('Number of documents: %d' % len(corpus))
 # reasonably good results. You might not need to interpret all your topics, so
 # you could use a large number of topics, for example 100.
 #
+# chunksize 是控制每次训练的文档数，增加chunksize会加快训练速度，至少在文档可以轻松放入内存的情况下。
+# 如果chunksize超过了文档的数量，那么就会一次性处理所有的文档。
+# chunksize可以影响模型的质量，
 # ``chunksize`` controls how many documents are processed at a time in the
 # training algorithm. Increasing chunksize will speed up training, at least as
 # long as the chunk of documents easily fit into memory. I've set ``chunksize =
@@ -227,49 +176,46 @@ print('Number of documents: %d' % len(corpus))
 # technical, but essentially it controls how often we repeat a particular loop
 # over each document. It is important to set the number of "passes" and
 # "iterations" high enough.
-#
-# I suggest the following way to choose iterations and passes. First, enable
-# logging (as described in many Gensim tutorials), and set ``eval_every = 1``
-# in ``LdaModel``. When training the model look for a line in the log that
+#  ``passes`` 控制了我们对整个语料库训练模型的次数。另一个词可能是“epochs”。
+# ``iterations`` 是一个技术性的词，但实际上它控制了我们对每个文档重复特定循环的次数。设置“passes”和“iterations”足够高是很重要的。
+# I suggest the following way to choose iterations and passes. First, enable logging (as described in many Gensim tutorials), and set ``eval_every = 1`` in ``LdaModel``. When training the model look for a line in the log that
 # looks something like this::
-#
+# 我建议你选择iterations和passes的方式如下。首先，启用日志（如许多Gensim教程中所述），并在LdaModel中设置eval_every = 1。训练模型时，查找日志中类似于下面的一行：
+# eval_every = 1表示每次训练完一个文档就计算一次模型的困惑度，然后打印出来
 #    2016-06-21 15:40:06,753 - gensim.models.ldamodel - DEBUG - 68/1566 documents converged within 400 iterations
 #
 # If you set ``passes = 20`` you will see this line 20 times. Make sure that by
 # the final passes, most of the documents have converged. So you want to choose
 # both passes and iterations to be high enough for this to happen.
+# 也就是说，如果你设置了passes = 20，那么你会看到这一行20次。确保最后的passes中，大多数文档都收敛了。因此，你需要选择passes和iterations足够高，以便发生这种情况。
 #
 # We set ``alpha = 'auto'`` and ``eta = 'auto'``. Again this is somewhat
 # technical, but essentially we are automatically learning two parameters in
 # the model that we usually would have to specify explicitly.
-#
+# 我们设置alpha = 'auto'和eta = 'auto'。这也是技术性的，但实际上我们正在自动学习模型中的两个参数，通常我们必须明确指定。
 
-
+# passes和iterations的区别：
+# passes是对整个语料库的训练次数，iterations是对每个文档的训练次数
 # Train LDA model.
-from gensim.models import LdaModel
 
 # Set training parameters.
-num_topics = 10
-chunksize = 2000
-passes = 20
-iterations = 400
-eval_every = None  # Don't evaluate model perplexity, takes too much time.
+def train_lda_model(corpus, dictionary, num_topics=20, chunksize=2000, passes=20, iterations=400, eval_every=None):
+    # Make a index to word dictionary.
+    temp = dictionary[0]  # This is only to "load" the dictionary.
+    id2word = dictionary.id2token
+    model = LdaModel(
+        corpus=corpus,
+        id2word=id2word,
+        chunksize=chunksize,
+        alpha='auto',
+        eta='auto',
+        iterations=iterations,
+        num_topics=num_topics,
+        passes=passes,
+        eval_every=eval_every
+    )
+    return model
 
-# Make an index to word dictionary.
-temp = dictionary[0]  # This is only to "load" the dictionary.
-id2word = dictionary.id2token
-
-model = LdaModel(
-    corpus=corpus,
-    id2word=id2word,
-    chunksize=chunksize,
-    alpha='auto',
-    eta='auto',
-    iterations=iterations,
-    num_topics=num_topics,
-    passes=passes,
-    eval_every=eval_every
-)
 
 ###############################################################################
 # We can compute the topic coherence of each topic. Below we display the
@@ -286,16 +232,21 @@ model = LdaModel(
 # others are hard to interpret, and most of them have at least some terms that
 # seem out of place. If you were able to do better, feel free to share your
 # methods on the blog at http://rare-technologies.com/lda-training-tips/ !
-#
 
-top_topics = model.top_topics(corpus)
+def topic_coherence(model, corpus, num_topics=20):
+    top_topics = model.top_topics(corpus)
+    avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
+    print('Average topic coherence: %.4f.' % avg_topic_coherence)
+    pprint(top_topics)
+    return avg_topic_coherence, top_topics
+
+# 这里的top_topics是一个列表，列表中的每个元素是一个元组，元组中的第一个元素是主题的id，第二个元素是主题的相关性
+
 
 # Average topic coherence is the sum of topic coherences of all topics, divided by the number of topics.
-avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
-print('Average topic coherence: %.4f.' % avg_topic_coherence)
+# 平均主题相关性是所有主题的主题相关性之和，除以主题数。
+# 该值越大，说明主题之间的相关性越高
 
-from pprint import pprint
-pprint(top_topics)
 
 ###############################################################################
 # Things to experiment with
@@ -320,3 +271,65 @@ pprint(top_topics)
 # 1. "Latent Dirichlet Allocation", Blei et al. 2003.
 # 2. "Online Learning for Latent Dirichlet Allocation", Hoffman et al. 2010.
 #
+
+# if
+# # Partie prediction avec le modèle IDA
+# docs = load_file(corpus.content)
+# docs_bigrams = bigram(docs)
+# dictionary = filter_extremes(docs_bigrams)
+# doc_bow = doc2bow(docs_bigrams, dictionary)
+# lda_model = train_lda_model(doc_bow, dictionary, num_topics=10,
+#                             chunksize=2000, passes=20, iterations=400, eval_every=None)
+# avg_topic_coherence, top_topics = topic_coherence(
+#     lda_model, doc_bow, num_topics=10)
+# print('Average topic coherence: %.4f.' % avg_topic_coherence)
+# pprint(top_topics)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Ce script permet de créer un modèle LDA à partir d'un corpus, et de prédire les topics d'un nouveau document")
+    parser.add_argument("-s", help="input file")
+    parser.add_argument(
+        "-m", choices=['xml', 'json', 'pickle'], help='Type of input file')
+    parser.add_argument(
+        "-t", help="choisir le lemma ou la forme")
+    parser.add_argument(
+        "pos", nargs="*", help="determiner les pos (une liste)")
+    parser.add_argument("-n", help="num_topics", default=10)
+    parser.add_argument("-c", help="chunksize", default=2000)
+    parser.add_argument("-p", help="passes", default=20)
+    parser.add_argument("-i", help="iterations", default=400)
+    args = parser.parse_args()
+# ---------------------------------------------------------------------
+    if args.s:
+        if args.m == 'xml':
+            corpus = load_file_xml(args.s, args.t, args.pos)
+        elif args.m == 'json':
+            corpus = load_file_json(args.s, args.t, args.pos)
+        elif args.m == 'pickle':
+            corpus = load_file_pickle(args.s, args.t, args.pos)
+        else:
+            print('Invalid filetype')
+            sys.exit(1)
+        corpus = [[token for token in doc if not token.isnumeric()]
+                  for doc in corpus]
+        docs_c = [[token for token in doc if len(token) > 1] for doc in corpus]
+        bi_docs = bigram(docs_c)
+        dictionnaire = filter_extremes(bi_docs)
+        print(dictionnaire)
+        doc_bow = doc2bow(bi_docs, dictionnaire)
+        print('Number of unique tokens: %d' % len(dictionnaire))
+        print('Number of documents: %d' % len(doc_bow))
+        num_topics = args.n
+        chunksize = args.c
+        passes = args.p
+        iterations = args.i
+        eval_every = None
+        model = train_lda_model(
+            doc_bow, dictionnaire, num_topics=num_topics, chunksize=chunksize, passes=passes, eval_every=eval_every)
+        topic_coherence(model, doc_bow, num_topics=num_topics)
+        # nous allons maintenant sauvegarder le modèle sous forme d
+        lda_dp = pyLDAvis.gensim_models.prepare(
+            model, doc_bow, dictionnaire)
+        pyLDAvis.save_html(lda_dp, 'lda_dp.html')
