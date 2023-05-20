@@ -162,19 +162,27 @@
                     Le script utilisé pour la création du dictionnaire
                   </div>
                   <p>
-                    Morbi nulla arcu,pellentesque sed egestas in,tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat,quis interdum
-                    nisi sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin.
+                    Ce script est une intégration des réalisations des trois
+                    premières semaines de travail, qui permet de traiter des
+                    fichiers texte. Il utilise des arguments de ligne de
+                    commande pour spécifier les chemins des fichiers.
+                  </p>
+                  <p>
+                    L'argument
+                    <i style="background-color: antiquewhite">--chemin</i> est
+                    utilisé pour spécifier les chemins des fichiers. Il définit
+                    des fonctions
+                    <span style="color: orangered">
+                      construit_liste_de_chaines</span
+                    >,
+                    <span style="color: rgb(10, 170, 101)"
+                      >construit_liste_de_chaines_r2_r3</span
+                    >
+                    , <span style="color: rgb(33, 5, 215)">count_words</span> ,
+                    <span style="color: rgb(190, 17, 161)">doc_freq</span> et
+                    <span style="color: rgb(135, 131, 0)">lexique</span> qui
+                    permettent de compter la fréquence des mots et la fréquence
+                    des documents, et de générer un lexique.
                   </p>
                 </div>
                 <div class="date">Script</div>
@@ -281,6 +289,13 @@ if __name__ == '__main__':
                       Scripts de modules, de fonctions et de classes</strong
                     >
                   </h1>
+                  <p style="font-size: 15px">
+                    Il est possible d'utiliser les fonctions déjà définies pour
+                    exécuter des tâches ou des opérations spécifiques dans la
+                    fonction principale. En séparant ces fonctions de la
+                    fonction principale, on peut mieux organiser le code et
+                    améliorer sa lisibilité et sa maintenabilité.
+                  </p>
                 </div>
               </div>
               <div>
@@ -289,19 +304,14 @@ if __name__ == '__main__':
                     1. Scripts de parser : etree et re
                   </div>
                   <p>
-                    Morbi nulla arcu,pellentesque sed egestas in,tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat,quis interdum
-                    nisi sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin.
+                    Ce script contient des fonctions qui sont responsables de
+                    l'analyse de fichiers XML et de l'extraction d'informations
+                    à partir de texte à l'aide d'expressions régulières. Le
+                    script "etree" utilise le module "xml.etree.ElementTree"
+                    pour le parsing des fichiers XML, tandis que le script "re"
+                    utilise des expressions régulières pour extraire des
+                    informations d'un texte. Les deux fonctions peuvent être
+                    appelés en tant que modules.
                   </p>
                 </div>
                 <div class="date">Script</div>
@@ -357,19 +367,17 @@ def re_parser(fic):
                     2. Dataclass
                   </div>
                   <p>
-                    Morbi nulla arcu,pellentesque sed egestas in,tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat,quis interdum
-                    nisi sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin.
+                    Ce script définit plusieurs classes de données qui
+                    permettent de créer des objets avec des attributs
+                    pré-définis. Les classes définies dans ce script utilisent
+                    le décorateur
+                    <span style="color: brown">@dataclass</span> pour créer des
+                    objets avec des attributs pré-définis. Ici, ces trois
+                    classes permettent de structurer les données d'un corpus
+                    textuel avec des articles, des analyses linguistiques et des
+                    informations associées. Elles facilitent la manipulation et
+                    l'accès aux données, ainsi que la gestion de la structure
+                    hiérarchique des données.
                   </p>
                 </div>
                 <div class="date">Script</div>
@@ -413,20 +421,49 @@ class Corpus:
                   <div class="title_inner" style="text-transform: none">
                     3. Exports
                   </div>
+
                   <p>
-                    Morbi nulla arcu,pellentesque sed egestas in,tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat,quis interdum
-                    nisi sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin.
+                    <span style="color: darkblue">write_json</span> : Cette
+                    fonction prend un objet Corpus et un chemin de destination
+                    en paramètres. Elle utilise la fonction asdict pour
+                    convertir l'objet Corpus en un dictionnaire Python, puis
+                    utilise json.dump pour écrire ce dictionnaire dans un
+                    fichier JSON. Cela permet de sauvegarder les données des
+                    classes dataclass dans un format JSON.
+                  </p>
+
+                  <p>
+                    <span style="color: chocolate">article_to_xml</span> : Cette
+                    fonction prend un objet Article en paramètre et renvoie un
+                    élément XML correspondant à cet article. Elle crée un
+                    élément "article" et attribue les valeurs des attributs date
+                    et categorie. Elle crée également des éléments "title",
+                    "description" et "analyse" avec leurs valeurs respectives.
+                    Si l'article contient des analyses, elle crée des éléments
+                    "token" pour chaque analyse avec les attributs "form",
+                    "lemma" et "pos". Ensuite, elle renvoie l'élément XML de
+                    l'article.
+                  </p>
+
+                  <p>
+                    <span style="color: purple">write_xml</span> : Cette
+                    fonction prend un objet Corpus et un chemin de destination
+                    en paramètres. Elle crée un élément "corpus" et attribue les
+                    valeurs des attributs start et end. Elle crée également un
+                    élément "categories" et un élément "content". Pour chaque
+                    catégorie du corpus, elle crée un élément "cat" sous
+                    l'élément "categories". Pour chaque article du corpus, elle
+                    utilise la fonction article_to_xml pour obtenir l'élément
+                    XML correspondant, puis l'ajoute à l'élément "content".
+                    Enfin, elle crée un objet ElementTree à partir de l'élément
+                    "corpus", applique l'indentation et écrit le résultat dans
+                    un fichier XML à l'aide de la méthode write.
+                  </p>
+
+                  <p>
+                    Ces fonctions permettent de convertir les données des
+                    classes dataclass en formats JSON et XML pour la sauvegarde
+                    ou l'échange de données.
                   </p>
                 </div>
                 <div class="date">Script</div>
@@ -496,19 +533,14 @@ def write_xml(corpus: Corpus, destination: str):
                     4. TAL modules
                   </div>
                   <p>
-                    Morbi nulla arcu,pellentesque sed egestas in,tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat,quis interdum
-                    nisi sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin.
+                    Ces fonctions fournissent un choix de modules NLP différents
+                    pour effectuer des analyses et des traitements de texte.
+                    Selon les besoins, vous pouvez choisir le module qui
+                    convient le mieux. Chaque fonction prend un texte en entrée
+                    et renvoie un dictionnaire contenant des informations sur la
+                    lemmatisation et l'annotation grammaticale des mots. Ces
+                    informations peuvent être utilisées pour des tâches et des
+                    analyses LDA ultérieures.
                   </p>
                 </div>
                 <div class="date">Script</div>
@@ -595,19 +627,39 @@ def stanza_analyse(parser, text: str):
                     le main script
                   </div>
                   <p>
-                    Morbi nulla arcu,pellentesque sed egestas in,tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat,quis interdum
-                    nisi sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin.
+                    Le script principal parcourt les fichiers XML correspondant
+                    à certaines catégories et périodes spécifiées, extrait les
+                    titres et descriptions des articles, effectue une analyse
+                    linguistique à l'aide d'un module NLP, puis enregistre ou
+                    affiche les résultats en fonction des options choisies.
+                  </p>
+                  <p>
+                    Il importe les modules nécessaires et définit des
+                    constantes, telles que les mois et les jours, qui seront
+                    utilisées ultérieurement. Ensuite, il définit un
+                    dictionnaire qui associe des codes de catégories à leurs
+                    noms correspondants.
+                  </p>
+                  <p>
+                    Ensuite, le script parcourt les fichiers XML dans un
+                    répertoire donné, en tenant compte des critères tels que les
+                    catégories, la date de début et la date de fin. Cette
+                    fonction renvoie un générateur qui produit un par un les
+                    fichiers XML répondant aux critères spécifiés.
+                  </p>
+                  <p>
+                    Pour chaque fichier retourné, il extrait le titre et la
+                    description à l'aide de la fonction fonc. Si ces
+                    informations sont valides, un objet Article est créé et
+                    ajouté au corpus. Le script utilise également un module NLP
+                    spécifié pour effectuer une analyse du titre et de la
+                    description. Les informations obtenues, telles que les
+                    lemmes et les étiquettes de partie du discours, sont
+                    associées à chaque mot et ajoutées à l'objet Article. Enfin,
+                    en fonction des arguments de ligne de commande, le script
+                    écrit les résultats dans un fichier de sortie au format
+                    JSON, XML ou pickle, ou les affiche simplement dans la
+                    console.
                   </p>
                 </div>
                 <div class="date">Script</div>
@@ -802,19 +854,51 @@ if __name__ == "__main__":
                     LDA Topic Modeling
                   </div>
                   <p>
-                    Morbi nulla arcu,pellentesque sed egestas in,tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat,quis interdum
-                    nisi sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin. Morbi nulla arcu,pellentesque sed egestas
-                    in,tempor eget felis. Nullam tincidunt augue in leo
-                    feugiat,quis interdum nisi sollicitudin. Morbi nulla
-                    arcu,pellentesque sed egestas in,tempor eget felis. Nullam
-                    tincidunt augue in leo feugiat,quis interdum nisi
-                    sollicitudin.
+                    Ce script charge un corpus de documents à partir d'un
+                    fichier XML, JSON ou pickle, prétraite les données en
+                    supprimant les mots vides et en identifiant les bigrammes,
+                    crée un modèle LDA à partir des documents prétraités, évalue
+                    la cohérence des sujets générés et génère une visualisation
+                    interactive des sujets.
+                  </p>
+
+                  <p>
+                    Le script effectue une étape de nettoyage des données en
+                    supprimant les mots vides (stopwords) du corpus, en
+                    utilisant une liste de mots vides prédéfinie pour le
+                    français, ainsi qu'une liste personnalisée provenant d'un
+                    fichier texte. Ensuite, le script identifie les bigrammes
+                    dans les documents à l'aide du module Phrases de gensim.
+                  </p>
+                  <p>
+                    Ensuite, le script crée un dictionnaire à partir des
+                    documents prétraités et filtre les termes extrêmes (trop
+                    fréquents ou trop rares) du dictionnaire. Le script
+                    convertit ensuite les documents prétraités en une
+                    représentation de type "sac de mots" (bag-of-words) à l'aide
+                    du dictionnaire créé précédemment.
+                  </p>
+
+                  <p>
+                    Après les opérations sur le dataset, le modèle LDA est
+                    entraîné en utilisant les paramètres spécifiés tels que le
+                    nombre de sujets, la taille du lot (chunksize), le nombre de
+                    passages (passes) et le nombre d'itérations. Après
+                    l'entraînement, le script évalue la cohérence des sujets
+                    générés à l'aide de la mesure de cohérence des sujets et
+                    affiche les sujets triés par ordre de cohérence.
+                  </p>
+
+                  <p>
+                    Enfin, le script génère une visualisation interactive des
+                    sujets à l'aide de la bibliothèque pyLDAvis, et sauvegarde
+                    la visualisation sous la forme d'un fichier HTML. En résumé,
+                    ce script charge un corpus de documents à partir d'un
+                    fichier XML, JSON ou pickle, prétraite les données en
+                    supprimant les mots vides et en identifiant les bigrammes,
+                    crée un modèle LDA à partir des documents prétraités, évalue
+                    la cohérence des sujets générés et génère une visualisation
+                    interactive des sujets.
                   </p>
                 </div>
                 <div class="date">Script</div>
