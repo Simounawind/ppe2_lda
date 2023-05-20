@@ -1,3 +1,4 @@
+# main script
 from title_descr_re import re_parser
 from title_descr_etree import etree_parser
 import re
@@ -12,7 +13,6 @@ from datastructures import Corpus, Article, Analyse
 from exports import write_json, write_xml
 import nlp_modules
 from tqdm import tqdm
-import gensim_lda_pred as lda
 
 
 # Objectif : parcourir les fichiers et, extraire et afficher le titre et la description de chaque article correspondant à une catégorie
@@ -116,6 +116,8 @@ if __name__ == "__main__":
         "corpus_dir", help="root dir of the corpus data,qui contient des dossiers/fichiers xml")
     parser.add_argument("categories", nargs="*",
                         help="la ou les catégories des fichiers XML désirés")
+    parser.add_argument(
+        "-p", help="parser, spacy ou trankit ou stanza", default="trankit")
     args = parser.parse_args()
     if args.m == 'etree':
         fonc = etree_parser
@@ -129,23 +131,65 @@ if __name__ == "__main__":
     # f = un fichier xml, obtenu par yield, soit le "yield(fic)"
 
     # creation du corpus
-    tk_parser = nlp_modules.create_parser()
-    print('l\'analyse commence, veuillez patienter...')
-    corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
-    for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
-                                       start_date=date.fromisoformat(args.s),
-                                       end_date=date.fromisoformat(args.e),
-                                       categories=args.categories)):
-        for title, desc in tqdm(fonc(f)):
-            if title and desc is not None:
-                article = Article(title, desc, dt, c, [])
-                corpus.content.append(article)
-                analyse_dict = nlp_modules.trankit_analyse(
-                    tk_parser, title + " " + desc)
-                for forme in analyse_dict:
-                    token = Analyse(forme, analyse_dict.get(forme)[
-                        0], analyse_dict.get(forme)[1])
-                    article.analyse.append(token)
+    if args.p == 'trankit':
+        tk_parser = nlp_modules.trankit_parser()
+        print('l\'analyse avec trankit commence, veuillez patienter...')
+        corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
+        for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
+                                           start_date=date.fromisoformat(
+                                               args.s),
+                                           end_date=date.fromisoformat(args.e),
+                                           categories=args.categories)):
+            for title, desc in tqdm(fonc(f)):
+                if title and desc is not None:
+                    article = Article(title, desc, dt, c, [])
+                    corpus.content.append(article)
+                    analyse_dict = nlp_modules.trankit_analyse(
+                        tk_parser, title + " " + desc)
+                    for forme in analyse_dict:
+                        token = Analyse(forme, analyse_dict.get(forme)[
+                            0], analyse_dict.get(forme)[1])
+                        article.analyse.append(token)
+    elif args.p == 'stanza':
+        za_parser = nlp_modules.stanza_parser()
+        print('l\'analyse avec stanza commence, veuillez patienter...')
+        corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
+        for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
+                                           start_date=date.fromisoformat(
+                                               args.s),
+                                           end_date=date.fromisoformat(args.e),
+                                           categories=args.categories)):
+            for title, desc in tqdm(fonc(f)):
+                if title and desc is not None:
+                    article = Article(title, desc, dt, c, [])
+                    corpus.content.append(article)
+                    analyse_dict = nlp_modules.stanza_analyse(
+                        za_parser, title + " " + desc)
+                    for forme in analyse_dict:
+                        token = Analyse(forme, analyse_dict.get(forme)[
+                            0], analyse_dict.get(forme)[1])
+                        article.analyse.append(token)
+
+    elif args.p == 'spacy':
+        sp_parser = nlp_modules.spacy_parser()
+        print('l\'analyse avec spacy commence, veuillez patienter...')
+        corpus = Corpus(args.categories, args.s, args.e, args.corpus_dir, [])
+        for f, dt, c in tqdm(parcours_path(Path(args.corpus_dir),
+                                           start_date=date.fromisoformat(
+                                               args.s),
+                                           end_date=date.fromisoformat(args.e),
+                                           categories=args.categories)):
+            for title, desc in tqdm(fonc(f)):
+                if title and desc is not None:
+                    article = Article(title, desc, dt, c, [])
+                    corpus.content.append(article)
+                    analyse_dict = nlp_modules.spacy_analyse(
+                        sp_parser, title + " " + desc)
+                    for forme in analyse_dict:
+                        token = Analyse(forme, analyse_dict.get(forme)[
+                            0], analyse_dict.get(forme)[1])
+                        article.analyse.append(token)
+
      # d'après le format de fichier de sortie, on écrit le résultat dans le fichier correspondant
     if args.o.endswith(".js"):
         print('parsing done, outputed in the file de format json you required')
@@ -176,14 +220,3 @@ if __name__ == "__main__":
                     print(">>> Description:", desc)
                     print(
                         '------------------------------------------------------------------------------------------------------------------------------')
-# S10: LDA tourner sur les données "en bricolant" le script
-    continue_ou_non = input(
-        "Do you want to start the LDA topic module ? (y/n): ")
-    if continue_ou_non.lower() == 'y':
-        use_saved_data = input("Do you want to use saved data? (y/n): ")
-        if use_saved_data.lower() == 'y':
-            pass
-        else:
-            pass
-# ↑ problem non résolu : je ne sais pas comment lier les deux scripts ensemble, et comment faire pour que le script de LDA puisse utiliser automatiquement les données de ce script.
-# Il n'y a pour moi qu'une seule solution, c'est d'utiliser input() pour demander à l'utilisateur de choisir les paramètres pour entraîner le modèle LDA, mais je ne sais pas si c'est une bonne solution.

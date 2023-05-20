@@ -11,8 +11,6 @@ import argparse
 import logging
 import pyLDAvis.gensim_models
 import sys
-logging.basicConfig(
-    format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 
 # 定义一个函数：
@@ -84,7 +82,6 @@ def stop_words(corpus):
     with open('stopwords-fr.txt', 'r', encoding='utf-8') as f:
         sw_file = set(f.read().split())
     stop_words = set(stopwords.words('french')).union(sw_file)
-    print(stop_words)
     corpus = [[word for word in doc if word not in stop_words]
               for doc in corpus]
     return corpus
@@ -206,7 +203,7 @@ def doc2bow(docs, dictionary):
 # Train LDA model.
 
 # Set training parameters.
-def train_lda_model(corpus, dictionary, num_topics=20, chunksize=2000, passes=20, iterations=400, eval_every=None):
+def train_lda_model(corpus, dictionary, num_topics=10, chunksize=2000, passes=20, iterations=400, eval_every=None):
     # Make a index to word dictionary.
     temp = dictionary[0]  # This is only to "load" the dictionary.
     id2word = dictionary.id2token
@@ -240,7 +237,7 @@ def train_lda_model(corpus, dictionary, num_topics=20, chunksize=2000, passes=20
 # seem out of place. If you were able to do better, feel free to share your
 # methods on the blog at http://rare-technologies.com/lda-training-tips/ !
 
-def topic_coherence(model, corpus, num_topics=20):
+def topic_coherence(model, corpus, num_topics=10):
     top_topics = model.top_topics(corpus)
     avg_topic_coherence = sum([t[1] for t in top_topics]) / num_topics
     print('Average topic coherence: %.4f.' % avg_topic_coherence)
@@ -303,9 +300,9 @@ if __name__ == "__main__":
         "-t", help="choisir le lemma ou la forme")
     parser.add_argument(
         "pos", nargs="*", help="determiner les pos (une liste)")
-    parser.add_argument("-n", help="num_topics", default=10)
+    parser.add_argument("-n", help="num_topics", type=int, default=10)
     parser.add_argument("-c", help="chunksize", default=2000)
-    parser.add_argument("-p", help="passes", default=20)
+    parser.add_argument("-p", help="passes", default=40)
     parser.add_argument("-i", help="iterations", default=400)
     args = parser.parse_args()
 # ---------------------------------------------------------------------
