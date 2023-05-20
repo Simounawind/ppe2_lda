@@ -48,13 +48,7 @@ body.loaded header, body.loaded footer, body.loaded .section {
     background: #fff
 }
 
-.container div.col {
-    width: 33.33%;
-    float: left;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
+
 
 
 @media(max-width:840px) {
