@@ -54,55 +54,53 @@
       <!-- Header -->
       <header>
         <div class="head-top">
-          <a href="#" class="menu-btn"></a>
-          <div class="top-menu">
-            <nav class="navbar">
-              <ul style="font-family: Merriweather">
-                <li><a href="index.html" class="btn">Accueil</a></li>
-
-                <li class="dropdown">
-                  <a href="projet.html"
-                    ><span>Projet </span
-                    ><ion-icon name="caret-down-outline"></ion-icon>
-                  </a>
-                  <ul>
-                    <li><a href="projet.html#presentation">Présentation</a></li>
-                    <li><a href="projet.html#bao1">BàO1</a></li>
-                    <li><a href="projet.html#bao1">BàO2</a></li>
-                    <li><a href="projet.html#bao3">BàO3</a></li>
-                    <li><a href="projet.html#bao4">BàO4</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="scripts.html"
-                    ><span>Scripts </span>
-                    <ion-icon name="caret-down-outline"></ion-icon
-                  ></a>
-                  <ul>
-                    <li><a href="scripts.html#partie1">Dictionnaire</a></li>
-                    <li><a href="scripts.html#partie2">Modules</a></li>
-                    <li><a href="scripts.html#partie3">Main.py</a></li>
-                    <li><a href="scripts.html#partie4">LDA Modeling</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="produits.html"
-                    ><span>Produits </span
-                    ><ion-icon name="caret-down-outline"></ion-icon>
-                  </a>
-                  <ul>
-                    <li><a href="produits.html#xml">Fichiers XML</a></li>
-                    <li><a href="produits.html#json">Fichiers js</a></li>
-                    <li><a href="produits.html#lda">LDA Topics</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="blog.html" class="lnk">Blog</a>
-                </li>
-                <li><a href="nous.html" class="lnk">Nous</a></li>
-              </ul>
-            </nav>
-          </div>
+          <nav class="dropdownmenu" style="position: relative">
+            <ul>
+              <li><a href="nous.html" class="lnk">Nous</a></li>
+              <li>
+                <a href="blog.html" class="lnk">Blog</a>
+              </li>
+              <li>
+                <a href="scripts.html"
+                  ><span>Scripts </span
+                  ><ion-icon name="caret-down-outline"></ion-icon>
+                </a>
+                <ul id="submenu">
+                  <li><a href="scripts.html#partie1">Dictionnaire</a></li>
+                  <li><a href="scripts.html#partie2">Modules</a></li>
+                  <li><a href="scripts.html#partie3">Main.py</a></li>
+                  <li><a href="scripts.html#partie4">LDA</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="produits.html"
+                  ><span>Produits </span
+                  ><ion-icon name="caret-down-outline"></ion-icon>
+                </a>
+                <ul id="submenu">
+                  <li><a href="produits.html#xml">XML</a></li>
+                  <li><a href="produits.html#json">js</a></li>
+                  <li><a href="produits.html#lda">LDA</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="projet.html"
+                  ><span>Projet </span
+                  ><ion-icon name="caret-down-outline"></ion-icon>
+                </a>
+                <ul id="submenu">
+                  <li>
+                    <a href="projet.html#presentation">Présentation</a>
+                  </li>
+                  <li><a href="projet.html#bao1">BàO1</a></li>
+                  <li><a href="projet.html#bao1">BàO2</a></li>
+                  <li><a href="projet.html#bao3">BàO3</a></li>
+                  <li><a href="projet.html#bao4">BàO4</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Accueil</a></li>
+            </ul>
+          </nav>
         </div>
       </header>
       <!-- Wrapper -->
@@ -138,18 +136,30 @@
               </div>
             </div>
             <div class="image">
-              <img src="static/picture/blog_1.jpg" alt="" />
+              <img src="static/picture/jdb11.png" alt="" />
             </div>
             <div class="desc">
               <p>
-                ce qu'on a appris par ce cours，exemple ：Dans le cadre du cours
-                "Programmation et projet encadré 2", nous avons travaillé sur
-                Dans le cadre du cours "Programmation et projet encadré 2", nous
-                avons travaillé sur Dans le cadre du cours "Programmation et
-                projet encadré 2", nous avons travaillé sur Dans le cadre du
-                cours "Programmation et projet encadré 2", nous avons travaillé
-                surDans le cadre du cours "Programmation et projet encadré 2",
-                nous avons travaillé sur
+                Ce site web a pour objectif de présenter notre projet réalisé
+                dans le cadre du cours "Programmation et projet Encadré 2" du
+                TAL (Traitement Automatique des Langues) de l'année
+                universitaire 2022-2023 à l'Université Sorbonne Nouvelle,
+                l'Université Paris Nanterre et l'INALCO.
+              </p>
+              <p>
+                Notre projet captivant consistait à explorer les fils RSS du
+                journal Le Monde de l'année 2022 en utilisant Python. Nous avons
+                extrait des motifs morpho-syntaxiques, réalisé une analyse des
+                sujets et créé des visualisations captivantes.
+              </p>
+
+              <p>
+                Notre démarche nous a permis de plonger au cœur de ce corpus
+                riche en informations et de mettre en lumière les tendances et
+                les thèmes dominants abordés dans les articles. Nous espérons
+                que ce site web vous offrira un aperçu détaillé de notre
+                exploration linguistique et suscitera votre intérêt pour le
+                traitement automatique des langues.
               </p>
             </div>
             <div class="clear"></div>
@@ -161,19 +171,44 @@
 
             <!-- 222222 -->
             <div class="title">
-              <div class="title_inner">Partie 2</div>
+              <div class="title_inner">Aperçu du traitement des données</div>
             </div>
             <div class="image">
-              <img src="static/picture/blog_1.jpg" alt="" />
+              <img src="static/picture/script1.png" alt="" />
             </div>
             <div class="desc">
               <p>
-                aois fjaoisjvcmoa isncaisncai sunfasasoixjasmoindoasnfoqfiqw
-                aois fjaoisjvcmoa isncaisncai sunfasasoixjasmoindoasnfoqfiqw
-                aois fjaoisjvcmoa isncaisncai sunfasasoixjasmoindoasnfoqfiqw
-                aois fjaoisjvcmoa isncaisncai sunfasasoixjasmoindoasnfoqfiqw
-                aois fjaoisjvcmoa isncaisncai sunfasasoixjasmoindoasnfoqfiqw
-                aois fjaoisjvcmoa isncaisncai sunfasasoixjasmoindoasnfoqfiqw
+                Nous avons commencé par obtenir les données des fils RSS en
+                développant des modules Python pour lire les fichiers et
+                extraire les textes et les métadonnées. Ensuite, nous avons
+                enrichi ces données en nettoyant le texte, en éliminant les mots
+                vides et en utilisant la tokenisation pour identifier les motifs
+                cachés.
+              </p>
+              <p>
+                L'analyse a été le cœur de notre exploration. Nous avons utilisé
+                des techniques de modélisation des sujets pour révéler les
+                thèmes dominants dans les articles du journal Le Monde. En
+                examinant la distribution des sujets dans le temps, nous avons
+                observé les évolutions et les tendances.
+              </p>
+              <p>
+                Enfin, nous avons créé des visualisations attrayantes à l'aide
+                d'outils de visualisation tels que Matplotlib et D3.js. Ces
+                visualisations, telles que des graphiques interactifs et des
+                nuages de mots, permettent aux utilisateurs de plonger dans les
+                profondeurs du corpus de données et de mieux comprendre les
+                thèmes et les tendances.
+              </p>
+              <p>
+                Grâce à nos analyses et visualisations, nous avons révélé les
+                richesses cachées de ce corpus d'informations. Nous espérons que
+                notre travail ouvrira de nouvelles perspectives et inspirera de
+                futures explorations dans le domaine de l'analyse linguistique.
+              </p>
+              <p>
+                Vous pouvez trouver plus d'informations sur notre projet dans
+                les sections situées en haut du site.
               </p>
             </div>
             <div class="clear"></div>
@@ -210,7 +245,6 @@
             <br />
             <br />
             <br />
-            <p>空白</p>
             <br />
             <br />
             <br />
@@ -227,7 +261,7 @@
               height: 100%;
               margin-bottom: 70px;
             "
-            src="/static/picture/bottom_pic.png"
+            src="/html/static/picture/bottom_pic.png"
           />
         </div>
       </div>

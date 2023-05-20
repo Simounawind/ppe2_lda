@@ -58,57 +58,53 @@
       <!-- Header -->
       <header>
         <div class="head-top">
-          <a href="#" class="menu-btn"></a>
-          <div class="top-menu">
-            <nav class="navbar">
-              <ul style="font-family: Merriweather">
-                <li><a href="../index.html" class="btn">Accueil</a></li>
-
-                <li class="dropdown">
-                  <a href="../projet.html"
-                    ><span>Projet </span
-                    ><ion-icon name="caret-down-outline"></ion-icon>
-                  </a>
-                  <ul>
-                    <li>
-                      <a href="../projet.html#presentation">Présentation</a>
-                    </li>
-                    <li><a href="../projet.html#bao1">BàO1</a></li>
-                    <li><a href="../projet.html#bao1">BàO2</a></li>
-                    <li><a href="../projet.html#bao3">BàO3</a></li>
-                    <li><a href="../projet.html#bao4">BàO4</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="../scripts.html"
-                    ><span>Scripts </span>
-                    <ion-icon name="caret-down-outline"></ion-icon
-                  ></a>
-                  <ul>
-                    <li><a href="../scripts.html#partie1">Dictionnaire</a></li>
-                    <li><a href="../scripts.html#partie2">Modules</a></li>
-                    <li><a href="../scripts.html#partie3">Main.py</a></li>
-                    <li><a href="../scripts.html#partie4">LDA Modeling</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="../produits.html"
-                    ><span>Produits </span
-                    ><ion-icon name="caret-down-outline"></ion-icon>
-                  </a>
-                  <ul>
-                    <li><a href="../produits.html#xml">Fichiers XML</a></li>
-                    <li><a href="../produits.html#json">Fichiers js</a></li>
-                    <li><a href="../produits.html#lda">LDA Topics</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="../blog.html" class="lnk">Blog</a>
-                </li>
-                <li><a href="../nous.html" class="lnk">Nous</a></li>
-              </ul>
-            </nav>
-          </div>
+          <nav class="dropdownmenu" style="position: relative">
+            <ul>
+              <li><a href="nous.html" class="lnk">Nous</a></li>
+              <li>
+                <a href="blog.html" class="lnk">Blog</a>
+              </li>
+              <li>
+                <a href="scripts.html"
+                  ><span>Scripts </span
+                  ><ion-icon name="caret-down-outline"></ion-icon>
+                </a>
+                <ul id="submenu">
+                  <li><a href="scripts.html#partie1">Dictionnaire</a></li>
+                  <li><a href="scripts.html#partie2">Modules</a></li>
+                  <li><a href="scripts.html#partie3">Main.py</a></li>
+                  <li><a href="scripts.html#partie4">LDA</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="produits.html"
+                  ><span>Produits </span
+                  ><ion-icon name="caret-down-outline"></ion-icon>
+                </a>
+                <ul id="submenu">
+                  <li><a href="produits.html#xml">XML</a></li>
+                  <li><a href="produits.html#json">js</a></li>
+                  <li><a href="produits.html#lda">LDA</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="projet.html" id="start"
+                  ><span>Projet </span
+                  ><ion-icon name="caret-down-outline"></ion-icon>
+                </a>
+                <ul id="submenu">
+                  <li>
+                    <a href="projet.html#presentation">Présentation</a>
+                  </li>
+                  <li><a href="projet.html#bao1">BàO1</a></li>
+                  <li><a href="projet.html#bao1">BàO2</a></li>
+                  <li><a href="projet.html#bao3">BàO3</a></li>
+                  <li><a href="projet.html#bao4">BàO4</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Accueil</a></li>
+            </ul>
+          </nav>
         </div>
       </header>
       <!-- Wrapper -->
@@ -330,10 +326,40 @@
                 prochaine.
               </h5>
             </div>
+            <div class="section blog">
+              <div class="content" style="text-align: justify">
+                <div class="single-post-text">
+                  <h1
+                    style="
+                      text-align: center;
+                      font-family: Merriweather;
+                      font-size: 35px;
+                    "
+                  >
+                    20/04
+                  </h1>
+                  <h3 style="font-family: 'Merriweather'">Yingzi :</h3>
+                  <h5 style="font-family: 'Merriweather'; line-height: 30px">
+                    Après avoir consulté les corrections du prof sur le TP-distant et les avoir combinées avec la version élaborée par Xiaohua, j'ai effectué les modifications suivantes sur mon TP-distant et complété les parties que je n'avais pas terminées auparavant :
+                  </h5>
+                  <h5  style="font-family: 'Merriweather'; line-height: 30px">Ajout des bibliothèques supplémentaires : pickle, tarfile, re, os.path, io, json, et les bibliothèques nltk.
+                    Importation des structures de données personnalisées : Corpus, Article, Analyse.
+                    Modification des fonctions de chargement de fichiers : load_file_xml, load_file_json, load_file_pickle.
+                    Ajout du traitement des bigrams avec la fonction bigram utilisant le modèle Phrases.
+                    Modification de la fonction de filtrage des termes extrêmes avec la fonction filter_extremes utilisant l'objet Dictionary.
+                    Modification de la fonction de construction du modèle LDA avec la fonction train_lda_model utilisant LdaModel.
+                    Modification de l'affichage de la cohérence des sujets avec la fonction topic_coherence.
+                    Ajout de l'analyse des arguments de ligne de commande avec la bibliothèque argparse.
+                    Appel des fonctions appropriées dans la fonction principale en fonction des arguments de ligne de commande.
+                    Ajout d'instructions d'impression pour afficher des informations pendant l'exécution.</h5>
+                    <h5 style="font-family: 'Merriweather'; line-height: 30px">TP-distant est fini. Nous allons commencer à faire la mise en forme des sorties du modèle.</h5>
+            </div>
+
             <div class="clear"></div>
           </div>
         </div>
       </div>
+
       <!-- Footer -->
       <footer>
         <div class="soc">
