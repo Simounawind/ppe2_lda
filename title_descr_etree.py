@@ -12,4 +12,3 @@ def etree_parser(xml):
         title = article.find('title').text
         description = article.find('description').text
         yield title, description
-
