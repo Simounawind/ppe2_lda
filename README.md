@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 ## PPE2
 
-> **LIU Yingzi**  
-> **KANLIBICAK Danyel**  
-> **CUI Xiaohua**
-
-=======
 <h1 align="center">
 <span>Projet LCD</span>
 </h1>
@@ -33,4 +27,3 @@
 **KANLIBICAK Danyel**
 
 **CUI Xiaohua**
->>>>>>> 100a091f48271028960ead4a3d0c34a44429cecb
