@@ -6,3 +6,4 @@ repository: "Simounawind/ppe2_lda"
 # 从构建过程中排除以下文件
 exclude:
   - README.md
+  - vendor/bundle/
