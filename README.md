@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-## PPE2
+ ## PPE2
 
 > **LIU Yingzi**  
 > **KANLIBICAK Danyel**  
@@ -33,4 +32,3 @@
 **KANLIBICAK Danyel**
 
 **CUI Xiaohua**
->>>>>>> 100a091f48271028960ead4a3d0c34a44429cecb

@@ -7,6 +7,8 @@ __pycache__
 __pycache__/
 cache
 cache/
+<<<<<<< HEAD
+=======
 =======
 */.DS_Store
 2022
@@ -14,3 +16,4 @@ cache
 cache/*
 __pycache__/
 >>>>>>> 100a091f48271028960ead4a3d0c34a44429cecb
+>>>>>>> e4cb64802f3145bbb1974d7b59b4999ea47b195f
